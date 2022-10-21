@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 public class Conexion {
 
-    private static String url = "jdbc:mysql://localhost/universidadg2";
+    private static String url = "jdbc:mysql://localhost:3306/transversal?zeroDateTimeBehavior=CONVERT_TO_NULL";
     private static String usuario = "root";
     private static String password = "";
     private static Conexion conexion=null;
@@ -33,7 +33,7 @@ public class Conexion {
          }
         
         try {
-            conn = DriverManager.getConnection(url + "?useLegacyDatetimeCode=false&serverTimezone=UTC" + "&user=" + usuario + "&password=" + password);
+            conn = DriverManager.getConnection(url + "&user=" + usuario + "&password=" + password);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Clase Conexion: Error de Conexion");
         }
