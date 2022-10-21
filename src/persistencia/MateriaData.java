@@ -1,12 +1,10 @@
 package persistencia;
 
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import universidadg8.entidades.Alumno;
 import universidadg8.entidades.Materia;
 
 public class MateriaData {
