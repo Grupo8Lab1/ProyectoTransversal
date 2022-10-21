@@ -15,7 +15,7 @@ public class AlumnoData {
 
     public void guardarAlumno(Alumno alumno) {
         //a)	INSERT INTO `alumno` (`dni`,`apellido`,`nombre`,`fechaNacimiento`,`estado`) VALUES ('111','Muñoz','Federico','2001-05-31','1'),(
-        String sql = "INSERT INTO alumnos (dni, apellido, nombre, fechaNacimiento, estado) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO alumno (dni, apellido, nombre, fechaNacimiento, estado) VALUES (?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setLong(1, alumno.getDni());
@@ -42,7 +42,7 @@ public class AlumnoData {
 
         ArrayList<Alumno> listaTemp = new ArrayList();
 
-        String sql = "SELECT * FROM alumnos WHERE estado = 1";
+        String sql = "SELECT * FROM alumno WHERE estado = 1";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -72,7 +72,7 @@ public class AlumnoData {
     }
 
     public Alumno obtenerAlumnoPorId(int idAlumno) {
-        String sql = "SELECT * FROM alumnos WHERE estado = 1 AND idAlumno = ?";
+        String sql = "SELECT * FROM alumno WHERE estado = 1 AND idAlumno = ?";
         Alumno alu = new Alumno();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -99,7 +99,7 @@ public class AlumnoData {
     }
 
     public void borrarAlumno(int id) {
-        String sql = "UPDATE alumnos SET estado=0 WHERE idAlumno=?";
+        String sql = "UPDATE alumno SET estado=0 WHERE idAlumno=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
@@ -115,7 +115,7 @@ public class AlumnoData {
     }
 
     public void actualizaAlumno(Alumno alumno) {
-        String sql = "UPDATE alumnos SET dni=?, apellido = ?, nombre = ?, fechaNacimiento = ?, estado=? WHERE idAlumno=?";
+        String sql = "UPDATE alumno SET dni=?, apellido = ?, nombre = ?, fechaNacimiento = ?, estado=? WHERE idAlumno=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setLong(1, alumno.getDni());
