@@ -34,7 +34,7 @@ public class MateriaData {
             }
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "MateriaData Sentencia SQL erronea-AgregarMateria");
+            JOptionPane.showMessageDialog(null, "MateriaData Sentencia SQL erronea-guardarMateria");
         }
     }
 
@@ -42,7 +42,7 @@ public class MateriaData {
 
         ArrayList<Materia> listaTemp = new ArrayList();
 
-        String sql = "SELECT * FROM materia WHERE estado = 1";
+        String sql = "SELECT * FROM materia WHERE materia.estado = 1";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -53,7 +53,7 @@ public class MateriaData {
 
                 Materia m = new Materia();
 
-                m.setId_materia(rs.getInt(""));
+                m.setId_materia(rs.getInt("id_materia"));
                 m.setNombre(rs.getString("nombre"));
                 m.setAnio(rs.getInt("anio"));
                 m.setEstado(rs.getBoolean("estado"));
@@ -72,7 +72,7 @@ public class MateriaData {
 
     public Materia obtenerMateriaPorId(int idMateria) {
 
-        String sql = "SELECT * FROM materia WHERE estado = 1 AND idMateria = ?";
+        String sql = "SELECT * FROM materia WHERE materia.estado = 1 AND materia.id_materia = ?";
         Materia m = new Materia();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -96,7 +96,7 @@ public class MateriaData {
     }
 
     public void borrarMateria(int id) {
-        String sql = "UPDATE materia SET estado=0 WHERE idMateria=?";
+        String sql = "UPDATE materia SET estado=0 WHERE materia.id_materia=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
@@ -112,13 +112,13 @@ public class MateriaData {
     }
 
     public void actualizaMateria(Materia materia) {
-        String sql = "UPDATE alumnos SET dni=?, apellido = ?, nombre = ?, fechaNacimiento = ?, estado=? WHERE idAlumno=?";
+        String sql = "UPDATE materia SET nombre=?, anio = ?, estado=? WHERE materia.id_materia=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, materia.getNombre());
             ps.setInt(2, materia.getAnio());
             ps.setBoolean(3, materia.isEstado());
-            ps.executeUpdate();//insert, update, delete
+            ps.setInt(4, materia.getId_materia());
             ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Datos de la materia actualizados");

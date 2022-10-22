@@ -14,7 +14,6 @@ public class AlumnoData {
     }
 
     public void guardarAlumno(Alumno alumno) {
-        //a)	INSERT INTO `alumno` (`dni`,`apellido`,`nombre`,`fechaNacimiento`,`estado`) VALUES ('111','Muñoz','Federico','2001-05-31','1'),(
         String sql = "INSERT INTO alumno (dni, apellido, nombre, fechaNacimiento, estado) VALUES (?, ?, ?, ?, ?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -34,7 +33,7 @@ public class AlumnoData {
             }
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "ALumnoData Sentencia SQL erronea-AgregarAlumno");
+            JOptionPane.showMessageDialog(null, "ALumnoData Sentencia SQL erronea-guardarAlumno");
         }
     }
 
@@ -42,7 +41,7 @@ public class AlumnoData {
 
         ArrayList<Alumno> listaTemp = new ArrayList();
 
-        String sql = "SELECT * FROM alumno WHERE estado = 1";
+        String sql = "SELECT * FROM alumno WHERE alumno.estado = 1";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -53,7 +52,7 @@ public class AlumnoData {
 
                 Alumno a = new Alumno();
 
-                a.setId_alumno(rs.getInt("idAlumno"));
+                a.setId_alumno(rs.getInt("id_alumno"));
                 a.setDni(rs.getLong("dni"));
                 a.setApellido(rs.getString("apellido"));
                 a.setNombre(rs.getString("nombre"));
@@ -72,7 +71,7 @@ public class AlumnoData {
     }
 
     public Alumno obtenerAlumnoPorId(int idAlumno) {
-        String sql = "SELECT * FROM alumno WHERE estado = 1 AND idAlumno = ?";
+        String sql = "SELECT * FROM alumno WHERE alumno.estado = 1 AND alumno.id_alumno = ?";
         Alumno alu = new Alumno();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -99,7 +98,7 @@ public class AlumnoData {
     }
 
     public void borrarAlumno(int id) {
-        String sql = "UPDATE alumno SET estado=0 WHERE idAlumno=?";
+        String sql = "UPDATE alumno SET estado=0 WHERE alumno.id_alumno=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
@@ -115,7 +114,7 @@ public class AlumnoData {
     }
 
     public void actualizaAlumno(Alumno alumno) {
-        String sql = "UPDATE alumno SET dni=?, apellido = ?, nombre = ?, fechaNacimiento = ?, estado=? WHERE idAlumno=?";
+        String sql = "UPDATE alumno SET dni=?, apellido = ?, nombre = ?, fechaNacimiento = ?, estado=? WHERE alumno.id_alumno=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setLong(1, alumno.getDni());
