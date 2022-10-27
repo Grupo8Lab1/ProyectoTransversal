@@ -1,8 +1,10 @@
 package persistencia;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import universidadg8.entidades.Alumno;
@@ -11,10 +13,10 @@ import universidadg8.entidades.Materia;
 
 public class InscripcionData {
 
-    private Conexion con;
+    private Connection con;
 
     public InscripcionData() {
-        this.con = (Conexion) Conexion.getConexion();
+        this.con = Conexion.getConexion();
     }
 
     public void guardarInscripcion(Inscripcion inscripcion) {
@@ -22,7 +24,7 @@ public class InscripcionData {
         String sql = "INSERT INTO inscripcion (id_alumno, id_materia, nota) VALUES (?, ?, ?)";
 
         try {
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, inscripcion.getAlumno().getId_alumno());
             ps.setInt(2, inscripcion.getMateria().getId_materia());
             ps.setDouble(3, inscripcion.getNota());
@@ -49,7 +51,7 @@ public class InscripcionData {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, idAlumno);
             ps.setInt(2, idMateria);
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery(); //Select
 
             if (rs.next()) {
                 AlumnoData a = new AlumnoData();
@@ -75,9 +77,14 @@ public class InscripcionData {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, idAlumno);
             ps.setInt(2, idMateria);
-            ps.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Se eliminó la inscripción correctamente.");
+            int agrego = ps.executeUpdate(sql); //Update
+            String aviso;
+            if (agrego > 0) {
+                aviso = "Se elimino la inscripción correctamente";
+            } else {
+                aviso = "No se pudo eliminar la inscripción";
+            }
+            JOptionPane.showMessageDialog(null, aviso);
 
             ps.close();
 
@@ -93,9 +100,14 @@ public class InscripcionData {
             ps.setDouble(1, nota);
             ps.setInt(2, idAlumno);
             ps.setInt(3, idMateria);
-            ps.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Datos de la inscripción actualizados");
+            int agrego = ps.executeUpdate(sql); //Update
+            String aviso;
+            if (agrego > 0) {
+                aviso = "Datos de la inscripción actualizados";
+            } else {
+                aviso = "No se pudo actualizar la inscripción";
+            }
+            JOptionPane.showMessageDialog(null, aviso);
 
             ps.close();
 
@@ -185,7 +197,7 @@ public class InscripcionData {
                 a.setDni(rs.getLong("dni"));
                 a.setApellido(rs.getString("apellido"));
                 a.setNombre(rs.getString("nombre"));
-                a.setFecha_nacimiento(rs.getDate("fechaNacimiento").toLocalDate());
+                a.setFecha_nacimiento(rs.getDate("fecha_nacimiento").toLocalDate());
                 a.setEstado(rs.getBoolean("estado"));
 
                 listaTemp.add(a);
