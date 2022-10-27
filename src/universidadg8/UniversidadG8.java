@@ -20,6 +20,10 @@ public class UniversidadG8 {
     public static void main(String[] args) {
         // TODO code application logic here
 
+        MateriaData md = new MateriaData();
+        Materia m = new Materia("Laboratorio 3", 3, true);
+        md.guardarMateria(m);
+
         /* 
 AlumnoData: 
         
@@ -39,13 +43,13 @@ No funcionan:
  /* MateriaData:
 
 Funcionan: 
-
+- GuardarMateria()
 - obtenerMaterias()
 - obtenerMateriaPorId()
 
 No Funcionan:
 
-- GuardarMateria()
+
 - actualizarMateria()
 - borrarMateria()
          */
