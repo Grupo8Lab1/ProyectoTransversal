@@ -10,6 +10,7 @@ package universidadg8.entidades;
  * @author Santi
  */
 public class Inscripcion {
+
     private int id_inscripcion;
     private Alumno alumno;
     private Materia materia;
@@ -67,7 +68,5 @@ public class Inscripcion {
     public String toString() {
         return "Inscripcion{" + "id_inscripcion=" + id_inscripcion + ", alumno=" + alumno + ", materia=" + materia + ", nota=" + nota + '}';
     }
-    
-    
-    
+
 }

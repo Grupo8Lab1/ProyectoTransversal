@@ -8,6 +8,7 @@ import persistencia.Conexion;
 import persistencia.InscripcionData;
 import persistencia.MateriaData;
 import universidadg8.entidades.Alumno;
+import universidadg8.entidades.Inscripcion;
 import universidadg8.entidades.Materia;
 
 /**
@@ -19,20 +20,53 @@ public class UniversidadG8 {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        AlumnoData ad = new AlumnoData();
-        System.out.println(ad.obtenerAlumnos());
-        MateriaData md = new MateriaData();
-        System.out.println(md.obtenerMaterias());
-        InscripcionData ind = new InscripcionData();
-        System.out.println(ind.obtenerInscripcion(2, 1));
+        /* 
+AlumnoData: 
         
+Funcionan:
         
-//        ad.borrarAlumno(4);
-//        ad.borrarAlumno(6);
+- GuardarAlumno()
+- ObtenerAlumnos()
+- ObtenerAlumnoPorId()
+                
+                
+No funcionan: 
+                
+- BorrarAlumno()
+- ActualizarAlumno()
+         */
 
-//        Materia m = new Materia("Estructuras", 2, true);
-        //    md.guardarMateria(m);
-        //Test
+ /* MateriaData:
+
+Funcionan: 
+
+- obtenerMaterias()
+- obtenerMateriaPorId()
+
+No Funcionan:
+
+- GuardarMateria()
+- actualizarMateria()
+- borrarMateria()
+         */
+ /*
+ 
+ Inscripcion:
+ 
+ Funcionan: 
+ 
+ -GuardarInscripcion()
+ -obtenerInscripcion()
+ 
+ No Funcionan: 
+ 
+ - borrarInscripcion
+ - actualizarNota
+ - obtenerMateriasInscriptas
+ - obtenerMateriasNoInscriptas
+ - obtenerAlumnosInscriptos
+         */
+//Test
     }
 
 }

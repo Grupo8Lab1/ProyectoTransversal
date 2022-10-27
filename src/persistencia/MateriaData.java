@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import static java.sql.Statement.RETURN_GENERATED_KEYS;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import universidadg8.entidades.Materia;
@@ -19,9 +20,8 @@ public class MateriaData {
 
     public void guardarMateria(Materia materia) {
         String sql = "INSERT INTO materia (nombre, anio, estado) VALUES (?, ?, ?)";
-
         try {
-            PreparedStatement ps = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = con.prepareStatement(sql, RETURN_GENERATED_KEYS);
             ps.setString(1, materia.getNombre());
             ps.setInt(2, materia.getAnio());
             ps.setBoolean(3, materia.isEstado());

@@ -149,7 +149,7 @@ public class InscripcionData {
 
     }
 
-    public ArrayList<Materia> obtenerMateriasNoInscriptos(Alumno alumno) {
+    public ArrayList<Materia> obtenerMateriasNoInscriptas(Alumno alumno) {
         ArrayList<Materia> listaTemp = new ArrayList();
 
         String sql = "SELECT * FROM materia WHERE id_materia NOT IN (SELECT id_materia FROM inscripcion WHERE id_alumno=?);";
