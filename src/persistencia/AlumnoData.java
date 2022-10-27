@@ -1,22 +1,23 @@
 package persistencia;
 
 import java.sql.*;
+import static java.sql.Statement.RETURN_GENERATED_KEYS;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import universidadg8.entidades.Alumno;
 
 public class AlumnoData {
 
-    private Conexion con;
+    private Connection con;
 
     public AlumnoData() {
-        this.con = (Conexion) Conexion.getConexion();
+        this.con = Conexion.getConexion();
     }
 
     public void guardarAlumno(Alumno alumno) {
-        String sql = "INSERT INTO alumno (dni, apellido, nombre, fechaNacimiento, estado) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO alumno (dni, apellido, nombre, fecha_nacimiento, estado) VALUES (?, ?, ?, ?, ?)";
         try {
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = con.prepareStatement(sql, RETURN_GENERATED_KEYS);
             ps.setLong(1, alumno.getDni());
             ps.setString(2, alumno.getApellido());
             ps.setString(3, alumno.getNombre());
@@ -33,7 +34,7 @@ public class AlumnoData {
             }
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "ALumnoData Sentencia SQL erronea-guardarAlumno");
+            JOptionPane.showMessageDialog(null, "AlumnoData Sentencia SQL erronea-guardarAlumno");
         }
     }
 
@@ -56,7 +57,7 @@ public class AlumnoData {
                 a.setDni(rs.getLong("dni"));
                 a.setApellido(rs.getString("apellido"));
                 a.setNombre(rs.getString("nombre"));
-                a.setFecha_nacimiento(rs.getDate("fechaNacimiento").toLocalDate());
+                a.setFecha_nacimiento(rs.getDate("fecha_nacimiento").toLocalDate());
                 a.setEstado(rs.getBoolean("estado"));
 
                 listaTemp.add(a);
@@ -76,22 +77,21 @@ public class AlumnoData {
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, idAlumno);
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery(); //Select
 
             if (rs.next()) {
                 alu.setId_alumno(idAlumno);
                 alu.setDni(rs.getLong("dni"));
                 alu.setApellido(rs.getString("apellido"));
                 alu.setNombre(rs.getString("nombre"));
-                alu.setFecha_nacimiento(rs.getDate("fechaNacimiento").toLocalDate());
+                alu.setFecha_nacimiento(rs.getDate("fecha_nacimiento").toLocalDate());
                 alu.setEstado(rs.getBoolean("estado"));
-
             }
 
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "ALumnoData Sentencia SQL erronea-obtenerAlumnoPorId");
+            JOptionPane.showMessageDialog(null, "AlumnoData Sentencia SQL erronea-obtenerAlumnoPorId");
         }
         return alu;
 
@@ -102,9 +102,14 @@ public class AlumnoData {
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            ps.executeUpdate();//
-
-            JOptionPane.showMessageDialog(null, "Se elimino el alumno correctamente");
+            int agrego = ps.executeUpdate(sql); //Update
+            String aviso;
+            if (agrego > 0) {
+                aviso = "Se elimino el alumno correctamente";
+            } else {
+                aviso = "No se pudo eliminar el alumno";
+            }
+            JOptionPane.showMessageDialog(null, aviso);
 
             ps.close();
 
@@ -123,9 +128,14 @@ public class AlumnoData {
             ps.setDate(4, Date.valueOf(alumno.getFecha_nacimiento()));
             ps.setBoolean(5, alumno.isEstado());
             ps.setInt(6, alumno.getId_alumno());
-            ps.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Datos del alumno actualizados");
+            int agrego = ps.executeUpdate(sql); //Update
+            String aviso;
+            if (agrego > 0) {
+                aviso = "Datos del alumno actualizados correctamente";
+            } else {
+                aviso = "No se pudo actualizar el alumno";
+            }
+            JOptionPane.showMessageDialog(null, aviso);
 
             ps.close();
 

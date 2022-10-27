@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Santi/Documents/NetBeansProjects/UniversidadG8/ProyectoTransversal/src/persistencia/Conexion.java</file>
             <file>file:/C:/Users/Santi/Documents/NetBeansProjects/UniversidadG8/ProyectoTransversal/src/universidadg8/entidades/Materia.java</file>
             <file>file:/C:/Users/Santi/Documents/NetBeansProjects/UniversidadG8/ProyectoTransversal/src/persistencia/InscripcionData.java</file>
@@ -13,6 +14,18 @@
             <file>file:/C:/Users/Santi/Documents/NetBeansProjects/UniversidadG8/ProyectoTransversal/src/universidadg8/JFIndex.java</file>
             <file>file:/C:/Users/Santi/Documents/NetBeansProjects/UniversidadG8/ProyectoTransversal/src/universidadg8/entidades/Alumno.java</file>
             <file>file:/C:/Users/Santi/Documents/NetBeansProjects/UniversidadG8/ProyectoTransversal/src/universidadg8/UniversidadG8.java</file>
+=======
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/AgregarAlumno.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/UniversidadG8.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/entidades/Inscripcion.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/entidades/Alumno.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/AlumnoData.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/MateriaData.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/entidades/Materia.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/JFIndex.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/InscripcionData.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/Conexion.java</file>
+>>>>>>> afb5f65cddbf95341da121a0fe83c7c5bbbae2e8
         </group>
     </open-files>
 </project-private>

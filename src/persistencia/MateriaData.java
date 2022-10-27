@@ -1,25 +1,27 @@
 package persistencia;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import universidadg8.entidades.Materia;
 
 public class MateriaData {
 
-    private Conexion con;
+    private Connection con;
 
     public MateriaData() {
-        this.con = (Conexion) Conexion.getConexion();
+        this.con = Conexion.getConexion();
     }
 
     public void guardarMateria(Materia materia) {
         String sql = "INSERT INTO materia (nombre, anio, estado) VALUES (?, ?, ?)";
 
         try {
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, materia.getNombre());
             ps.setInt(2, materia.getAnio());
             ps.setBoolean(3, materia.isEstado());
@@ -77,7 +79,7 @@ public class MateriaData {
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, idMateria);
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery(); //Select
 
             if (rs.next()) {
                 m.setId_materia(idMateria);
@@ -100,9 +102,14 @@ public class MateriaData {
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            ps.executeUpdate();//
-
-            JOptionPane.showMessageDialog(null, "Se elimino la materia correctamente");
+            int agrego = ps.executeUpdate(sql); //Update
+            String aviso;
+            if (agrego > 0) {
+                aviso = "Se elimino la materia correctamente";
+            } else {
+                aviso = "No se pudo borrar la materia";
+            }
+            JOptionPane.showMessageDialog(null, aviso);
 
             ps.close();
 
@@ -119,9 +126,16 @@ public class MateriaData {
             ps.setInt(2, materia.getAnio());
             ps.setBoolean(3, materia.isEstado());
             ps.setInt(4, materia.getId_materia());
-            ps.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Datos de la materia actualizados");
+            int agrego = ps.executeUpdate(sql); //Update
+            String aviso;
+            if (agrego > 0) {
+                aviso = "Datos de la materia actualizados";
+            } else {
+                aviso = "No se pudo actualizar los datos de la materia";
+            }
+
+            JOptionPane.showMessageDialog(null, aviso);
 
             ps.close();
 
