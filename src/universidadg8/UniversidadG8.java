@@ -5,28 +5,31 @@ import java.time.LocalDate;
 import static java.time.LocalDate.now;
 import persistencia.AlumnoData;
 import persistencia.Conexion;
+import persistencia.MateriaData;
 import universidadg8.entidades.Alumno;
+import universidadg8.entidades.Materia;
 
 /**
  *
  * @author Santi
  */
 public class UniversidadG8 {
-
+    
     public static void main(String[] args) {
         // TODO code application logic here
 
-        Connection con = Conexion.getConexion();
-        System.out.println(con);
-        LocalDate fecha = now();
-        System.out.println(fecha);
-        Alumno alum = new Alumno(123456, "Ape", "nom", fecha, true);
-        System.out.println(alum);//Hasta acá bien
-        AlumnoData ad = new AlumnoData();//Acá tira errorcito
+     
+     
+        AlumnoData ad = new AlumnoData();
         System.out.println(ad);
-        ad.guardarAlumno(alum);
+        ad.borrarAlumno(4);
+        ad.borrarAlumno(6);
+
+//        Materia m = new Materia("Estructuras", 2, true);
+  //      MateriaData md = new MateriaData();
+    //    md.guardarMateria(m);
 
         //Test
     }
-
+    
 }
