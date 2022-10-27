@@ -24,9 +24,5 @@ public class UniversidadG8 {
         
         AlumnoData ad= new AlumnoData();//Acá tira errorcito
         
-        
-        
-        //Test
     }
-
 }
