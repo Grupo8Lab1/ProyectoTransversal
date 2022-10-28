@@ -125,7 +125,7 @@ public class InscripcionData {
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-
+            ps.setInt(1, alumno.getId_alumno());
             ResultSet rs = ps.executeQuery();//select
 
             while (rs.next()) {
@@ -143,7 +143,8 @@ public class InscripcionData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasInscriptas");
+            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasInscriptas " + ex.getMessage());
+            ex.printStackTrace();
         }
         return listaTemp;
 
@@ -156,7 +157,7 @@ public class InscripcionData {
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-
+            ps.setInt(1, alumno.getId_alumno());
             ResultSet rs = ps.executeQuery();//select
 
             while (rs.next()) {
@@ -174,7 +175,8 @@ public class InscripcionData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasNoInscriptas");
+            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasNoInscriptas " + ex.getMessage());
+            ex.printStackTrace();
         }
         return listaTemp;
     }
@@ -187,7 +189,7 @@ public class InscripcionData {
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-
+            ps.setInt(1, materia.getId_materia());
             ResultSet rs = ps.executeQuery();//select
 
             while (rs.next()) {
@@ -207,7 +209,8 @@ public class InscripcionData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerAlumnosPorMateria");
+            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerAlumnosPorMateria " + ex.getMessage());
+            ex.printStackTrace();
         }
         return listaTemp;
     }

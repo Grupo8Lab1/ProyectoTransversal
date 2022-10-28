@@ -114,8 +114,7 @@ public class AlumnoData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "AlumnoData Sentencia SQL erronea-borrarAlumno " + ex.getMessage());
-            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "AlumnoData Sentencia SQL erronea-borrarAlumno");
         }
     }
 

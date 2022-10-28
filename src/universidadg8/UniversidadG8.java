@@ -21,12 +21,13 @@ public class UniversidadG8 {
         // TODO code application logic here
 
         MateriaData md = new MateriaData();
-        //AlumnoData ad = new AlumnoData();
+        AlumnoData ad = new AlumnoData();
 
         InscripcionData id = new InscripcionData();
-        id.obtenerAlumnosInscriptos(md.obtenerMateriaPorId(3));
-        //System.out.println(id.obtenerMateriasInscriptas(ad.obtenerAlumnoPorId(1)));
-        //System.out.println(id.obtenerMateriasNoInscriptas(ad.obtenerAlumnoPorId(1)));
+
+        System.out.println(id.obtenerAlumnosInscriptos(md.obtenerMateriaPorId(3)));
+        System.out.println(id.obtenerMateriasInscriptas(ad.obtenerAlumnoPorId(1)));
+        System.out.println(id.obtenerMateriasNoInscriptas(ad.obtenerAlumnoPorId(1)));
 
         /* 
 AlumnoData: 
