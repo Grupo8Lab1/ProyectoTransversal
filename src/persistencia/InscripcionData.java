@@ -71,14 +71,13 @@ public class InscripcionData {
         return i;
     }
 
-    public void borrarInscripcion(int idAlumno, int idMateria) {
+    public void borrarInscripcion(int idInscripcion) {
 
-        String sql = "DELETE FROM inscripcion WHERE id_inscripcion = ? AND id_materia = ?";
+        String sql = "DELETE FROM inscripcion WHERE idInscripcion = ?;";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, idAlumno);
-            ps.setInt(2, idMateria);
-            int agrego = ps.executeUpdate(sql); //Update
+            ps.setInt(1, idInscripcion);
+            int agrego = ps.executeUpdate(); //Update
             String aviso;
             if (agrego > 0) {
                 aviso = "Se elimino la inscripción correctamente";
@@ -101,7 +100,7 @@ public class InscripcionData {
             ps.setDouble(1, nota);
             ps.setInt(2, idAlumno);
             ps.setInt(3, idMateria);
-            int agrego = ps.executeUpdate(sql); //Update
+            int agrego = ps.executeUpdate(); //Update
             String aviso;
             if (agrego > 0) {
                 aviso = "Datos de la inscripción actualizados";

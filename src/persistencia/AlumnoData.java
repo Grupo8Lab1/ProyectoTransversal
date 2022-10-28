@@ -102,7 +102,7 @@ public class AlumnoData {
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            int agrego = ps.executeUpdate(sql); //Update
+            int agrego = ps.executeUpdate(); //Update
             String aviso;
             if (agrego > 0) {
                 aviso = "Se elimino el alumno correctamente";
@@ -129,7 +129,7 @@ public class AlumnoData {
             ps.setDate(4, Date.valueOf(alumno.getFecha_nacimiento()));
             ps.setBoolean(5, alumno.isEstado());
             ps.setInt(6, alumno.getId_alumno());
-            int agrego = ps.executeUpdate(sql); //Update
+            int agrego = ps.executeUpdate(); //Update
             String aviso;
             if (agrego > 0) {
                 aviso = "Datos del alumno actualizados correctamente";

@@ -98,11 +98,11 @@ public class MateriaData {
     }
 
     public void borrarMateria(int id) {
-        String sql = "UPDATE materia SET estado=0 WHERE materia.id_materia=?";
+        String sql = "UPDATE materia SET estado=0 WHERE id_materia=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            int agrego = ps.executeUpdate(sql); //Update
+            int agrego = ps.executeUpdate(); //Update
             String aviso;
             if (agrego > 0) {
                 aviso = "Se elimino la materia correctamente";
@@ -119,7 +119,7 @@ public class MateriaData {
     }
 
     public void actualizaMateria(Materia materia) {
-        String sql = "UPDATE materia SET nombre=?, anio = ?, estado=? WHERE materia.id_materia=?";
+        String sql = "UPDATE materia SET nombre=?, anio = ?, estado=? WHERE id_materia=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, materia.getNombre());
@@ -127,7 +127,7 @@ public class MateriaData {
             ps.setBoolean(3, materia.isEstado());
             ps.setInt(4, materia.getId_materia());
 
-            int agrego = ps.executeUpdate(sql); //Update
+            int agrego = ps.executeUpdate(); //Update
             String aviso;
             if (agrego > 0) {
                 aviso = "Datos de la materia actualizados";
