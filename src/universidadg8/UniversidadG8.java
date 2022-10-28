@@ -22,56 +22,8 @@ public class UniversidadG8 {
 
         MateriaData md = new MateriaData();
         AlumnoData ad = new AlumnoData();
-
         InscripcionData id = new InscripcionData();
-        
-        Inscripcion i = new Inscripcion(ad.obtenerAlumnoPorId(1),md.obtenerMateriaPorId(4),8);
-        id.guardarInscripcion(i);
-        /* 
-AlumnoData: 
-        
-Funcionan:
-        
-- GuardarAlumno()
-- ObtenerAlumnos()
-- ObtenerAlumnoPorId()
-- BorrarAlumno()
-- ActualizarAlumno()
-                                
-No funcionan: 
-                
-         
 
- MateriaData:
-
-Funcionan: 
-        
-- GuardarMateria()
-- obtenerMaterias()
-- obtenerMateriaPorId()
-- actualizarMateria()
-- borrarMateria()
-        
-No Funcionan:
-         
- /*
- 
- Inscripcion:
- 
- Funcionan: 
- 
- -GuardarInscripcion()
- -obtenerInscripcion()
- -borrarInscripcion
- -actualizarNota
-        
- No Funcionan: 
- 
- - obtenerMateriasInscriptas
- - obtenerMateriasNoInscriptas
- - obtenerAlumnosInscriptos
-         */
-//Test
+        //Testing
     }
-
 }
