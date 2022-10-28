@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
