@@ -24,11 +24,9 @@ public class UniversidadG8 {
         AlumnoData ad = new AlumnoData();
 
         InscripcionData id = new InscripcionData();
-
-        System.out.println(id.obtenerAlumnosInscriptos(md.obtenerMateriaPorId(3)));
-        System.out.println(id.obtenerMateriasInscriptas(ad.obtenerAlumnoPorId(1)));
-        System.out.println(id.obtenerMateriasNoInscriptas(ad.obtenerAlumnoPorId(1)));
-
+        
+        Inscripcion i = new Inscripcion(ad.obtenerAlumnoPorId(1),md.obtenerMateriaPorId(4),8);
+        id.guardarInscripcion(i);
         /* 
 AlumnoData: 
         

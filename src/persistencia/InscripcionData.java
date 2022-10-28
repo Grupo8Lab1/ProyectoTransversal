@@ -143,8 +143,7 @@ public class InscripcionData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasInscriptas " + ex.getMessage());
-            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasInscriptas");
         }
         return listaTemp;
 
@@ -175,8 +174,7 @@ public class InscripcionData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasNoInscriptas " + ex.getMessage());
-            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerMateriasNoInscriptas");
         }
         return listaTemp;
     }
@@ -209,8 +207,7 @@ public class InscripcionData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerAlumnosPorMateria " + ex.getMessage());
-            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "InscripcionData Sentencia SQL erronea-ObtenerAlumnosPorMateria ");
         }
         return listaTemp;
     }

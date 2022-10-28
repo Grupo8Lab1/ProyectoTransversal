@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-10-2022 a las 17:56:36
+-- Tiempo de generación: 28-10-2022 a las 20:34:03
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -71,7 +71,8 @@ INSERT INTO `inscripcion` (`id_inscripcion`, `id_alumno`, `id_materia`, `nota`) 
 (4, 1, 3, 0),
 (5, 3, 3, 0),
 (6, 3, 5, 0),
-(16, 2, 5, 9);
+(16, 2, 5, 9),
+(21, 1, 4, 8);
 
 -- --------------------------------------------------------
 
@@ -115,6 +116,7 @@ ALTER TABLE `alumno`
 --
 ALTER TABLE `inscripcion`
   ADD PRIMARY KEY (`id_inscripcion`) USING BTREE,
+  ADD UNIQUE KEY `id_alumno_2` (`id_alumno`,`id_materia`),
   ADD KEY `id_alumno` (`id_alumno`),
   ADD KEY `id_materia` (`id_materia`);
 
@@ -138,7 +140,7 @@ ALTER TABLE `alumno`
 -- AUTO_INCREMENT de la tabla `inscripcion`
 --
 ALTER TABLE `inscripcion`
-  MODIFY `id_inscripcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_inscripcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `materia`
