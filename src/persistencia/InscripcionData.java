@@ -71,12 +71,13 @@ public class InscripcionData {
         return i;
     }
 
-    public void borrarInscripcion(int idInscripcion) {
+    public void borrarInscripcion(int idAlumno, int idMateria) {
 
-        String sql = "DELETE FROM inscripcion WHERE idInscripcion = ?;";
+        String sql = "DELETE FROM inscripcion WHERE id_alumno= ? AND id_materia=?;";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, idInscripcion);
+            ps.setInt(1, idAlumno);
+            ps.setInt(2, idMateria);
             int agrego = ps.executeUpdate(); //Update
             String aviso;
             if (agrego > 0) {
@@ -182,7 +183,7 @@ public class InscripcionData {
 
         ArrayList<Alumno> listaTemp = new ArrayList();
 
-        String sql = "SELECT * FROM alumno WHERE id_alumno IN (SELECT id_alumno FROM inscripcion WHERE materia.id_materia = ?)";
+        String sql = "SELECT * FROM alumno WHERE id_alumno IN (SELECT id_alumno FROM inscripcion WHERE id_materia = ?)";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);

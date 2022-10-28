@@ -120,7 +120,7 @@ public class AlumnoData {
     }
 
     public void actualizaAlumno(Alumno alumno) {
-        String sql = "UPDATE alumno SET dni=?, apellido=?, nombre=?, fecha_nacimiento=?, estado=? WHERE alumno.id_alumno=?";
+        String sql = "UPDATE alumno SET dni=?, apellido=?, nombre=?, fecha_nacimiento=?, estado=? WHERE id_alumno=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setLong(1, alumno.getDni());

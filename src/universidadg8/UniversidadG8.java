@@ -21,11 +21,12 @@ public class UniversidadG8 {
         // TODO code application logic here
 
         MateriaData md = new MateriaData();
-        AlumnoData ad = new AlumnoData();
+        //AlumnoData ad = new AlumnoData();
 
-        ad.borrarAlumno(2);
-//       System.out.println(md.obtenerMateriaPorId(2));
-        //     id.obtenerAlumnosInscriptos(md.obtenerMateriaPorId(2));
+        InscripcionData id = new InscripcionData();
+        id.obtenerAlumnosInscriptos(md.obtenerMateriaPorId(3));
+        //System.out.println(id.obtenerMateriasInscriptas(ad.obtenerAlumnoPorId(1)));
+        //System.out.println(id.obtenerMateriasNoInscriptas(ad.obtenerAlumnoPorId(1)));
 
         /* 
 AlumnoData: 
@@ -35,28 +36,25 @@ Funcionan:
 - GuardarAlumno()
 - ObtenerAlumnos()
 - ObtenerAlumnoPorId()
-                
-                
-No funcionan: 
-                
 - BorrarAlumno()
 - ActualizarAlumno()
-         */
+                                
+No funcionan: 
+                
+         
 
- /* MateriaData:
+ MateriaData:
 
 Funcionan: 
         
 - GuardarMateria()
 - obtenerMaterias()
 - obtenerMateriaPorId()
-
-No Funcionan:
-
-
 - actualizarMateria()
 - borrarMateria()
-         */
+        
+No Funcionan:
+         
  /*
  
  Inscripcion:
@@ -65,11 +63,11 @@ No Funcionan:
  
  -GuardarInscripcion()
  -obtenerInscripcion()
- 
+ -borrarInscripcion
+ -actualizarNota
+        
  No Funcionan: 
  
- - borrarInscripcion
- - actualizarNota
  - obtenerMateriasInscriptas
  - obtenerMateriasNoInscriptas
  - obtenerAlumnosInscriptos
