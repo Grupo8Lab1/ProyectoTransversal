@@ -73,7 +73,7 @@ public class InscripcionData {
 
     public void borrarInscripcion(int idAlumno, int idMateria) {
 
-        String sql = "DELETE FROM inscripcion WHERE inscripcion.id_alumno=? AND inscripcion.id_materia=?";
+        String sql = "DELETE FROM inscripcion WHERE id_inscripcion = ? AND id_materia = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, idAlumno);
@@ -183,7 +183,7 @@ public class InscripcionData {
 
         ArrayList<Alumno> listaTemp = new ArrayList();
 
-        String sql = "SELECT * FROM alumno WHERE id_alumno IN (SELECT id_alumno FROM inscripcion WHERE id_materia=?);";
+        String sql = "SELECT * FROM alumno WHERE id_alumno IN (SELECT id_alumno FROM inscripcion WHERE materia.id_materia = ?)";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);

@@ -20,9 +20,16 @@ public class UniversidadG8 {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        MateriaData md = new MateriaData();
-        Materia m = new Materia("Laboratorio 3", 3, true);
-        md.guardarMateria(m);
+//        MateriaData md = new MateriaData();
+        InscripcionData id = new InscripcionData();
+        id.actualizarNota(2, 2, 9d);
+        id.borrarInscripcion(2, 2);
+        //AlumnoData ad = new AlumnoData();
+
+//        ad.borrarAlumno(2);
+
+//       System.out.println(md.obtenerMateriaPorId(2));
+        //     id.obtenerAlumnosInscriptos(md.obtenerMateriaPorId(2));
 
         /* 
 AlumnoData: 
@@ -43,6 +50,7 @@ No funcionan:
  /* MateriaData:
 
 Funcionan: 
+        
 - GuardarMateria()
 - obtenerMaterias()
 - obtenerMateriaPorId()

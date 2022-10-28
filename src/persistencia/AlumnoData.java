@@ -98,7 +98,7 @@ public class AlumnoData {
     }
 
     public void borrarAlumno(int id) {
-        String sql = "UPDATE alumno SET estado = 0 WHERE alumno.id_alumno = ?";
+        String sql = "UPDATE alumno SET estado = 0 WHERE id_alumno = ?;";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
@@ -114,7 +114,8 @@ public class AlumnoData {
             ps.close();
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "AlumnoData Sentencia SQL erronea-borrarAlumno");
+            JOptionPane.showMessageDialog(null, "AlumnoData Sentencia SQL erronea-borrarAlumno " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
