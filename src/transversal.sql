@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-10-2022 a las 02:16:55
+-- Tiempo de generación: 28-10-2022 a las 17:56:36
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -42,11 +42,11 @@ CREATE TABLE `alumno` (
 
 INSERT INTO `alumno` (`id_alumno`, `dni`, `apellido`, `nombre`, `fecha_nacimiento`, `estado`) VALUES
 (1, 42101958, 'Teruel', 'Lucas', '1999-08-20', 1),
-(2, 43072560, 'Lucero', 'Santiago', '2000-10-11', 1),
+(2, 43072560, 'Lucero', 'Santiago', '2000-10-11', 0),
 (3, 40659987, 'Rodriguez', 'Francisco', '1998-03-28', 1),
 (4, 123456, 'Ape', 'nom', '2022-10-27', 1),
 (6, 1234568, 'Ape', 'nom', '2022-10-27', 1),
-(7, 12345678, 'apellido', 'nombre', '2022-10-27', 1);
+(7, 37896542, 'Ramirez', 'Federico', '2022-10-28', 1);
 
 -- --------------------------------------------------------
 
@@ -71,9 +71,7 @@ INSERT INTO `inscripcion` (`id_inscripcion`, `id_alumno`, `id_materia`, `nota`) 
 (4, 1, 3, 0),
 (5, 3, 3, 0),
 (6, 3, 5, 0),
-(13, 2, 2, 8),
-(16, 2, 5, 9),
-(17, 2, 2, 9);
+(16, 2, 5, 9);
 
 -- --------------------------------------------------------
 
@@ -97,8 +95,8 @@ INSERT INTO `materia` (`id_materia`, `nombre`, `anio`, `estado`) VALUES
 (2, 'EDA', 1, 1),
 (3, 'Matematica 1', 1, 1),
 (4, 'Programación Web 1', 1, 1),
-(5, 'Laboratorio 2', 2, 1),
-(6, 'Laboratorio 3', 3, 1);
+(5, 'Laboratorio 4', 1, 1),
+(6, 'Laboratorio 3', 3, 0);
 
 --
 -- Índices para tablas volcadas
