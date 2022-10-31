@@ -54,7 +54,7 @@ id.guardarInscripcion(i);
 id.obtenerAlumnosInscriptos(m);
 id.obtenerMateriasInscriptas(a);
 id.obtenerMateriasNoInscriptas(a);
-id.actualizarNota(0, 0, 0);}
+id.actualizarNota(0, 0, 0);
 id.borrarInscripcion(0, 0);
          */
     }

@@ -5,9 +5,10 @@
         <group>
             <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/UniversidadG8.java</file>
             <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/entidades/Inscripcion.java</file>
-            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/entidades/Alumno.java</file>
             <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/AlumnoData.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/entidades/Alumno.java</file>
             <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/MateriaData.java</file>
+            <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/JfIndex.java</file>
             <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/universidadg8/entidades/Materia.java</file>
             <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/InscripcionData.java</file>
             <file>file:/C:/Users/tcnlu/Documents/GitHub/UniversidadG8/src/persistencia/Conexion.java</file>
