@@ -219,7 +219,6 @@ public class JfIndex extends javax.swing.JFrame {
         );
         JPMateriasLayout.setVerticalGroup(
             JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< Updated upstream
             .addGroup(JPMateriasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -246,9 +245,7 @@ public class JfIndex extends javax.swing.JFrame {
                             .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-=======
             .addGap(0, 610, Short.MAX_VALUE)
->>>>>>> Stashed changes
         );
 
         jtpOpciones.addTab("Materias", JPMaterias);
