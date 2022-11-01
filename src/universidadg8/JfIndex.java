@@ -53,7 +53,20 @@ public class JfIndex extends javax.swing.JFrame {
         JPConsultas = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        JPMaterias1 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        contentMateria1 = new javax.swing.JPanel();
+        jlIconBuscarAlumID = new javax.swing.JLabel();
+        jlIconListarAlum = new javax.swing.JLabel();
+        jlIconActualizarAlumno = new javax.swing.JLabel();
+        jlIConGuardarAlumno = new javax.swing.JLabel();
+        jlIconAlumno = new javax.swing.JLabel();
+        button5 = new java.awt.Button();
+        jbListarAlumnos = new java.awt.Button();
+        jbActualizarAlumno = new java.awt.Button();
+        jbGuardarAlumno = new java.awt.Button();
+        button8 = new java.awt.Button();
+        jlIconBorrarAlum = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -249,23 +262,160 @@ public class JfIndex extends javax.swing.JFrame {
 
         jtpOpciones.addTab("Consultas", JPConsultas);
 
-        jLabel5.setText("Alumnos ");
+        JPMaterias1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel14.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Alumno");
+
+        contentMateria1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.GroupLayout contentMateria1Layout = new javax.swing.GroupLayout(contentMateria1);
+        contentMateria1.setLayout(contentMateria1Layout);
+        contentMateria1Layout.setHorizontalGroup(
+            contentMateria1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 365, Short.MAX_VALUE)
+        );
+        contentMateria1Layout.setVerticalGroup(
+            contentMateria1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jlIconBuscarAlumID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlIconBuscarAlumID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIconBuscarAlumID.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-búsqueda-50.png"))); // NOI18N
+
+        jlIconListarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlIconListarAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIconListarAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-buscar-en-la-lista-50.png"))); // NOI18N
+
+        jlIconActualizarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlIconActualizarAlumno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIconActualizarAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-choose-50.png"))); // NOI18N
+
+        jlIConGuardarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlIConGuardarAlumno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIConGuardarAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-más-50.png"))); // NOI18N
+
+        jlIconAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-contactos-50.png"))); // NOI18N
+
+        button5.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        button5.setLabel("Borrar Alumno");
+
+        jbListarAlumnos.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbListarAlumnos.setLabel("Listar Alumnos");
+
+        jbActualizarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbActualizarAlumno.setLabel("Actualizar Datos");
+        jbActualizarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbActualizarAlumnoActionPerformed(evt);
+            }
+        });
+
+        jbGuardarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbGuardarAlumno.setLabel("Guardar Alumno");
+        jbGuardarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGuardarAlumnoActionPerformed(evt);
+            }
+        });
+
+        button8.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        button8.setLabel("Buscar Legajo");
+
+        jlIconBorrarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlIconBorrarAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIconBorrarAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-borrar-para-siempre-50.png"))); // NOI18N
+
+        javax.swing.GroupLayout JPMaterias1Layout = new javax.swing.GroupLayout(JPMaterias1);
+        JPMaterias1.setLayout(JPMaterias1Layout);
+        JPMaterias1Layout.setHorizontalGroup(
+            JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addComponent(jlIconAlumno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel14))
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addComponent(contentMateria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                                .addComponent(jlIconBorrarAlum)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlIconListarAlum, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jlIconBuscarAlumID, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbListarAlumnos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(button8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jlIConGuardarAlumno)
+                                    .addComponent(jlIconActualizarAlumno))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jbGuardarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jbActualizarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(22, 22, 22)))
+                .addContainerGap())
+        );
+        JPMaterias1Layout.setVerticalGroup(
+            JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jlIconAlumno))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(contentMateria1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlIConGuardarAlumno)
+                            .addComponent(jbGuardarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlIconActualizarAlumno)
+                            .addComponent(jbActualizarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlIconListarAlum)
+                            .addComponent(jbListarAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlIconBuscarAlumID)
+                            .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlIconBorrarAlum)
+                            .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(51, 51, 51)))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(584, Short.MAX_VALUE))
+            .addGap(0, 653, Short.MAX_VALUE)
+            .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(contentLayout.createSequentialGroup()
+                    .addComponent(JPMaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(436, Short.MAX_VALUE))
+            .addGap(0, 463, Short.MAX_VALUE)
+            .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(JPMaterias1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jtpOpciones.addTab("Alumnos", content);
@@ -337,6 +487,14 @@ public class JfIndex extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_button2ActionPerformed
 
+    private void jbActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbActualizarAlumnoActionPerformed
+
+    private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbGuardarAlumnoActionPerformed
+
      
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -374,27 +532,40 @@ public class JfIndex extends javax.swing.JFrame {
     private java.awt.Button JBGuardarMateria;
     private javax.swing.JPanel JPConsultas;
     private javax.swing.JPanel JPMaterias;
+    private javax.swing.JPanel JPMaterias1;
     private javax.swing.JPanel JpInscripciones;
     private javax.swing.JLabel Nombre;
     private java.awt.Button button2;
     private java.awt.Button button3;
     private java.awt.Button button4;
+    private java.awt.Button button5;
+    private java.awt.Button button8;
     private javax.swing.JPanel content;
     private javax.swing.JPanel contentMateria;
+    private javax.swing.JPanel contentMateria1;
     private javax.swing.JButton jBotonCopy;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private java.awt.Button jbActualizarAlumno;
+    private java.awt.Button jbGuardarAlumno;
+    private java.awt.Button jbListarAlumnos;
+    private javax.swing.JLabel jlIConGuardarAlumno;
+    private javax.swing.JLabel jlIconActualizarAlumno;
+    private javax.swing.JLabel jlIconAlumno;
+    private javax.swing.JLabel jlIconBorrarAlum;
+    private javax.swing.JLabel jlIconBuscarAlumID;
+    private javax.swing.JLabel jlIconListarAlum;
     private javax.swing.JTabbedPane jtpOpciones;
     // End of variables declaration//GEN-END:variables
 }
