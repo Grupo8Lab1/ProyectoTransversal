@@ -1,4 +1,4 @@
-package universidadg8;
+package universidadg8.vistas;
 
 import java.time.LocalDate;
 import persistencia.AlumnoData;

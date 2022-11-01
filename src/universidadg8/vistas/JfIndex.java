@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package universidadg8;
+package universidadg8.vistas;
 
 import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
@@ -31,7 +31,7 @@ public class JfIndex extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         Nombre = new javax.swing.JLabel();
-        jBotonCopy = new javax.swing.JButton();
+        BotonFachero = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -44,9 +44,9 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        button4 = new java.awt.Button();
-        button3 = new java.awt.Button();
-        button2 = new java.awt.Button();
+        BBorrarMateria = new java.awt.Button();
+        BBuscarMateriaporID = new java.awt.Button();
+        BModificarMateria = new java.awt.Button();
         JBGuardarMateria = new java.awt.Button();
         JpInscripciones = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -63,12 +63,12 @@ public class JfIndex extends javax.swing.JFrame {
         Nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Nombre.setText("Universidad G8");
 
-        jBotonCopy.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jBotonCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-copyright-all-rights-reserved-50.png"))); // NOI18N
-        jBotonCopy.setText("CopyRight 2022 - ∞");
-        jBotonCopy.addActionListener(new java.awt.event.ActionListener() {
+        BotonFachero.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        BotonFachero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-copyright-all-rights-reserved-50.png"))); // NOI18N
+        BotonFachero.setText("CopyRight 2022 - ∞");
+        BotonFachero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBotonCopyActionPerformed(evt);
+                BotonFacheroActionPerformed(evt);
             }
         });
 
@@ -120,17 +120,27 @@ public class JfIndex extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-abrir-carpeta-50.png"))); // NOI18N
 
-        button4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        button4.setLabel("Borar Materia");
-
-        button3.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        button3.setLabel("Buscar Materia por ID");
-
-        button2.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        button2.setLabel("Modificar Materia");
-        button2.addActionListener(new java.awt.event.ActionListener() {
+        BBorrarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        BBorrarMateria.setLabel("Borar Materia");
+        BBorrarMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button2ActionPerformed(evt);
+                BBorrarMateriaActionPerformed(evt);
+            }
+        });
+
+        BBuscarMateriaporID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        BBuscarMateriaporID.setLabel("Buscar Materia por ID");
+        BBuscarMateriaporID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BBuscarMateriaporIDActionPerformed(evt);
+            }
+        });
+
+        BModificarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        BModificarMateria.setLabel("Modificar Materia");
+        BModificarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BModificarMateriaActionPerformed(evt);
             }
         });
 
@@ -163,7 +173,7 @@ public class JfIndex extends javax.swing.JFrame {
                                     .addComponent(jLabel11))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(button2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(JBGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,8 +181,8 @@ public class JfIndex extends javax.swing.JFrame {
                                     .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(button3, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                                    .addComponent(button4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                                    .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap())
         );
         JPMateriasLayout.setVerticalGroup(
@@ -192,15 +202,15 @@ public class JfIndex extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(button2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(button3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(button4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 143, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -282,7 +292,7 @@ public class JfIndex extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBotonCopy, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                            .addComponent(BotonFachero, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(0, 0, Short.MAX_VALUE)))
@@ -309,7 +319,7 @@ public class JfIndex extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBotonCopy, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BotonFachero, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jtpOpciones))
                 .addContainerGap())
         );
@@ -324,26 +334,32 @@ public class JfIndex extends javax.swing.JFrame {
         contentMateria.revalidate();
         contentMateria.repaint();
     }
-    private void jBotonCopyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotonCopyActionPerformed
+    private void BotonFacheroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonFacheroActionPerformed
          JOptionPane.showMessageDialog(null, "Por favor Apruebenos.");
-    }//GEN-LAST:event_jBotonCopyActionPerformed
+    }//GEN-LAST:event_BotonFacheroActionPerformed
 
     private void JBGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarMateriaActionPerformed
         GuardarMateria a = new GuardarMateria();
         presentarvistas(a);
     }//GEN-LAST:event_JBGuardarMateriaActionPerformed
 
-    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button2ActionPerformed
+    private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BModificarMateriaActionPerformed
+        JPModificarMateria a = new JPModificarMateria();
+        presentarvistas(a);
+    }//GEN-LAST:event_BModificarMateriaActionPerformed
+
+    private void BBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBorrarMateriaActionPerformed
+        JPBorrarMateria a = new JPBorrarMateria();
+        presentarvistas(a);
+    }//GEN-LAST:event_BBorrarMateriaActionPerformed
+
+    private void BBuscarMateriaporIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscarMateriaporIDActionPerformed
+       JPBuscarMateriaporID a = new JPBuscarMateriaporID();
+        presentarvistas(a);
+    }//GEN-LAST:event_BBuscarMateriaporIDActionPerformed
 
      
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -371,17 +387,17 @@ public class JfIndex extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button BBorrarMateria;
+    private java.awt.Button BBuscarMateriaporID;
+    private java.awt.Button BModificarMateria;
+    private javax.swing.JButton BotonFachero;
     private java.awt.Button JBGuardarMateria;
     private javax.swing.JPanel JPConsultas;
     private javax.swing.JPanel JPMaterias;
     private javax.swing.JPanel JpInscripciones;
     private javax.swing.JLabel Nombre;
-    private java.awt.Button button2;
-    private java.awt.Button button3;
-    private java.awt.Button button4;
     private javax.swing.JPanel content;
     private javax.swing.JPanel contentMateria;
-    private javax.swing.JButton jBotonCopy;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
