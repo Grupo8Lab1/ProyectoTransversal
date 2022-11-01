@@ -480,6 +480,14 @@ public class JfIndex extends javax.swing.JFrame {
   private void presentarvistas(javax.swing.JPanel a) {
         a.setSize(369, 373);
         a.setLocation(0, 0);
+        contentMateria1.removeAll();
+        contentMateria1.add(a, BorderLayout.CENTER);
+        contentMateria1.revalidate();
+        contentMateria1.repaint();
+    }
+   private void presentarvistasMateria(javax.swing.JPanel a) {
+        a.setSize(369, 373);
+        a.setLocation(0, 0);
         contentMateria.removeAll();
         contentMateria.add(a, BorderLayout.CENTER);
         contentMateria.revalidate();
@@ -490,8 +498,8 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_jBotonCopyActionPerformed
 
     private void JBGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarMateriaActionPerformed
-        GuardarMateria a = new GuardarMateria();
-        presentarvistas(a);
+      GuardarMateria a = new GuardarMateria();
+        presentarvistasMateria(a);
     }//GEN-LAST:event_JBGuardarMateriaActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
@@ -505,7 +513,23 @@ public class JfIndex extends javax.swing.JFrame {
     private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbGuardarAlumnoActionPerformed
+                                           
+    private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+        JPModificarMateria a =new JPModificarMateria();
+        presentarvistasMateria(a);
+    }                                                 
 
+    private void BBuscarMateriaporIDActionPerformed(java.awt.event.ActionEvent evt) {                                                    
+        JPBuscarMateriaporID a = new JPBuscarMateriaporID();
+        presentarvistasMateria(a);
+    }                                                   
+
+    private void BBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {                                               
+      JPBorrarMateria a =new JPBorrarMateria();
+      presentarvistasMateria(a);
+    }                                              
+
+     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
