@@ -1,9 +1,10 @@
-package universidadg8.vistas;
+package universidadg8;
 
 import java.time.LocalDate;
 import persistencia.AlumnoData;
 import persistencia.InscripcionData;
 import persistencia.MateriaData;
+import universidadg8.vistas.JfIndex;
 import universidadg8.entidades.Alumno;
 import universidadg8.entidades.Inscripcion;
 import universidadg8.entidades.Materia;
@@ -18,9 +19,9 @@ public class UniversidadG8 {
         // TODO code application logic here
 
         JfIndex jf = new JfIndex();
-        
+
         jf.setVisible(true);
-        
+
 //        MateriaData md = new MateriaData();
 //        AlumnoData ad = new AlumnoData();
 //        InscripcionData id = new InscripcionData();
@@ -29,7 +30,6 @@ public class UniversidadG8 {
 //        Alumno a = new Alumno(123456789, "apellido", "nombre", LocalDate.now(), true);
 //        Materia m = new Materia("MateriaPrueba", 3, true);
 //        Inscripcion i = new Inscripcion(a, m, 10);
-
 //Testing AlumnoData
 /*
 ad.guardarAlumno(a);
