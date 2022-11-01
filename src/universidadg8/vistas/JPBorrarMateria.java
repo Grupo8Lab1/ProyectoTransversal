@@ -29,8 +29,6 @@ public class JPBorrarMateria extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         label1 = new java.awt.Label();
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
         label1.setAlignment(java.awt.Label.CENTER);
         label1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         label1.setText("Guardar Materia");
@@ -49,7 +47,7 @@ public class JPBorrarMateria extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
