@@ -5,7 +5,12 @@
 package universidadg8.vistas;
 
 import java.awt.BorderLayout;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
 import universidadg8.vistas.JPGuardarMateria;
 
 /**
@@ -13,6 +18,17 @@ import universidadg8.vistas.JPGuardarMateria;
  * @author Santi
  */
 public class JfIndex extends javax.swing.JFrame {
+
+    static JPanel crearBorde(Border b) {
+        JPanel jp = new JPanel();
+        String str = b.getClass().toString();
+
+        str = str.substring(str.lastIndexOf('.') + 1);
+        jp.setLayout(new BorderLayout());
+        jp.add(new JLabel(str, JLabel.CENTER), BorderLayout.CENTER);
+        jp.setBorder(b);
+        return jp;
+    }
 
     /**
      * Creates new form JfIndex
@@ -55,7 +71,7 @@ public class JfIndex extends javax.swing.JFrame {
         content = new javax.swing.JPanel();
         JPMaterias1 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        contentMateria1 = new javax.swing.JPanel();
+        contentAlumno = new javax.swing.JPanel();
         jlIconBuscarAlumID = new javax.swing.JLabel();
         jlIconListarAlum = new javax.swing.JLabel();
         jlIconActualizarAlumno = new javax.swing.JLabel();
@@ -269,16 +285,16 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Alumno");
 
-        contentMateria1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.GroupLayout contentMateria1Layout = new javax.swing.GroupLayout(contentMateria1);
-        contentMateria1.setLayout(contentMateria1Layout);
-        contentMateria1Layout.setHorizontalGroup(
-            contentMateria1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout contentAlumnoLayout = new javax.swing.GroupLayout(contentAlumno);
+        contentAlumno.setLayout(contentAlumnoLayout);
+        contentAlumnoLayout.setHorizontalGroup(
+            contentAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 365, Short.MAX_VALUE)
         );
-        contentMateria1Layout.setVerticalGroup(
-            contentMateria1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contentAlumnoLayout.setVerticalGroup(
+            contentAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -337,11 +353,7 @@ public class JfIndex extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPMaterias1Layout.createSequentialGroup()
-                        .addComponent(jlIconAlumno)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14))
-                    .addGroup(JPMaterias1Layout.createSequentialGroup()
-                        .addComponent(contentMateria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(contentAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPMaterias1Layout.createSequentialGroup()
@@ -365,8 +377,12 @@ public class JfIndex extends javax.swing.JFrame {
                                     .addComponent(jbGuardarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jbActualizarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(22, 22, 22)))
-                .addContainerGap())
+                        .addGap(22, 22, 22))
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addComponent(jlIconAlumno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel14)
+                        .addContainerGap())))
         );
         JPMaterias1Layout.setVerticalGroup(
             JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,7 +393,6 @@ public class JfIndex extends javax.swing.JFrame {
                     .addComponent(jlIconAlumno))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(contentMateria1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(JPMaterias1Layout.createSequentialGroup()
                         .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlIConGuardarAlumno)
@@ -398,8 +413,10 @@ public class JfIndex extends javax.swing.JFrame {
                         .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlIconBorrarAlum)
                             .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(51, 51, 51)))
-                .addContainerGap())
+                        .addGap(63, 63, 63))
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addComponent(contentAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
@@ -459,9 +476,9 @@ public class JfIndex extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Nombre)
-                .addGap(240, 240, 240)
+                .addGap(228, 228, 228)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
@@ -475,28 +492,35 @@ public class JfIndex extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-  private void presentarvistas(javax.swing.JPanel a) {
+  private void presentarVistasAlumno(javax.swing.JPanel a) {
+        a = crearBorde(new TitledBorder("Agregar Alumno"));
         a.setSize(369, 373);
         a.setLocation(0, 0);
-        contentMateria1.removeAll();
-        contentMateria1.add(a, BorderLayout.CENTER);
-        contentMateria1.revalidate();
-        contentMateria1.repaint();
+        contentAlumno.removeAll();
+        contentAlumno.add(a, BorderLayout.CENTER);
+        contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        contentAlumno.revalidate();
+        contentAlumno.repaint();
+
     }
-   private void presentarvistasMateria(javax.swing.JPanel a) {
+
+    private void presentarvistasMateria(javax.swing.JPanel a) {
+
         a.setSize(369, 373);
         a.setLocation(0, 0);
+
         contentMateria.removeAll();
         contentMateria.add(a, BorderLayout.CENTER);
         contentMateria.revalidate();
         contentMateria.repaint();
     }
+
     private void jBotonCopyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotonCopyActionPerformed
 
     }//GEN-LAST:event_jBotonCopyActionPerformed
 
     private void JBGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarMateriaActionPerformed
-      JPGuardarMateria a = new JPGuardarMateria();
+        JPGuardarMateria a = new JPGuardarMateria();
         presentarvistasMateria(a);
     }//GEN-LAST:event_JBGuardarMateriaActionPerformed
 
@@ -509,29 +533,33 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_jbActualizarAlumnoActionPerformed
 
     private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
+
+        JPGuardarAlumno jp = new JPGuardarAlumno();
+        presentarVistasAlumno(jp);
+//        contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jbGuardarAlumnoActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         JOptionPane.showMessageDialog(null, "Por favor Apruebenos.");
     }//GEN-LAST:event_button1ActionPerformed
-                                           
-    private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {                                                  
-        JPModificarMateria a =new JPModificarMateria();
-        presentarvistasMateria(a);
-    }                                                 
 
-    private void BBuscarMateriaporIDActionPerformed(java.awt.event.ActionEvent evt) {                                                    
+    private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
+        JPModificarMateria a = new JPModificarMateria();
+        presentarvistasMateria(a);
+    }
+
+    private void BBuscarMateriaporIDActionPerformed(java.awt.event.ActionEvent evt) {
         JPBuscarMateriaporID a = new JPBuscarMateriaporID();
         presentarvistasMateria(a);
-    }                                                   
+    }
 
-    private void BBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {                                               
-      JPBorrarMateria a =new JPBorrarMateria();
-      presentarvistasMateria(a);
-    }                                              
+    private void BBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
+        JPBorrarMateria a = new JPBorrarMateria();
+        presentarvistasMateria(a);
+    }
 
-     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -578,8 +606,8 @@ public class JfIndex extends javax.swing.JFrame {
     private java.awt.Button button5;
     private java.awt.Button button8;
     private javax.swing.JPanel content;
+    private javax.swing.JPanel contentAlumno;
     private javax.swing.JPanel contentMateria;
-    private javax.swing.JPanel contentMateria1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
