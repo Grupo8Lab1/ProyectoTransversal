@@ -38,7 +38,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="Nombre" max="32767" attributes="0"/>
-                          <Component id="jBotonCopy" pref="247" max="32767" attributes="0"/>
+                          <Component id="BotonFachero" pref="247" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -73,7 +73,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jBotonCopy" min="-2" pref="76" max="-2" attributes="0"/>
+                      <Component id="BotonFachero" min="-2" pref="76" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jtpOpciones" alignment="0" max="32767" attributes="0"/>
               </Group>
@@ -92,7 +92,7 @@
         <Property name="text" type="java.lang.String" value="Universidad G8"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jBotonCopy">
+    <Component class="javax.swing.JButton" name="BotonFachero">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="1"/>
@@ -103,7 +103,7 @@
         <Property name="text" type="java.lang.String" value="CopyRight 2022 - &#x221e;"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotonCopyActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonFacheroActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -176,7 +176,7 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="button2" max="32767" attributes="0"/>
+                                          <Component id="BModificarMateria" max="32767" attributes="0"/>
                                           <Component id="JBGuardarMateria" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -187,8 +187,8 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="button3" pref="172" max="32767" attributes="0"/>
-                                          <Component id="button4" max="32767" attributes="0"/>
+                                          <Component id="BBuscarMateriaporID" pref="172" max="32767" attributes="0"/>
+                                          <Component id="BBorrarMateria" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -217,17 +217,17 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel11" max="32767" attributes="0"/>
-                                  <Component id="button2" max="32767" attributes="0"/>
+                                  <Component id="BModificarMateria" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel12" max="32767" attributes="0"/>
-                                  <Component id="button3" max="32767" attributes="0"/>
+                                  <Component id="BBuscarMateriaporID" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel13" max="32767" attributes="0"/>
-                                  <Component id="button4" max="32767" attributes="0"/>
+                                  <Component id="BBorrarMateria" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="143" max="32767" attributes="0"/>
                           </Group>
@@ -320,23 +320,29 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="java.awt.Button" name="button4">
+            <Component class="java.awt.Button" name="BBorrarMateria">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Medium" size="14" style="0"/>
                 </Property>
                 <Property name="label" type="java.lang.String" value="Borar Materia"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BBorrarMateriaActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="java.awt.Button" name="button3">
+            <Component class="java.awt.Button" name="BBuscarMateriaporID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Medium" size="14" style="0"/>
                 </Property>
                 <Property name="label" type="java.lang.String" value="Buscar Materia por ID"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BBuscarMateriaporIDActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="java.awt.Button" name="button2">
+            <Component class="java.awt.Button" name="BModificarMateria">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Medium" size="14" style="0"/>
@@ -344,7 +350,7 @@
                 <Property name="label" type="java.lang.String" value="Modificar Materia"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BModificarMateriaActionPerformed"/>
               </Events>
             </Component>
             <Component class="java.awt.Button" name="JBGuardarMateria">
