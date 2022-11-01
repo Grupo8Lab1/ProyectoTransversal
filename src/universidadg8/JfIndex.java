@@ -266,14 +266,11 @@ public class JfIndex extends javax.swing.JFrame {
         );
         JpInscripcionesLayout.setVerticalGroup(
             JpInscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< Updated upstream
             .addGroup(JpInscripcionesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addContainerGap(436, Short.MAX_VALUE))
-=======
             .addGap(0, 610, Short.MAX_VALUE)
->>>>>>> Stashed changes
         );
 
         jtpOpciones.addTab("Inscripciones", JpInscripciones);
@@ -291,14 +288,11 @@ public class JfIndex extends javax.swing.JFrame {
         );
         JPConsultasLayout.setVerticalGroup(
             JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< Updated upstream
             .addGroup(JPConsultasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addContainerGap(436, Short.MAX_VALUE))
-=======
             .addGap(0, 610, Short.MAX_VALUE)
->>>>>>> Stashed changes
         );
 
         jtpOpciones.addTab("Consultas", JPConsultas);
@@ -434,18 +428,15 @@ public class JfIndex extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Por favor Apruebenos.");
     }//GEN-LAST:event_jBotonCopyActionPerformed
 
-<<<<<<< Updated upstream
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-     
-=======
+
     private void jbAgregarAlumno4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgregarAlumno4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbAgregarAlumno4ActionPerformed
 
->>>>>>> Stashed changes
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -495,7 +486,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-<<<<<<< Updated upstream
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -506,7 +496,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
-=======
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
@@ -515,7 +504,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JButton jbAgregarAlumno2;
     private javax.swing.JButton jbAgregarAlumno3;
     private javax.swing.JButton jbAgregarAlumno4;
->>>>>>> Stashed changes
     private javax.swing.JTabbedPane jtpOpciones;
     // End of variables declaration//GEN-END:variables
 }
