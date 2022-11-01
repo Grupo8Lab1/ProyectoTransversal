@@ -53,7 +53,20 @@ public class JfIndex extends javax.swing.JFrame {
         JPConsultas = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        JPMaterias1 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jbGuardarAlumno = new javax.swing.JToggleButton();
+        jbActualizarAlumno = new javax.swing.JToggleButton();
+        jbListarAlumnos = new javax.swing.JToggleButton();
+        jbBuscarAlumnoPorID = new javax.swing.JToggleButton();
+        jlBuscarAlum = new javax.swing.JLabel();
+        jlListarAlum = new javax.swing.JLabel();
+        jlActAlum = new javax.swing.JLabel();
+        jlAgAlum = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jbBorrarAlumno = new javax.swing.JToggleButton();
+        jlBorrarAlum = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -97,8 +110,13 @@ public class JfIndex extends javax.swing.JFrame {
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 367, Short.MAX_VALUE)
         );
+<<<<<<< Updated upstream
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+=======
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+>>>>>>> Stashed changes
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -171,8 +189,13 @@ public class JfIndex extends javax.swing.JFrame {
                                     .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< Updated upstream
                                     .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
                                     .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+=======
+                                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(jToggleButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+>>>>>>> Stashed changes
                         .addGap(9, 9, 9))))
         );
         JPMateriasLayout.setVerticalGroup(
@@ -199,11 +222,18 @@ public class JfIndex extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< Updated upstream
                             .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(167, 167, 167))
                     .addGroup(JPMateriasLayout.createSequentialGroup()
                         .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
+=======
+                            .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 159, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+>>>>>>> Stashed changes
         );
 
         jtpOpciones.addTab("Materias", JPMaterias);
@@ -250,23 +280,175 @@ public class JfIndex extends javax.swing.JFrame {
 
         jtpOpciones.addTab("Consultas", JPConsultas);
 
-        jLabel5.setText("Alumnos ");
+        JPMaterias1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel14.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Alumno");
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 367, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jbGuardarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbGuardarAlumno.setText("Agregar Alumno");
+        jbGuardarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGuardarAlumnoActionPerformed(evt);
+            }
+        });
+
+        jbActualizarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbActualizarAlumno.setText("Actualizar Datos");
+        jbActualizarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbActualizarAlumnoActionPerformed(evt);
+            }
+        });
+
+        jbListarAlumnos.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbListarAlumnos.setText("Listado de Alumnos");
+
+        jbBuscarAlumnoPorID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbBuscarAlumnoPorID.setText("Buscar Legajo");
+
+        jlBuscarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlBuscarAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlBuscarAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-borrar-para-siempre-50.png"))); // NOI18N
+        jlBuscarAlum.setLabelFor(jbBuscarAlumnoPorID);
+
+        jlListarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlListarAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlListarAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-buscar-en-la-lista-50.png"))); // NOI18N
+        jlListarAlum.setLabelFor(jbListarAlumnos);
+
+        jlActAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlActAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlActAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-choose-50.png"))); // NOI18N
+        jlActAlum.setLabelFor(jbActualizarAlumno);
+
+        jlAgAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlAgAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlAgAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-más-50.png"))); // NOI18N
+        jlAgAlum.setLabelFor(jbGuardarAlumno);
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-contactos-50.png"))); // NOI18N
+
+        jbBorrarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jbBorrarAlumno.setText("Borrar Alumno");
+
+        jlBorrarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlBorrarAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlBorrarAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-borrar-para-siempre-50.png"))); // NOI18N
+        jlBorrarAlum.setLabelFor(jbBorrarAlumno);
+
+        javax.swing.GroupLayout JPMaterias1Layout = new javax.swing.GroupLayout(JPMaterias1);
+        JPMaterias1.setLayout(JPMaterias1Layout);
+        JPMaterias1Layout.setHorizontalGroup(
+            JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel14)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jlAgAlum)
+                                    .addComponent(jlActAlum))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbActualizarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                                    .addComponent(jbGuardarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlListarAlum, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jlBuscarAlum, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jlBorrarAlum, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jbListarAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(jbBuscarAlumnoPorID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jbBorrarAlumno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(9, 9, 9))))
+        );
+        JPMaterias1Layout.setVerticalGroup(
+            JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPMaterias1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(JPMaterias1Layout.createSequentialGroup()
+                        .addGap(0, 13, Short.MAX_VALUE)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbGuardarAlumno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlAgAlum, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbActualizarAlumno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlActAlum, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbListarAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlListarAlum))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbBuscarAlumnoPorID, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlBuscarAlum))
+                        .addGap(18, 18, 18)
+                        .addGroup(JPMaterias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlBorrarAlum, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jbBorrarAlumno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(54, 54, 54))))
+        );
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(584, Short.MAX_VALUE))
+            .addGap(0, 641, Short.MAX_VALUE)
+            .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(contentLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(JPMaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< Updated upstream
             .addGroup(contentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addContainerGap(448, Short.MAX_VALUE))
+=======
+            .addGap(0, 463, Short.MAX_VALUE)
+            .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(contentLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(JPMaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+>>>>>>> Stashed changes
         );
 
         jtpOpciones.addTab("Alumnos", content);
@@ -335,6 +517,14 @@ public class JfIndex extends javax.swing.JFrame {
         presentarvistas(a);
     }//GEN-LAST:event_BGuardarMateriaActionPerformed
 
+    private void jbActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbActualizarAlumnoActionPerformed
+
+    private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbGuardarAlumnoActionPerformed
+
      
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -375,6 +565,7 @@ public class JfIndex extends javax.swing.JFrame {
     private java.awt.Button BModificarMateria;
     private javax.swing.JPanel JPConsultas;
     private javax.swing.JPanel JPMaterias;
+    private javax.swing.JPanel JPMaterias1;
     private javax.swing.JPanel JpInscripciones;
     private javax.swing.JLabel Nombre;
     private javax.swing.JPanel contenido;
@@ -385,14 +576,34 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+<<<<<<< Updated upstream
+=======
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jbActualizarAlumno;
+    private javax.swing.JToggleButton jbBorrarAlumno;
+    private javax.swing.JToggleButton jbBuscarAlumnoPorID;
+    private javax.swing.JToggleButton jbGuardarAlumno;
+    private javax.swing.JToggleButton jbListarAlumnos;
+    private javax.swing.JLabel jlActAlum;
+    private javax.swing.JLabel jlAgAlum;
+    private javax.swing.JLabel jlBorrarAlum;
+    private javax.swing.JLabel jlBuscarAlum;
+    private javax.swing.JLabel jlListarAlum;
+>>>>>>> Stashed changes
     private javax.swing.JTabbedPane jtpOpciones;
     // End of variables declaration//GEN-END:variables
 }
