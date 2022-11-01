@@ -16,8 +16,13 @@ public class UniversidadG8 {
 
     public static void main(String[] args) {
         // TODO code application logic here
-
-        MateriaData md = new MateriaData();
+        
+        JfIndex jf = new JfIndex();
+        
+        jf.setVisible(true);
+        
+        
+     /*   MateriaData md = new MateriaData();
         AlumnoData ad = new AlumnoData();
         InscripcionData id = new InscripcionData();
         //Testing
@@ -25,7 +30,7 @@ public class UniversidadG8 {
         Alumno a = new Alumno(123456789, "apellido", "nombre", LocalDate.now(), true);
         Materia m = new Materia("MateriaPrueba", 3, true);
         Inscripcion i = new Inscripcion(a, m, 10);
-
+*/
 //Testing AlumnoData
 /*
 ad.guardarAlumno(a);
