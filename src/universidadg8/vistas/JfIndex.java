@@ -61,9 +61,11 @@ public class JfIndex extends javax.swing.JFrame {
         jlIconActualizarAlumno = new javax.swing.JLabel();
         jlIConGuardarAlumno = new javax.swing.JLabel();
         jlIconAlumno = new javax.swing.JLabel();
+        JBBorrarAlumno = new java.awt.Button();
         jbListarAlumnos = new java.awt.Button();
         jbActualizarAlumno = new java.awt.Button();
         jbGuardarAlumno = new java.awt.Button();
+        JBBuscarAlumnoPorID = new java.awt.Button();
         jlIconBorrarAlum = new javax.swing.JLabel();
         JPMaterias = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -85,21 +87,6 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         contentConsultas = new javax.swing.JPanel();
-        content = new javax.swing.JPanel();
-        JPAlumno = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        contentAlumno = new javax.swing.JPanel();
-        jlIconBuscarAlumID = new javax.swing.JLabel();
-        jlIconListarAlum = new javax.swing.JLabel();
-        jlIconActualizarAlumno = new javax.swing.JLabel();
-        jlIConGuardarAlumno = new javax.swing.JLabel();
-        jlIconAlumno = new javax.swing.JLabel();
-        JBBorrarAlumno = new java.awt.Button();
-        jbListarAlumnos = new java.awt.Button();
-        jbActualizarAlumno = new java.awt.Button();
-        jbGuardarAlumno = new java.awt.Button();
-        JBBuscarAlumnoPorID = new java.awt.Button();
-        jlIconBorrarAlum = new javax.swing.JLabel();
         button1 = new java.awt.Button();
 
         jLabel1.setText("jLabel1");
@@ -615,9 +602,6 @@ public class JfIndex extends javax.swing.JFrame {
     private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
         JPGuardarAlumno jp = new JPGuardarAlumno();
         presentarVistasAlumno(jp);
-//        contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        // TODO add your handling code here:
     }//GEN-LAST:event_jbGuardarAlumnoActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
@@ -626,7 +610,7 @@ public class JfIndex extends javax.swing.JFrame {
 
     private void jbListarAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbListarAlumnosActionPerformed
         JPListarAlumnos jp = new JPListarAlumnos();
-        presentarVistasAlumno(jp);        // TODO add your handling code here:
+        presentarVistasAlumno(jp);
     }//GEN-LAST:event_jbListarAlumnosActionPerformed
 
     private void JBBuscarAlumnoPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBuscarAlumnoPorIDActionPerformed
