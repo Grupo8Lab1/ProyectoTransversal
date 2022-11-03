@@ -85,7 +85,6 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         contentConsultas = new javax.swing.JPanel();
-        contentAlumno2 = new javax.swing.JPanel();
         content = new javax.swing.JPanel();
         JPAlumno = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
