@@ -81,11 +81,11 @@ public class JfIndex extends javax.swing.JFrame {
         jlIconActualizarAlumno = new javax.swing.JLabel();
         jlIConGuardarAlumno = new javax.swing.JLabel();
         jlIconAlumno = new javax.swing.JLabel();
-        button5 = new java.awt.Button();
+        JBBorrarAlumno = new java.awt.Button();
         jbListarAlumnos = new java.awt.Button();
         jbActualizarAlumno = new java.awt.Button();
         jbGuardarAlumno = new java.awt.Button();
-        button8 = new java.awt.Button();
+        JBBuscarAlumnoPorID = new java.awt.Button();
         jlIconBorrarAlum = new javax.swing.JLabel();
         button1 = new java.awt.Button();
 
@@ -366,11 +366,21 @@ public class JfIndex extends javax.swing.JFrame {
 
         jlIconAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-contactos-50.png"))); // NOI18N
 
-        button5.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        button5.setLabel("Borrar Alumno");
+        JBBorrarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        JBBorrarAlumno.setLabel("Borrar Alumno");
+        JBBorrarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBBorrarAlumnoActionPerformed(evt);
+            }
+        });
 
         jbListarAlumnos.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jbListarAlumnos.setLabel("Listar Alumnos");
+        jbListarAlumnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbListarAlumnosActionPerformed(evt);
+            }
+        });
 
         jbActualizarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jbActualizarAlumno.setLabel("Actualizar Datos");
@@ -388,8 +398,13 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
-        button8.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        button8.setLabel("Buscar Legajo");
+        JBBuscarAlumnoPorID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        JBBuscarAlumnoPorID.setLabel("Buscar Legajo");
+        JBBuscarAlumnoPorID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBBuscarAlumnoPorIDActionPerformed(evt);
+            }
+        });
 
         jlIconBorrarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         jlIconBorrarAlum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -409,7 +424,7 @@ public class JfIndex extends javax.swing.JFrame {
                             .addGroup(JPAlumnoLayout.createSequentialGroup()
                                 .addComponent(jlIconBorrarAlum)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(button5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(JBBorrarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(JPAlumnoLayout.createSequentialGroup()
                                 .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jlIconListarAlum, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -417,7 +432,7 @@ public class JfIndex extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jbListarAlumnos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(button8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(JBBuscarAlumnoPorID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(JPAlumnoLayout.createSequentialGroup()
                                 .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jlIConGuardarAlumno)
@@ -458,11 +473,11 @@ public class JfIndex extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlIconBuscarAlumID)
-                            .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JBBuscarAlumnoPorID, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlIconBorrarAlum)
-                            .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JBBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(63, 63, 63))
                     .addGroup(JPAlumnoLayout.createSequentialGroup()
                         .addComponent(contentAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -579,11 +594,12 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_button2ActionPerformed
 
     private void jbActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarAlumnoActionPerformed
+        JPModificarAlumno jp = new JPModificarAlumno();
+        presentarVistasAlumno(jp);
         // TODO add your handling code here:
     }//GEN-LAST:event_jbActualizarAlumnoActionPerformed
 
     private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
-
         JPGuardarAlumno jp = new JPGuardarAlumno();
         presentarVistasAlumno(jp);
 //        contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -594,6 +610,21 @@ public class JfIndex extends javax.swing.JFrame {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         JOptionPane.showMessageDialog(null, "Por favor Apruebenos.");
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void jbListarAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbListarAlumnosActionPerformed
+        JPListarAlumnos jp = new JPListarAlumnos();
+        presentarVistasAlumno(jp);        // TODO add your handling code here:
+    }//GEN-LAST:event_jbListarAlumnosActionPerformed
+
+    private void JBBuscarAlumnoPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBuscarAlumnoPorIDActionPerformed
+        JPBuscarAlumnoPorID jp = new JPBuscarAlumnoPorID();
+        presentarVistasAlumno(jp);    // TODO add your handling code here:
+    }//GEN-LAST:event_JBBuscarAlumnoPorIDActionPerformed
+
+    private void JBBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBorrarAlumnoActionPerformed
+        JPBorrarAlumno jp = new JPBorrarAlumno();
+        presentarVistasAlumno(jp);// TODO add your handling code here:
+    }//GEN-LAST:event_JBBorrarAlumnoActionPerformed
 
     private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
         JPModificarMateria a = new JPModificarMateria();
@@ -646,6 +677,8 @@ public class JfIndex extends javax.swing.JFrame {
     private java.awt.Button BBorrarMateria;
     private java.awt.Button BBuscarMateriaporID;
     private java.awt.Button BModificarMateria;
+    private java.awt.Button JBBorrarAlumno;
+    private java.awt.Button JBBuscarAlumnoPorID;
     private java.awt.Button JBGuardarMateria;
     private javax.swing.JPanel JPAlumno;
     private javax.swing.JPanel JPConsultas;
@@ -653,8 +686,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JPanel JpInscripciones;
     private javax.swing.JLabel Nombre;
     private java.awt.Button button1;
-    private java.awt.Button button5;
-    private java.awt.Button button8;
     private javax.swing.JPanel content;
     private javax.swing.JPanel contentAlumno;
     private javax.swing.JPanel contentAlumno1;
