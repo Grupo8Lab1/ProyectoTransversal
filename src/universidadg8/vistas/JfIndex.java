@@ -19,15 +19,13 @@ import universidadg8.vistas.JPGuardarMateria;
  */
 public class JfIndex extends javax.swing.JFrame {
 
-    static JPanel crearBorde(Border b) {
-        JPanel jp = new JPanel();
+    static JPanel crearBorde(Border b, JPanel p) {
         String str = b.getClass().toString();
-
         str = str.substring(str.lastIndexOf('.') + 1);
-        jp.setLayout(new BorderLayout());
-        jp.add(new JLabel(str, JLabel.CENTER), BorderLayout.CENTER);
-        jp.setBorder(b);
-        return jp;
+        p.setLayout(new BorderLayout());
+        p.add(new JLabel(str, JLabel.CENTER), BorderLayout.CENTER);
+        p.setBorder(b);
+        return p;
     }
 
     /**
@@ -35,6 +33,7 @@ public class JfIndex extends javax.swing.JFrame {
      */
     public JfIndex() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -118,11 +117,11 @@ public class JfIndex extends javax.swing.JFrame {
         contentAlumno.setLayout(contentAlumnoLayout);
         contentAlumnoLayout.setHorizontalGroup(
             contentAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
+            .addGap(0, 369, Short.MAX_VALUE)
         );
         contentAlumnoLayout.setVerticalGroup(
             contentAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
+            .addGap(0, 353, Short.MAX_VALUE)
         );
 
         jlIconBuscarAlumID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
@@ -557,25 +556,25 @@ public class JfIndex extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-  private void presentarVistasAlumno(javax.swing.JPanel a) {
-        a = crearBorde(new TitledBorder("Alumno"));
-        a.setSize(369, 353);
-        a.setLocation(0, 0);
+  private void presentarVistasAlumno(javax.swing.JPanel p) {
+        p = crearBorde(new TitledBorder("Alumno"), p);
+        p.setSize(369, 353);
+        p.setLocation(0, 0);
         contentAlumno.removeAll();
-        contentAlumno.add(a, BorderLayout.CENTER);
-        contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        contentAlumno.add(p, BorderLayout.CENTER);
+       // contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         contentAlumno.revalidate();
         contentAlumno.repaint();
 
     }
 
-    private void presentarvistasMateria(javax.swing.JPanel a) {
-        a = crearBorde(new TitledBorder("Materia"));
-        a.setSize(369, 353);
-        a.setLocation(0, 0);
+    private void presentarvistasMateria(javax.swing.JPanel p) {
+        p = crearBorde(new TitledBorder("Materia"), p);
+        p.setSize(369, 353);
+        p.setLocation(0, 0);
         contentMateria.removeAll();
-        contentMateria.add(a, BorderLayout.CENTER);
-        contentMateria.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        contentMateria.add(p, BorderLayout.CENTER);
+   //     contentMateria.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         contentMateria.revalidate();
         contentMateria.repaint();
     }
