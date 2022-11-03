@@ -19,15 +19,6 @@ import universidadg8.vistas.JPGuardarMateria;
  */
 public class JfIndex extends javax.swing.JFrame {
 
-    static JPanel crearBorde(Border b, JPanel p) {
-        String str = b.getClass().toString();
-        str = str.substring(str.lastIndexOf('.') + 1);
-        p.setLayout(new BorderLayout());
-        p.add(new JLabel(str, JLabel.CENTER), BorderLayout.CENTER);
-        p.setBorder(b);
-        return p;
-    }
-
     /**
      * Creates new form JfIndex
      */
@@ -565,7 +556,6 @@ public class JfIndex extends javax.swing.JFrame {
     }
 
     private void presentarvistasMateria(javax.swing.JPanel p) {
-        p = crearBorde(new TitledBorder("Materia"), p);
         p.setSize(369, 353);
         p.setLocation(0, 0);
         contentMateria.removeAll();
