@@ -556,15 +556,12 @@ public class JfIndex extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
   private void presentarVistasAlumno(javax.swing.JPanel p) {
-        p = crearBorde(new TitledBorder("Alumno"), p);
         p.setSize(369, 353);
         p.setLocation(0, 0);
         contentAlumno.removeAll();
         contentAlumno.add(p, BorderLayout.CENTER);
-       // contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         contentAlumno.revalidate();
         contentAlumno.repaint();
-
     }
 
     private void presentarvistasMateria(javax.swing.JPanel p) {
