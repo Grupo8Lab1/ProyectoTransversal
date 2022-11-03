@@ -61,11 +61,9 @@ public class JfIndex extends javax.swing.JFrame {
         jlIconActualizarAlumno = new javax.swing.JLabel();
         jlIConGuardarAlumno = new javax.swing.JLabel();
         jlIconAlumno = new javax.swing.JLabel();
-        button5 = new java.awt.Button();
         jbListarAlumnos = new java.awt.Button();
         jbActualizarAlumno = new java.awt.Button();
         jbGuardarAlumno = new java.awt.Button();
-        button8 = new java.awt.Button();
         jlIconBorrarAlum = new javax.swing.JLabel();
         JPMaterias = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -86,12 +84,8 @@ public class JfIndex extends javax.swing.JFrame {
         JPConsultas = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-<<<<<<< HEAD
         contentConsultas = new javax.swing.JPanel();
-=======
         contentAlumno2 = new javax.swing.JPanel();
-<<<<<<< HEAD
-=======
         content = new javax.swing.JPanel();
         JPAlumno = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -107,8 +101,6 @@ public class JfIndex extends javax.swing.JFrame {
         jbGuardarAlumno = new java.awt.Button();
         JBBuscarAlumnoPorID = new java.awt.Button();
         jlIconBorrarAlum = new javax.swing.JLabel();
->>>>>>> c78a5b59ec2a48d1456c97a49d37e2474b4eb9c5
->>>>>>> 49bcf1c491f0faa14fe021cac66beb9ef2bf820a
         button1 = new java.awt.Button();
 
         jLabel1.setText("jLabel1");
