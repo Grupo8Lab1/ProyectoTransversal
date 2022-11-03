@@ -295,7 +295,7 @@ public class JfIndex extends javax.swing.JFrame {
         );
         contentAlumnoLayout.setVerticalGroup(
             contentAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 349, Short.MAX_VALUE)
         );
 
         jlIconBuscarAlumID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
@@ -415,8 +415,8 @@ public class JfIndex extends javax.swing.JFrame {
                             .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(63, 63, 63))
                     .addGroup(JPMaterias1Layout.createSequentialGroup()
-                        .addComponent(contentAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(contentAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
@@ -494,7 +494,7 @@ public class JfIndex extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
   private void presentarVistasAlumno(javax.swing.JPanel a) {
         a = crearBorde(new TitledBorder("Alumno"));
-        a.setSize(369, 373);
+        a.setSize(369, 353);
         a.setLocation(0, 0);
         contentAlumno.removeAll();
         contentAlumno.add(a, BorderLayout.CENTER);
@@ -506,9 +506,8 @@ public class JfIndex extends javax.swing.JFrame {
 
     private void presentarvistasMateria(javax.swing.JPanel a) {
         a = crearBorde(new TitledBorder("Materia"));
-        a.setSize(369, 373);
+        a.setSize(369, 353);
         a.setLocation(0, 0);
-
         contentMateria.removeAll();
         contentMateria.add(a, BorderLayout.CENTER);
         contentMateria.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
