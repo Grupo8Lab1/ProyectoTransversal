@@ -33,7 +33,6 @@ public class JfIndex extends javax.swing.JFrame {
      */
     public JfIndex() {
         initComponents();
-        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -574,7 +573,7 @@ public class JfIndex extends javax.swing.JFrame {
         p.setLocation(0, 0);
         contentMateria.removeAll();
         contentMateria.add(p, BorderLayout.CENTER);
-   //     contentMateria.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        contentMateria.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         contentMateria.revalidate();
         contentMateria.repaint();
     }
