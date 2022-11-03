@@ -66,8 +66,12 @@ public class JfIndex extends javax.swing.JFrame {
         BBorrarMateria = new java.awt.Button();
         JpInscripciones = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        contentAlumno1 = new javax.swing.JPanel();
         JPConsultas = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        contentAlumno2 = new javax.swing.JPanel();
         content = new javax.swing.JPanel();
         JPMaterias1 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -109,8 +113,6 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Materia");
-
-        contentMateria.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout contentMateriaLayout = new javax.swing.GroupLayout(contentMateria);
         contentMateria.setLayout(contentMateriaLayout);
@@ -187,19 +189,19 @@ public class JfIndex extends javax.swing.JFrame {
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JBGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                                .addComponent(JBGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                                .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                                .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))))
+                                .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))))
                     .addGroup(JPMateriasLayout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -232,12 +234,28 @@ public class JfIndex extends javax.swing.JFrame {
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
                             .addComponent(BBorrarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jtpOpciones.addTab("Materias", JPMaterias);
 
+        JpInscripciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel7.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
         jLabel7.setText("Inscripcion");
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-buscar-en-la-lista-50.png"))); // NOI18N
+
+        javax.swing.GroupLayout contentAlumno1Layout = new javax.swing.GroupLayout(contentAlumno1);
+        contentAlumno1.setLayout(contentAlumno1Layout);
+        contentAlumno1Layout.setHorizontalGroup(
+            contentAlumno1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 365, Short.MAX_VALUE)
+        );
+        contentAlumno1Layout.setVerticalGroup(
+            contentAlumno1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout JpInscripcionesLayout = new javax.swing.GroupLayout(JpInscripciones);
         JpInscripciones.setLayout(JpInscripcionesLayout);
@@ -245,20 +263,45 @@ public class JfIndex extends javax.swing.JFrame {
             JpInscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JpInscripcionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
-                .addContainerGap(577, Short.MAX_VALUE))
+                .addGroup(JpInscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JpInscripcionesLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7))
+                    .addComponent(contentAlumno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
         JpInscripcionesLayout.setVerticalGroup(
             JpInscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JpInscripcionesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
-                .addContainerGap(428, Short.MAX_VALUE))
+                .addGroup(JpInscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addComponent(contentAlumno1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jtpOpciones.addTab("Inscripciones", JpInscripciones);
 
+        JPConsultas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel6.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
         jLabel6.setText("Consultas");
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-búsqueda-50.png"))); // NOI18N
+
+        javax.swing.GroupLayout contentAlumno2Layout = new javax.swing.GroupLayout(contentAlumno2);
+        contentAlumno2.setLayout(contentAlumno2Layout);
+        contentAlumno2Layout.setHorizontalGroup(
+            contentAlumno2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 365, Short.MAX_VALUE)
+        );
+        contentAlumno2Layout.setVerticalGroup(
+            contentAlumno2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout JPConsultasLayout = new javax.swing.GroupLayout(JPConsultas);
         JPConsultas.setLayout(JPConsultasLayout);
@@ -266,15 +309,24 @@ public class JfIndex extends javax.swing.JFrame {
             JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPConsultasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6)
-                .addContainerGap(581, Short.MAX_VALUE))
+                .addGroup(JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPConsultasLayout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6))
+                    .addComponent(contentAlumno2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
         JPConsultasLayout.setVerticalGroup(
             JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPConsultasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6)
-                .addContainerGap(428, Short.MAX_VALUE))
+                .addGroup(JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel15))
+                .addGap(8, 8, 8)
+                .addComponent(contentAlumno2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jtpOpciones.addTab("Consultas", JPConsultas);
@@ -284,8 +336,6 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Alumno");
-
-        contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout contentAlumnoLayout = new javax.swing.GroupLayout(contentAlumno);
         contentAlumno.setLayout(contentAlumnoLayout);
@@ -423,7 +473,7 @@ public class JfIndex extends javax.swing.JFrame {
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 653, Short.MAX_VALUE)
+            .addGap(0, 649, Short.MAX_VALUE)
             .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(contentLayout.createSequentialGroup()
                     .addComponent(JPMaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -608,6 +658,8 @@ public class JfIndex extends javax.swing.JFrame {
     private java.awt.Button button8;
     private javax.swing.JPanel content;
     private javax.swing.JPanel contentAlumno;
+    private javax.swing.JPanel contentAlumno1;
+    private javax.swing.JPanel contentAlumno2;
     private javax.swing.JPanel contentMateria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -615,9 +667,11 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
