@@ -77,11 +77,7 @@ public class JfIndex extends javax.swing.JFrame {
                 modelo.addRow(new Object[]
                 (mat.getId_materia()
                 ,mat.getNombre()
-                ,mat.getAnio()
-            
-          
-            
-          
+                ,mat.getAnio()        
             ));
         }
          }else{
@@ -99,10 +95,12 @@ public class JfIndex extends javax.swing.JFrame {
                 (mat.getId_materia()
                 ,mat.getNombre()
                 ,mat.getAnio()
+            
+          
             ));
-         }else{
-             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
          }
+        }else{
+             JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
     }
 
