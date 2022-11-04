@@ -70,46 +70,34 @@ public class JfIndex extends javax.swing.JFrame {
         }
     }
 
-    /*private void cargarDatoInscriptas() {
+    private void cargarDatoInscriptas() {
         borrarFilasTabla();
         Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
         if (seleccionado != null) {
+
             ArrayList<Materia> lista = idata.obtenerMateriasInscriptas(seleccionado);
+
             for (Materia mat : lista) {
-                modelo.addRow(new Object[]
-                (mat.getId_materia()
-                ,mat.getNombre()
-                ,mat.getAnio()        
-            
-          
-            ));
-        }
-         }else{
-             JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
+                modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
     }
-*/
-/*    private void cargarDatoNoInscriptas() {
+
+    private void cargarDatoNoInscriptas() {
         borrarFilasTabla();
         Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
         if (seleccionado != null) {
             ArrayList<Materia> lista = idata.obtenerMateriasNoInscriptas(seleccionado);
             for (Materia mat : lista) {
-                modelo.addRow(new Object[]
-                (mat.getId_materia()
-                ,mat.getNombre()
-                ,mat.getAnio()
-            
-          
-            
-          
-            ));
-         }
-        }else{
-             JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
+                modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
     }
-*/
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
