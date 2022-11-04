@@ -17,6 +17,7 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
     /**
      * Creates new form JPBuscarAlumnoPorID
      */
+    
     public JPBuscarAlumnoPorID() {
         listaAlumnos = adata.obtenerAlumnos();
         initComponents();

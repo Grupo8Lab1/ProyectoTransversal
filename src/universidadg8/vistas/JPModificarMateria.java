@@ -4,6 +4,7 @@
  */
 package universidadg8.vistas;
 
+import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.listaMaterias;
 import universidadg8.entidades.Materia;
 
@@ -74,6 +75,11 @@ public class JPModificarMateria extends javax.swing.JPanel {
         });
 
         JBActualizarActualizarMateria.setText("Actualizar Datos");
+        JBActualizarActualizarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBActualizarActualizarMateriaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -157,6 +163,11 @@ public class JPModificarMateria extends javax.swing.JPanel {
     private void JTFActualizarIDMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFActualizarIDMateriaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFActualizarIDMateriaActionPerformed
+
+    private void JBActualizarActualizarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBActualizarActualizarMateriaActionPerformed
+       adata.actualizaAlumno(adata.obtenerAlumnoPorId(WIDTH));
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBActualizarActualizarMateriaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

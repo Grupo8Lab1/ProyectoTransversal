@@ -19,13 +19,17 @@ public class JPModificarAlumno extends javax.swing.JPanel {
     /**
      * Creates new form JPModificarAlumno
      */
-    public JPModificarAlumno() {
-        initComponents();
+    private void actualizarLista() {
         listaAlumnos = adata.obtenerAlumnos();
         jcbAlumnosActualizarAlumno.removeAllItems();
         for (Alumno alumnos : listaAlumnos) {
             jcbAlumnosActualizarAlumno.addItem(alumnos.getNombre() + " " + alumnos.getApellido());
         }
+    }
+
+    public JPModificarAlumno() {
+        initComponents();
+        actualizarLista();
     }
 
     /**
@@ -45,7 +49,7 @@ public class JPModificarAlumno extends javax.swing.JPanel {
         jlApeActualizarAlumno = new javax.swing.JLabel();
         jlDNIActualizarAlumno = new javax.swing.JLabel();
         jlFechaActualizarAlumno = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlLegajoActualizarAlumno = new javax.swing.JLabel();
         jtfNombreActualizarAlumno = new javax.swing.JTextField();
         jtfApeActualizarAlumno = new javax.swing.JTextField();
         jtfDNIActualizarAlumno = new javax.swing.JTextField();
@@ -79,7 +83,7 @@ public class JPModificarAlumno extends javax.swing.JPanel {
 
         jlFechaActualizarAlumno.setText("Fecha Nacimiento");
 
-        jLabel1.setText("Legajo");
+        jlLegajoActualizarAlumno.setText("Legajo");
 
         jtfDNIActualizarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +94,11 @@ public class JPModificarAlumno extends javax.swing.JPanel {
         jtfIDAlumActualizarAlumno.setEditable(false);
 
         jbActualizarActualizarAlumno.setText("Actualizar Datos");
+        jbActualizarActualizarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbActualizarActualizarAlumnoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -108,7 +117,7 @@ public class JPModificarAlumno extends javax.swing.JPanel {
                                     .addComponent(jlNomActualizarAlumno)
                                     .addComponent(jlFechaActualizarAlumno)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jlLegajoActualizarAlumno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jlDNIActualizarAlumno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jlApeActualizarAlumno, javax.swing.GroupLayout.Alignment.LEADING))))
                             .addGroup(layout.createSequentialGroup()
@@ -149,7 +158,7 @@ public class JPModificarAlumno extends javax.swing.JPanel {
                     .addComponent(jtfDNIActualizarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlLegajoActualizarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfIDAlumActualizarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -176,16 +185,27 @@ public class JPModificarAlumno extends javax.swing.JPanel {
 // TODO add your handling code here:
     }//GEN-LAST:event_jcbAlumnosActualizarAlumnoActionPerformed
 
+    private void jbActualizarActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarActualizarAlumnoActionPerformed
+        Alumno aux;
+        aux = adata.obtenerAlumnoPorId(Integer.parseInt(jtfIDAlumActualizarAlumno.getText()));
+        aux.setNombre(jtfNombreActualizarAlumno.getText());
+        aux.setApellido(jtfApeActualizarAlumno.getText());
+        aux.setDni(Long.parseLong(jtfDNIActualizarAlumno.getText()));
+        aux.setFecha_nacimiento(jDaChActualizarAlumno.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+        adata.actualizaAlumno(aux);
+        actualizarLista();
+    }//GEN-LAST:event_jbActualizarActualizarAlumnoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.toedter.calendar.JDateChooser jDaChActualizarAlumno;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbActualizarActualizarAlumno;
     private javax.swing.JComboBox<String> jcbAlumnosActualizarAlumno;
     private javax.swing.JLabel jlApeActualizarAlumno;
     private javax.swing.JLabel jlDNIActualizarAlumno;
     private javax.swing.JLabel jlFechaActualizarAlumno;
+    private javax.swing.JLabel jlLegajoActualizarAlumno;
     private javax.swing.JLabel jlNomActualizarAlumno;
     private javax.swing.JLabel jlTitulo2ActualizarAlum;
     private javax.swing.JLabel jlTituloActualizarAlum;

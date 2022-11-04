@@ -17,14 +17,17 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
     /**
      * Creates new form JPBorrarAlumno
      */
-    public JPBorrarAlumno() {
-        initComponents();
+    private void actualizarLista() {
         listaAlumnos = adata.obtenerAlumnos();
         jcbAlumnosBorrarAlumno.removeAllItems();
         for (Alumno alumnos : listaAlumnos) {
             jcbAlumnosBorrarAlumno.addItem(alumnos.getNombre() + " " + alumnos.getApellido());
         }
+    }
 
+    public JPBorrarAlumno() {
+        initComponents();
+        actualizarLista();
     }
 
     /**
