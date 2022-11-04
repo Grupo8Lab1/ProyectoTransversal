@@ -14,7 +14,9 @@ import javax.swing.table.DefaultTableModel;
 import persistencia.AlumnoData;
 import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.idata;
+import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Alumno;
+import universidadg8.entidades.Inscripcion;
 import universidadg8.entidades.Materia;
 import universidadg8.vistas.JPGuardarMateria;
 
@@ -26,11 +28,12 @@ public class JfIndex extends javax.swing.JFrame {
 
     private DefaultTableModel modelo;
     public static ArrayList<Alumno> listaAlumnos;
+    public static ArrayList<Materia> listaMaterias;
 
     public JfIndex() {
         initComponents();
-
         listaAlumnos = adata.obtenerAlumnos();
+        listaMaterias = mdata.obtenerMaterias();
         cargarAlumno();
         modelo = new DefaultTableModel();
         armarCabeceraTabla();
@@ -78,6 +81,8 @@ public class JfIndex extends javax.swing.JFrame {
                 (mat.getId_materia()
                 ,mat.getNombre()
                 ,mat.getAnio()        
+            
+          
             ));
         }
          }else{
@@ -95,6 +100,8 @@ public class JfIndex extends javax.swing.JFrame {
                 (mat.getId_materia()
                 ,mat.getNombre()
                 ,mat.getAnio()
+            
+          
             
           
             ));
