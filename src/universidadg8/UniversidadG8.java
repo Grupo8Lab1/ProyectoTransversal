@@ -1,5 +1,6 @@
 package universidadg8;
 
+
 import java.time.LocalDate;
 import persistencia.AlumnoData;
 import persistencia.InscripcionData;
@@ -22,6 +23,7 @@ public class UniversidadG8 {
     public static void main(String[] args) {
         // TODO code application logic here
 
+               
         JfIndex jf = new JfIndex();
 
         jf.setVisible(true);

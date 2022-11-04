@@ -54,7 +54,6 @@ public class JfIndex extends javax.swing.JFrame {
         columnas.add("ID");
         columnas.add("Nombre");
         columnas.add("AÑO");
-
         for (Object it : columnas) {
             modelo.addColumn(it);
         }
@@ -71,7 +70,7 @@ public class JfIndex extends javax.swing.JFrame {
         }
     }
 
-    private void cargarDatoInscriptas() {
+    /*private void cargarDatoInscriptas() {
         borrarFilasTabla();
         Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
         if (seleccionado != null) {
@@ -89,8 +88,8 @@ public class JfIndex extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
     }
-
-    private void cargarDatoNoInscriptas() {
+*/
+/*    private void cargarDatoNoInscriptas() {
         borrarFilasTabla();
         Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
         if (seleccionado != null) {
@@ -110,7 +109,7 @@ public class JfIndex extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
     }
-
+*/
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -809,10 +808,7 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_JRBMateriasNoInscriptasActionPerformed
 
     private void JCBAlumnosDBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCBAlumnosDBActionPerformed
-        AlumnoData a = new AlumnoData();
-        for (Object lista : a.obtenerAlumnos()) {
-            JCBAlumnosDB.addItem((String) lista);
-        }
+
     }//GEN-LAST:event_JCBAlumnosDBActionPerformed
 
     private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
