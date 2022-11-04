@@ -15,9 +15,9 @@ import universidadg8.entidades.Materia;
  */
 public class UniversidadG8 {
 
-    public static AlumnoData ad = new AlumnoData();
-    public static MateriaData md = new MateriaData();
-    public static InscripcionData id = new InscripcionData();
+    public static AlumnoData adata = new AlumnoData();
+    public static MateriaData mdata = new MateriaData();
+    public static InscripcionData idata = new InscripcionData();
 
     public static void main(String[] args) {
         // TODO code application logic here

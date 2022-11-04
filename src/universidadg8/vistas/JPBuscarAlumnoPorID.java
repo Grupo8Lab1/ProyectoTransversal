@@ -4,7 +4,7 @@
  */
 package universidadg8.vistas;
 
-import static universidadg8.UniversidadG8.ad;
+import static universidadg8.UniversidadG8.adata;
 import universidadg8.entidades.Alumno;
 
 /**
@@ -183,7 +183,7 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFechaNacBuscarAlumnoPorIDActionPerformed
 
     private void jbBuscarBuscarAlumnoPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarBuscarAlumnoPorIDActionPerformed
-        Alumno aux = ad.obtenerAlumnoPorId(Integer.valueOf(jtfIDBuscarBuscarAlumnoPorID.getText()));
+        Alumno aux = adata.obtenerAlumnoPorId(Integer.valueOf(jtfIDBuscarBuscarAlumnoPorID.getText()));
         jtfNombreBuscarAlumnoPorID.setText(aux.getNombre());
         jtfApeBuscarAlumnoPorID.setText(aux.getApellido());
         jtfDNIBuscarAlumnoPorID.setText(String.valueOf(aux.getDni()));

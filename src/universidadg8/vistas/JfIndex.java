@@ -14,6 +14,8 @@ import javax.swing.table.DefaultTableModel;
 import persistencia.AlumnoData;
 import persistencia.InscripcionData;
 import persistencia.MateriaData;
+import static universidadg8.UniversidadG8.adata;
+import static universidadg8.UniversidadG8.idata;
 import universidadg8.entidades.Alumno;
 import universidadg8.entidades.Materia;
 import universidadg8.vistas.JPGuardarMateria;
@@ -22,17 +24,14 @@ import universidadg8.vistas.JPGuardarMateria;
  *
  * @author Santi
  */
-
 public class JfIndex extends javax.swing.JFrame {
 
-   private AlumnoData alumnoData;
-   private DefaultTableModel modelo;
-   private ArrayList <Alumno> listaAlumnos;
-   private MateriaData materiaData;
-  
-   
+    private DefaultTableModel modelo;
+    public static ArrayList<Alumno> listaAlumnos;
+
     public JfIndex() {
         initComponents();
+<<<<<<< Updated upstream
         alumnoData= new AlumnoData();
         listaAlumnos=alumnoData.obtenerAlumnos();
         //cargarAlumno();
@@ -60,21 +59,45 @@ public class JfIndex extends javax.swing.JFrame {
     columnas.add("ID");
     columnas.add("Nombre");
     columnas.add("Año");
+=======
+
+        cargarAlumno();
+        listaAlumnos = adata.obtenerAlumnos();
+        modelo = new DefaultTableModel();
+        armarCabeceraTabla();
+    }
+
+    private void cargarAlumno() {
+        Collections.sort(listaAlumnos, (Alumno a, Alumno a1) -> a.getApellido().compareTo(a1.getApellido()));
+        JCBAlumnosDB.removeAllItems();
+        for (Alumno lista : listaAlumnos) {
+
+            JCBAlumnosDB.addItem(lista.getNombre() + " " + lista.getApellido());
+        }
+    }
+
+    private void armarCabeceraTabla() {
+        ArrayList<Object> columnas = new ArrayList<Object>();
+        columnas.add("ID");
+        columnas.add("Nombre");
+        columnas.add("AÑO");
+>>>>>>> Stashed changes
         for (Object it : columnas) {
-        modelo.addColumn(it);
+            modelo.addColumn(it);
         }
         JTMaterias.setModel(modelo);
     }
-    
-    private void borrarFilasTabla(){
-        if (modelo!=null) {
-            int a =modelo.getRowCount()-1;
-            for (int i = a; i>= 0; i--) {
+
+    private void borrarFilasTabla() {
+        if (modelo != null) {
+            int a = modelo.getRowCount() - 1;
+            for (int i = a; i >= 0; i--) {
                 modelo.removeRow(i);
             }
-            
+
         }
     }
+<<<<<<< Updated upstream
 //     private void cargarDatoInscriptas(){
 //        borrarFilasTabla();
 //        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
@@ -102,6 +125,49 @@ public class JfIndex extends javax.swing.JFrame {
 //    }
     
    
+=======
+
+    private void cargarDatoInscriptas() {
+        borrarFilasTabla();
+        Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
+        if (seleccionado != null) {
+            ArrayList<Materia> lista = idata.obtenerMateriasInscriptas(seleccionado);
+            for (Materia mat : lista) {
+                modelo.addRow(new Object[] =
+                {
+                    mat.getId_materia()
+                    ,mat.getNombre()
+                    ,mat.getAnio();
+                }
+            
+          
+            );
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
+        }
+    }
+
+    private void cargarDatoNoInscriptas() {
+        borrarFilasTabla();
+        Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
+        if (seleccionado != null) {
+            ArrayList<Materia> lista = idata.obtenerMateriasNoInscriptas(seleccionado);
+            for (Materia mat : lista) {
+                modelo.addRow(new Object[] = {(Integer) mat.getId_materia()
+                    , mat.getNombre(), (Integer
+                    )mat.getAnio()
+                }
+            
+          
+            );
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
+        }
+    }
+
+>>>>>>> Stashed changes
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -782,10 +848,10 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_JBBorrarAlumnoActionPerformed
 
     private void JRBMateriasInscriptasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JRBMateriasInscriptasActionPerformed
-       JRBMateriasNoInscriptas.setSelected(false);
-       JBAnularInscripcionAlumno.setEnabled(true);
-       JBInscribirAlumno.setEnabled(false);
-       //cargarDatosInscriptas();
+        JRBMateriasNoInscriptas.setSelected(false);
+        JBAnularInscripcionAlumno.setEnabled(true);
+        JBInscribirAlumno.setEnabled(false);
+        //cargarDatosInscriptas();
     }//GEN-LAST:event_JRBMateriasInscriptasActionPerformed
 
     private void JBInscribirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBInscribirAlumnoActionPerformed
@@ -793,14 +859,14 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_JBInscribirAlumnoActionPerformed
 
     private void JRBMateriasNoInscriptasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JRBMateriasNoInscriptasActionPerformed
-       JRBMateriasInscriptas.setSelected(false);
-       JBAnularInscripcionAlumno.setEnabled(false);
-       JBInscribirAlumno.setEnabled(true);
-       //cargarDatosNoInscriptas();
+        JRBMateriasInscriptas.setSelected(false);
+        JBAnularInscripcionAlumno.setEnabled(false);
+        JBInscribirAlumno.setEnabled(true);
+        //cargarDatosNoInscriptas();
     }//GEN-LAST:event_JRBMateriasNoInscriptasActionPerformed
 
     private void JCBAlumnosDBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCBAlumnosDBActionPerformed
-    AlumnoData a = new AlumnoData();
+        AlumnoData a = new AlumnoData();
         for (Object lista : a.obtenerAlumnos()) {
             JCBAlumnosDB.addItem((String) lista);
         }

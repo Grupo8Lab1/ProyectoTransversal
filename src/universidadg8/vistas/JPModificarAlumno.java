@@ -10,8 +10,9 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import persistencia.AlumnoData;
-import static universidadg8.UniversidadG8.ad;
+import static universidadg8.UniversidadG8.adata;
 import universidadg8.entidades.Alumno;
+import static universidadg8.vistas.JfIndex.listaAlumnos;
 
 /**
  *
@@ -19,16 +20,14 @@ import universidadg8.entidades.Alumno;
  */
 public class JPModificarAlumno extends javax.swing.JPanel {
 
-    private ArrayList<Alumno> listaAlumnos = new ArrayList();
-
+    // private ArrayList<Alumno> listaAlumnos = new ArrayList();
     /**
      * Creates new form JPModificarAlumno
      */
     public JPModificarAlumno() {
         initComponents();
-        listaAlumnos = ad.obtenerAlumnos();
         jcbAlumnosActualizarAlumno.removeAllItems();
-        for (Alumno alumnos : ad.obtenerAlumnos()) {
+        for (Alumno alumnos : listaAlumnos) {
             jcbAlumnosActualizarAlumno.addItem(alumnos.getNombre() + " " + alumnos.getApellido());
         }
     }
