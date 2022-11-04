@@ -7,12 +7,15 @@ package universidadg8.vistas;
 import java.awt.BorderLayout;
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import persistencia.AlumnoData;
 import persistencia.InscripcionData;
 import persistencia.MateriaData;
 import universidadg8.entidades.Alumno;
+import universidadg8.entidades.Materia;
 import universidadg8.vistas.JPGuardarMateria;
 
 /**
@@ -24,21 +27,33 @@ public class JfIndex extends javax.swing.JFrame {
 
    private AlumnoData alumnoData;
    private DefaultTableModel modelo;
+   private ArrayList <Alumno> listaAlumnos;
    private MateriaData materiaData;
-   private InscripcionData inscripcionData;
+  
    
     public JfIndex() {
         initComponents();
         alumnoData= new AlumnoData();
-        alumnoData.obtenerAlumnos();
+        listaAlumnos=alumnoData.obtenerAlumnos();
         cargarAlumno();
         modelo=new DefaultTableModel();
         armarCabeceraTabla();
+        inscripcionData= new inscripcionData();
     }
     
     private void cargarAlumno(){
-        
+        Collections.sort(listaAlumnos, new Comparator<Alumno>(){
+        @Override
+        public int compare(Alumno t, Alumno t1){
+        return t.getApellido().compareTo(t1.getApellido());
     }
+    }
+        );
+        for (Object lista: listaAlumnos) {
+            JCBAlumnosDB.addItem(lista);
+        }
+    }
+
     
     private void armarCabeceraTabla(){
     ArrayList<Object>columnas= new ArrayList<Object>();   
@@ -51,6 +66,42 @@ public class JfIndex extends javax.swing.JFrame {
         JTMaterias.setModel(modelo);
     }
     
+    private void borrarFilasTabla(){
+        if (modelo!=null) {
+            int a =modelo.getRowCount()-1;
+            for (int i = a; i>= 0; i--) {
+                modelo.removeRow(i);
+            }
+            
+        }
+    }
+     private void cargarDatoInscriptas(){
+        borrarFilasTabla();
+        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
+         if (seleccionado!=null) {
+             ArrayList<Materia>lista=(ArrayList)inscripcionData.obtenerMateriasInscriptas(seleccionado);
+        for (Object mat : lista) {
+            modelo.addRow(new Object[](mat.getIdMateria(),mat.getNombre,mat.getAnio()));
+        }
+         }else{
+             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
+         }
+    }
+    
+    private void cargarDatoNoInscriptas(){
+          borrarFilasTabla();
+        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
+         if (seleccionado!=null) {
+             ArrayList<Materia>lista=(ArrayList)inscripcionData.obtenerMateriasNoInscriptas(seleccionado);
+        for (Object mat : lista) {
+            modelo.addRow(new Object[](mat.getIdMateria(),mat.getNombre,mat.getAnio()));
+        }
+         }else{
+             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
+         }
+    }
+    
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -241,13 +292,12 @@ public class JfIndex extends javax.swing.JFrame {
                                 .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jbGuardarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jbActualizarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(JPAlumnoLayout.createSequentialGroup()
                         .addComponent(jlIconAlumno)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14)
-                        .addContainerGap())))
+                        .addComponent(jLabel14)))
+                .addContainerGap())
         );
         JPAlumnoLayout.setVerticalGroup(
             JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -530,9 +580,9 @@ public class JfIndex extends javax.swing.JFrame {
                     .addComponent(jLabel16))
                 .addGap(33, 33, 33)
                 .addComponent(jLabel17)
-                .addGroup(contentInscripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JRBMateriasInscriptas)
-                    .addComponent(JRBMateriasNoInscriptas))
+                .addGroup(contentInscripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JRBMateriasInscriptas, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(JRBMateriasNoInscriptas, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(contentInscripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contentInscripcionLayout.createSequentialGroup()
