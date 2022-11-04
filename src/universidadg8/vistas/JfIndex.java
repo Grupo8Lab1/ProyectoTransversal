@@ -79,9 +79,9 @@ public class JfIndex extends javax.swing.JFrame {
         borrarFilasTabla();
         Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
          if (seleccionado!=null) {
-             ArrayList<Materia>lista=(ArrayList)inscripcionData.obtenerMateriasInscriptas(seleccionado);
-        for (Object mat : lista) {
-            modelo.addRow(new Object[](mat.getIdMateria(),mat.getNombre,mat.getAnio()));
+             ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasInscriptas(seleccionado);
+        for (Materia mat : lista) {
+            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
         }
          }else{
              JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
@@ -92,9 +92,9 @@ public class JfIndex extends javax.swing.JFrame {
           borrarFilasTabla();
         Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
          if (seleccionado!=null) {
-             ArrayList<Materia>lista=(ArrayList)inscripcionData.obtenerMateriasNoInscriptas(seleccionado);
-        for (Object mat : lista) {
-            modelo.addRow(new Object[](mat.getIdMateria(),mat.getNombre,mat.getAnio()));
+             ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasNoInscriptas(seleccionado);
+        for (Materia mat : lista) {
+            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
         }
          }else{
              JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
