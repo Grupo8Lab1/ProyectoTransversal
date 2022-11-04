@@ -69,9 +69,7 @@ public class JfIndex extends javax.swing.JFrame {
         Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         if (seleccionado != null) {
 
-            ArrayList<Materia> lista = idata.obtenerMateriasInscriptas(seleccionado);
-
-            for (Materia mat : lista) {
+            for (Materia mat : idata.obtenerMateriasNoInscriptas(seleccionado)) {
                 modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
             }
         } else {
@@ -83,8 +81,7 @@ public class JfIndex extends javax.swing.JFrame {
         borrarFilasTabla();
         Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         if (seleccionado != null) {
-            ArrayList<Materia> lista = idata.obtenerMateriasNoInscriptas(seleccionado);
-            for (Materia mat : lista) {
+            for (Materia mat : idata.obtenerMateriasInscriptas(seleccionado)) {
                 modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
             }
         } else {
