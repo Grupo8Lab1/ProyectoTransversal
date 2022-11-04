@@ -95,6 +95,11 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
         jtfIDAlumBorrarAlumno.setEditable(false);
 
         jbBorrarBorrarAlumno.setText("Borrar");
+        jbBorrarBorrarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBorrarBorrarAlumnoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -177,6 +182,11 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
     private void jtfDNIBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDNIBorrarAlumnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfDNIBorrarAlumnoActionPerformed
+
+    private void jbBorrarBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarBorrarAlumnoActionPerformed
+        adata.borrarAlumno(Integer.parseInt(jtfIDAlumBorrarAlumno.getText()));
+        actualizarLista();
+    }//GEN-LAST:event_jbBorrarBorrarAlumnoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
