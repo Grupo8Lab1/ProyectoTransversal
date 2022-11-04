@@ -15,16 +15,16 @@ import universidadg8.entidades.Materia;
  */
 public class UniversidadG8 {
 
+    public static AlumnoData ad = new AlumnoData();
+    public static MateriaData md = new MateriaData();
+    public static InscripcionData id = new InscripcionData();
+
     public static void main(String[] args) {
         // TODO code application logic here
 
         JfIndex jf = new JfIndex();
 
         jf.setVisible(true);
-
-//        MateriaData md = new MateriaData();
-//        AlumnoData ad = new AlumnoData();
-//        InscripcionData id = new InscripcionData();
 //        //Testing
 //
 //        Alumno a = new Alumno(123456789, "apellido", "nombre", LocalDate.now(), true);

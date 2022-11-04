@@ -4,6 +4,10 @@
  */
 package universidadg8.vistas;
 
+import persistencia.AlumnoData;
+import static universidadg8.UniversidadG8.ad;
+import universidadg8.entidades.Alumno;
+
 /**
  *
  * @author tcnlu
@@ -15,6 +19,10 @@ public class JPModificarAlumno extends javax.swing.JPanel {
      */
     public JPModificarAlumno() {
         initComponents();
+        jcbAlumnosActualizarAlumno.removeAllItems();
+        for (Alumno alumnos : ad.obtenerAlumnos()) {
+            jcbAlumnosActualizarAlumno.addItem(alumnos.getNombre() + " " + alumnos.getApellido());
+        }
     }
 
     /**
