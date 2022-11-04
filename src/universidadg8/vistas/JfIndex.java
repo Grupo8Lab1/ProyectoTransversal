@@ -35,31 +35,31 @@ public class JfIndex extends javax.swing.JFrame {
         initComponents();
         alumnoData= new AlumnoData();
         listaAlumnos=alumnoData.obtenerAlumnos();
-        cargarAlumno();
+        //cargarAlumno();
         modelo=new DefaultTableModel();
         armarCabeceraTabla();
-        inscripcionData= new inscripcionData();
+
     }
     
-    private void cargarAlumno(){
-        Collections.sort(listaAlumnos, new Comparator<Alumno>(){
-        @Override
-        public int compare(Alumno t, Alumno t1){
-        return t.getApellido().compareTo(t1.getApellido());
-    }
-    }
-        );
-        for (Object lista: listaAlumnos) {
-            JCBAlumnosDB.addItem(lista);
-        }
-    }
+//    private void cargarAlumno(){
+//        Collections.sort(listaAlumnos, new Comparator<Alumno>(){
+//        @Override
+//        public int compare(Alumno t, Alumno t1){
+//        return t.getApellido().compareTo(t1.getApellido());
+//    }
+//    }
+//        );
+//        for (Object lista: listaAlumnos) {
+//            JCBAlumnosDB.addItem(lista);
+//        }
+//    }
 
     
     private void armarCabeceraTabla(){
     ArrayList<Object>columnas= new ArrayList<Object>();   
     columnas.add("ID");
     columnas.add("Nombre");
-    columnas.add("AÑO");
+    columnas.add("Año");
         for (Object it : columnas) {
         modelo.addColumn(it);
         }
@@ -75,31 +75,31 @@ public class JfIndex extends javax.swing.JFrame {
             
         }
     }
-     private void cargarDatoInscriptas(){
-        borrarFilasTabla();
-        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
-         if (seleccionado!=null) {
-             ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasInscriptas(seleccionado);
-        for (Materia mat : lista) {
-            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
-        }
-         }else{
-             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
-         }
-    }
-    
-    private void cargarDatoNoInscriptas(){
-          borrarFilasTabla();
-        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
-         if (seleccionado!=null) {
-             ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasNoInscriptas(seleccionado);
-        for (Materia mat : lista) {
-            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
-        }
-         }else{
-             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
-         }
-    }
+//     private void cargarDatoInscriptas(){
+//        borrarFilasTabla();
+//        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
+//         if (seleccionado!=null) {
+//            ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasInscriptas(seleccionado);
+//        for (Materia mat : lista) {
+//            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
+//        }
+//         }else{
+//             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
+//         }
+//    }
+//    
+//    private void cargarDatoNoInscriptas(){
+//          borrarFilasTabla();
+//        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
+//         if (seleccionado!=null) {
+//            ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasNoInscriptas(seleccionado);
+//        for (Materia mat : lista) {
+//            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
+//        }
+//         }else{
+//             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
+//         }
+//    }
     
    
     /**
