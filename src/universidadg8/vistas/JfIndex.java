@@ -38,7 +38,6 @@ public class JfIndex extends javax.swing.JFrame {
     private void cargarAlumno() {
         JCBAlumnosDB.removeAllItems();
         for (Alumno lista : listaAlumnos) {
-
             JCBAlumnosDB.addItem(lista.getNombre() + " " + lista.getApellido());
         }
     }
@@ -74,6 +73,8 @@ public class JfIndex extends javax.swing.JFrame {
             for (Materia mat : idata.obtenerMateriasNoInscriptas(seleccionado)) {
                 modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
             }
+            modelo.isCellEditable(0, 0);
+
         } else {
             JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
@@ -98,10 +99,10 @@ public class JfIndex extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        Nombre = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jlNombre = new javax.swing.JLabel();
+        jlIntegrantes = new javax.swing.JLabel();
+        jlLucas = new javax.swing.JLabel();
+        jlSantiago = new javax.swing.JLabel();
         jtpOpciones = new javax.swing.JTabbedPane();
         content = new javax.swing.JPanel();
         JPAlumno = new javax.swing.JPanel();
@@ -131,14 +132,14 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         BBorrarMateria = new java.awt.Button();
         JpInscripciones = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jlInscripcionTitulo = new javax.swing.JLabel();
+        jlIconInscripcion = new javax.swing.JLabel();
         contentInscripcion = new javax.swing.JPanel();
         JCBAlumnosDB = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         JRBMateriasInscriptas = new javax.swing.JRadioButton();
         JRBMateriasNoInscriptas = new javax.swing.JRadioButton();
-        jLabel17 = new javax.swing.JLabel();
+        jlInscripcionTitulo2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTMaterias = new javax.swing.JTable();
         JBAnularInscripcionAlumno = new java.awt.Button();
@@ -149,20 +150,20 @@ public class JfIndex extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Nombre.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        Nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Nombre.setText("Universidad G8");
+        jlNombre.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jlNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlNombre.setText("Universidad G8");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-car-accident-50.png"))); // NOI18N
-        jLabel2.setText("Integrantes:");
+        jlIntegrantes.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jlIntegrantes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlIntegrantes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-car-accident-50.png"))); // NOI18N
+        jlIntegrantes.setText("Integrantes:");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel3.setText("Lucas Teruel");
+        jlLucas.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jlLucas.setText("Lucas Teruel");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel4.setText("Santiago Lucero");
+        jlSantiago.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jlSantiago.setText("Santiago Lucero");
 
         JPAlumno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -468,10 +469,10 @@ public class JfIndex extends javax.swing.JFrame {
 
         JpInscripciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel7.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
-        jLabel7.setText("Inscripcion");
+        jlInscripcionTitulo.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jlInscripcionTitulo.setText("Inscripcion");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-buscar-en-la-lista-50.png"))); // NOI18N
+        jlIconInscripcion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-buscar-en-la-lista-50.png"))); // NOI18N
 
         JCBAlumnosDB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         JCBAlumnosDB.addActionListener(new java.awt.event.ActionListener() {
@@ -500,9 +501,9 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
-        jLabel17.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Listado Materias");
+        jlInscripcionTitulo2.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
+        jlInscripcionTitulo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlInscripcionTitulo2.setText("Listado Materias");
 
         JTMaterias.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -514,10 +515,25 @@ public class JfIndex extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        JTMaterias.setName(""); // NOI18N
+        JTMaterias.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(JTMaterias);
 
         JBAnularInscripcionAlumno.setLabel("Anular Inscripcion Alumno");
+        JBAnularInscripcionAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBAnularInscripcionAlumnoActionPerformed(evt);
+            }
+        });
 
         JBInscribirAlumno.setLabel("Inscribir Alumno");
         JBInscribirAlumno.addActionListener(new java.awt.event.ActionListener() {
@@ -538,7 +554,7 @@ public class JfIndex extends javax.swing.JFrame {
                         .addComponent(JRBMateriasNoInscriptas))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contentInscripcionLayout.createSequentialGroup()
                         .addGap(203, 203, 203)
-                        .addComponent(jLabel17))
+                        .addComponent(jlInscripcionTitulo2))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contentInscripcionLayout.createSequentialGroup()
                         .addContainerGap()
@@ -561,7 +577,7 @@ public class JfIndex extends javax.swing.JFrame {
                     .addComponent(JCBAlumnosDB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
                 .addGap(33, 33, 33)
-                .addComponent(jLabel17)
+                .addComponent(jlInscripcionTitulo2)
                 .addGroup(contentInscripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JRBMateriasInscriptas, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(JRBMateriasNoInscriptas, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -584,9 +600,9 @@ public class JfIndex extends javax.swing.JFrame {
                 .addGroup(JpInscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(contentInscripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(JpInscripcionesLayout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(jlIconInscripcion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7)
+                        .addComponent(jlInscripcionTitulo)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -595,8 +611,8 @@ public class JfIndex extends javax.swing.JFrame {
             .addGroup(JpInscripcionesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JpInscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel7))
+                    .addComponent(jlIconInscripcion)
+                    .addComponent(jlInscripcionTitulo))
                 .addGap(18, 18, 18)
                 .addComponent(contentInscripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(44, 44, 44))
@@ -621,15 +637,15 @@ public class JfIndex extends javax.swing.JFrame {
                 .addComponent(jtpOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
+                            .addComponent(jlIntegrantes)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(112, 112, 112)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))))
+                                    .addComponent(jlLucas)
+                                    .addComponent(jlSantiago))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(copyright, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -638,13 +654,13 @@ public class JfIndex extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Nombre)
+                .addComponent(jlNombre)
                 .addGap(240, 240, 240)
-                .addComponent(jLabel2)
+                .addComponent(jlIntegrantes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(jlLucas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(jlSantiago)
                 .addGap(32, 32, 32)
                 .addComponent(copyright, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
@@ -741,6 +757,13 @@ public class JfIndex extends javax.swing.JFrame {
 
     }//GEN-LAST:event_JCBAlumnosDBActionPerformed
 
+    private void JBAnularInscripcionAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAnularInscripcionAlumnoActionPerformed
+        //  idata.borrarInscripcion(listaAlumnos.get(JCBAlumnosDB.getSelectedIndex()).getId_alumno(),);
+        // mdata.obtenerMateriaPorId(JTMaterias.getValueAt(WIDTH, WIDTH));
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_JBAnularInscripcionAlumnoActionPerformed
+
     private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
         JPModificarMateria a = new JPModificarMateria();
         presentarvistasMateria(a);
@@ -812,7 +835,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JRadioButton JRBMateriasNoInscriptas;
     private javax.swing.JTable JTMaterias;
     private javax.swing.JPanel JpInscripciones;
-    private javax.swing.JLabel Nombre;
     private javax.swing.JPanel content;
     private javax.swing.JPanel contentAlumno;
     private javax.swing.JPanel contentInscripcion;
@@ -825,12 +847,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
@@ -842,7 +858,14 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jlIconAlumno;
     private javax.swing.JLabel jlIconBorrarAlum;
     private javax.swing.JLabel jlIconBuscarAlumID;
+    private javax.swing.JLabel jlIconInscripcion;
     private javax.swing.JLabel jlIconListarAlum;
+    private javax.swing.JLabel jlInscripcionTitulo;
+    private javax.swing.JLabel jlInscripcionTitulo2;
+    private javax.swing.JLabel jlIntegrantes;
+    private javax.swing.JLabel jlLucas;
+    private javax.swing.JLabel jlNombre;
+    private javax.swing.JLabel jlSantiago;
     private javax.swing.JTabbedPane jtpOpciones;
     // End of variables declaration//GEN-END:variables
 }
