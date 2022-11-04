@@ -12,8 +12,6 @@ import java.util.Comparator;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import persistencia.AlumnoData;
-import persistencia.InscripcionData;
-import persistencia.MateriaData;
 import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.idata;
 import universidadg8.entidades.Alumno;
@@ -31,42 +29,26 @@ public class JfIndex extends javax.swing.JFrame {
 
     public JfIndex() {
         initComponents();
-<<<<<<< Updated upstream
-        alumnoData= new AlumnoData();
-        listaAlumnos=alumnoData.obtenerAlumnos();
-        //cargarAlumno();
-        modelo=new DefaultTableModel();
+
+        listaAlumnos = adata.obtenerAlumnos();
+        cargarAlumno();
+        modelo = new DefaultTableModel();
         armarCabeceraTabla();
 
     }
-    
-//    private void cargarAlumno(){
-//        Collections.sort(listaAlumnos, new Comparator<Alumno>(){
-//        @Override
-//        public int compare(Alumno t, Alumno t1){
-//        return t.getApellido().compareTo(t1.getApellido());
-//    }
-//    }
-//        );
-//        for (Object lista: listaAlumnos) {
-//            JCBAlumnosDB.addItem(lista);
-//        }
-//    }
 
-    
-    private void armarCabeceraTabla(){
+
+    /*   private void armarCabeceraTabla(){
     ArrayList<Object>columnas= new ArrayList<Object>();   
     columnas.add("ID");
     columnas.add("Nombre");
     columnas.add("Año");
-=======
-
-        cargarAlumno();
-        listaAlumnos = adata.obtenerAlumnos();
-        modelo = new DefaultTableModel();
-        armarCabeceraTabla();
+    cargarAlumno();
+    listaAlumnos = adata.obtenerAlumnos();
+    modelo = new DefaultTableModel();
+    armarCabeceraTabla();
     }
-
+     */
     private void cargarAlumno() {
         Collections.sort(listaAlumnos, (Alumno a, Alumno a1) -> a.getApellido().compareTo(a1.getApellido()));
         JCBAlumnosDB.removeAllItems();
@@ -81,7 +63,7 @@ public class JfIndex extends javax.swing.JFrame {
         columnas.add("ID");
         columnas.add("Nombre");
         columnas.add("AÑO");
->>>>>>> Stashed changes
+
         for (Object it : columnas) {
             modelo.addColumn(it);
         }
@@ -97,36 +79,45 @@ public class JfIndex extends javax.swing.JFrame {
 
         }
     }
-<<<<<<< Updated upstream
-//     private void cargarDatoInscriptas(){
-//        borrarFilasTabla();
-//        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
-//         if (seleccionado!=null) {
-//            ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasInscriptas(seleccionado);
-//        for (Materia mat : lista) {
-//            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
-//        }
-//         }else{
-//             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
-//         }
-//    }
-//    
-//    private void cargarDatoNoInscriptas(){
-//          borrarFilasTabla();
-//        Alumno seleccionado=(Alumno)JCBAlumnosDB.getSelectedItem();
-//         if (seleccionado!=null) {
-//            ArrayList<Materia>lista=(ArrayList)InscripcionData.obtenerMateriasNoInscriptas(seleccionado);
-//        for (Materia mat : lista) {
-//            modelo.addRow(new Object[](mat.getId_materia(),mat.getNombre(),mat.getAnio()));
-//        }
-//         }else{
-//             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
-//         }
-//    }
-    
-   
-=======
 
+    private void cargarDatoInscriptas() {
+        borrarFilasTabla();
+        Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
+        if (seleccionado != null) {
+            ArrayList<Materia> lista = idata.obtenerMateriasInscriptas(seleccionado);
+            for (Materia mat : lista) {
+                modelo.addRow(new Object[]
+                (mat.getId_materia()
+                ,mat.getNombre()
+                ,mat.getAnio()
+            
+          
+            ));
+        }
+         }else{
+             JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
+        }
+    }
+
+    private void cargarDatoNoInscriptas() {
+        borrarFilasTabla();
+        Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
+        if (seleccionado != null) {
+            ArrayList<Materia> lista = idata.obtenerMateriasNoInscriptas(seleccionado);
+            for (Materia mat : lista) {
+                modelo.addRow(new Object[]
+                (mat.getId_materia()
+                ,mat.getNombre()
+                ,mat.getAnio()
+            ));
+         }else{
+             JOptionPane.showMessageDialog(this,"se debe seleccionar un alumno" );
+         }
+        }
+    }
+
+
+    /*
     private void cargarDatoInscriptas() {
         borrarFilasTabla();
         Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
@@ -146,9 +137,9 @@ public class JfIndex extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
-    }
+    }*/
 
-    private void cargarDatoNoInscriptas() {
+ /*  private void cargarDatoNoInscriptas() {
         borrarFilasTabla();
         Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
         if (seleccionado != null) {
@@ -165,15 +156,15 @@ public class JfIndex extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
         }
-    }
-
->>>>>>> Stashed changes
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
-    @SuppressWarnings("unchecked")
+}
+    
+*/
+/**
+ * This method is called from within the constructor to initialize the form.
+ * WARNING: Do NOT modify this code. The content of this method is always
+ * regenerated by the Form Editor.
+ */
+@SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -898,16 +889,28 @@ public class JfIndex extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                }
+
+}
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JfIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JfIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JfIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JfIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JfIndex.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(JfIndex.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(JfIndex.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(JfIndex.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
