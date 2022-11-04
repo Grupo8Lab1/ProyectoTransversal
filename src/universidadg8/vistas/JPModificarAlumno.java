@@ -5,12 +5,7 @@
 package universidadg8.vistas;
 
 import java.sql.Date;
-import java.time.Instant;
-import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.ArrayList;
-import persistencia.AlumnoData;
-import static universidadg8.UniversidadG8.adata;
 import universidadg8.entidades.Alumno;
 import static universidadg8.vistas.JfIndex.listaAlumnos;
 

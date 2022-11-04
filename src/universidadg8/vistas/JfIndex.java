@@ -153,10 +153,6 @@ public class JfIndex extends javax.swing.JFrame {
         JTMaterias = new javax.swing.JTable();
         JBAnularInscripcionAlumno = new java.awt.Button();
         JBInscribirAlumno = new java.awt.Button();
-        JPConsultas = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        contentConsultas = new javax.swing.JPanel();
         copyright = new java.awt.Button();
 
         jLabel1.setText("jLabel1");
@@ -618,52 +614,6 @@ public class JfIndex extends javax.swing.JFrame {
 
         jtpOpciones.addTab("Inscripciones", JpInscripciones);
 
-        JPConsultas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel6.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
-        jLabel6.setText("Consultas");
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-búsqueda-50.png"))); // NOI18N
-
-        javax.swing.GroupLayout contentConsultasLayout = new javax.swing.GroupLayout(contentConsultas);
-        contentConsultas.setLayout(contentConsultasLayout);
-        contentConsultasLayout.setHorizontalGroup(
-            contentConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
-        );
-        contentConsultasLayout.setVerticalGroup(
-            contentConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout JPConsultasLayout = new javax.swing.GroupLayout(JPConsultas);
-        JPConsultas.setLayout(JPConsultasLayout);
-        JPConsultasLayout.setHorizontalGroup(
-            JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JPConsultasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPConsultasLayout.createSequentialGroup()
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6))
-                    .addComponent(contentConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(266, Short.MAX_VALUE))
-        );
-        JPConsultasLayout.setVerticalGroup(
-            JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JPConsultasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(JPConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel15))
-                .addGap(8, 8, 8)
-                .addComponent(contentConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jtpOpciones.addTab("Consultas", JPConsultas);
-
         copyright.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         copyright.setLabel("Copyright");
         copyright.addActionListener(new java.awt.event.ActionListener() {
@@ -865,7 +815,6 @@ public class JfIndex extends javax.swing.JFrame {
     private java.awt.Button JBInscribirAlumno;
     private javax.swing.JComboBox<String> JCBAlumnosDB;
     private javax.swing.JPanel JPAlumno;
-    private javax.swing.JPanel JPConsultas;
     private javax.swing.JPanel JPMaterias;
     private javax.swing.JRadioButton JRBMateriasInscriptas;
     private javax.swing.JRadioButton JRBMateriasNoInscriptas;
@@ -874,7 +823,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel Nombre;
     private javax.swing.JPanel content;
     private javax.swing.JPanel contentAlumno;
-    private javax.swing.JPanel contentConsultas;
     private javax.swing.JPanel contentInscripcion;
     private javax.swing.JPanel contentMateria;
     private java.awt.Button copyright;
@@ -884,14 +832,12 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

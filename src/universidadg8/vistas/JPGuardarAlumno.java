@@ -77,8 +77,18 @@ public JPGuardarAlumno(){
         jLabel1.setText("Ingresar Datos");
 
         jbBorrarGuardarAlumno.setText("Borrar");
+        jbBorrarGuardarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBorrarGuardarAlumnoActionPerformed(evt);
+            }
+        });
 
         jbGuardarGuardarAlumno.setText("Guardar");
+        jbGuardarGuardarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGuardarGuardarAlumnoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -152,6 +162,14 @@ public JPGuardarAlumno(){
     private void jtfNombreGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombreGuardarAlumnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNombreGuardarAlumnoActionPerformed
+
+    private void jbGuardarGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarGuardarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbGuardarGuardarAlumnoActionPerformed
+
+    private void jbBorrarGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarGuardarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbBorrarGuardarAlumnoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
