@@ -41,7 +41,6 @@ public class JfIndex extends javax.swing.JFrame {
     }
 
     private void cargarAlumno() {
-        //   Collections.sort(listaAlumnos, (Alumno a, Alumno a1) -> a.getApellido().compareTo(a1.getApellido()));
         JCBAlumnosDB.removeAllItems();
         for (Alumno lista : listaAlumnos) {
 
