@@ -21,9 +21,9 @@ public class UniversidadG8 {
     public static InscripcionData idata = new InscripcionData();
 
     public static void main(String[] args) {
-        // TODO code application logic here
-
-               
+        // TODO code application logic here    
+       
+        
         JfIndex jf = new JfIndex();
 
         jf.setVisible(true);

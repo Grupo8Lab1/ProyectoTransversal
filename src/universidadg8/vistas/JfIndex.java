@@ -41,7 +41,7 @@ public class JfIndex extends javax.swing.JFrame {
     }
 
     private void cargarAlumno() {
-        Collections.sort(listaAlumnos, (Alumno a, Alumno a1) -> a.getApellido().compareTo(a1.getApellido()));
+        //   Collections.sort(listaAlumnos, (Alumno a, Alumno a1) -> a.getApellido().compareTo(a1.getApellido()));
         JCBAlumnosDB.removeAllItems();
         for (Alumno lista : listaAlumnos) {
 
@@ -72,7 +72,7 @@ public class JfIndex extends javax.swing.JFrame {
 
     private void cargarDatoInscriptas() {
         borrarFilasTabla();
-        Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
+        Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         if (seleccionado != null) {
 
             ArrayList<Materia> lista = idata.obtenerMateriasInscriptas(seleccionado);
@@ -87,7 +87,7 @@ public class JfIndex extends javax.swing.JFrame {
 
     private void cargarDatoNoInscriptas() {
         borrarFilasTabla();
-        Alumno seleccionado = (Alumno) JCBAlumnosDB.getSelectedItem();
+        Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         if (seleccionado != null) {
             ArrayList<Materia> lista = idata.obtenerMateriasNoInscriptas(seleccionado);
             for (Materia mat : lista) {
@@ -781,7 +781,7 @@ public class JfIndex extends javax.swing.JFrame {
         JRBMateriasNoInscriptas.setSelected(false);
         JBAnularInscripcionAlumno.setEnabled(true);
         JBInscribirAlumno.setEnabled(false);
-        //cargarDatosInscriptas();
+        cargarDatoInscriptas();
     }//GEN-LAST:event_JRBMateriasInscriptasActionPerformed
 
     private void JBInscribirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBInscribirAlumnoActionPerformed
@@ -792,7 +792,7 @@ public class JfIndex extends javax.swing.JFrame {
         JRBMateriasInscriptas.setSelected(false);
         JBAnularInscripcionAlumno.setEnabled(false);
         JBInscribirAlumno.setEnabled(true);
-        //cargarDatosNoInscriptas();
+        cargarDatoNoInscriptas();
     }//GEN-LAST:event_JRBMateriasNoInscriptasActionPerformed
 
     private void JCBAlumnosDBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCBAlumnosDBActionPerformed
