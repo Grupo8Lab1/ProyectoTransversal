@@ -4,7 +4,14 @@
  */
 package universidadg8.vistas;
 
-import com.toedter.calendar.JDateChooser;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.util.Date;
+import static universidadg8.UniversidadG8.adata;
+import static universidadg8.UniversidadG8.listaAlumnos;
+import universidadg8.entidades.Alumno;
 
 /**
  *
@@ -15,9 +22,11 @@ public class JPGuardarAlumno extends javax.swing.JPanel {
     /**
      * Creates new form JPGuardarAlumno
      */
-public JPGuardarAlumno(){
-    initComponents();
-}
+    public JPGuardarAlumno() {
+        initComponents();
+        listaAlumnos = adata.obtenerAlumnos();
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -162,11 +171,14 @@ public JPGuardarAlumno(){
     }//GEN-LAST:event_jtfNombreGuardarAlumnoActionPerformed
 
     private void jbGuardarGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarGuardarAlumnoActionPerformed
-        // TODO add your handling code here:
+        adata.guardarAlumno(new Alumno((Long.parseLong(jtfDNIGuardarAlumno.getText())), jtfApellidoGuardarAlumno.getText(), jtfNombreGuardarAlumno.getText(), jCalGuardarAlumno.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), true));
     }//GEN-LAST:event_jbGuardarGuardarAlumnoActionPerformed
 
     private void jbBorrarGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarGuardarAlumnoActionPerformed
-
+        jtfApellidoGuardarAlumno.setText("");
+        jtfNombreGuardarAlumno.setText("");
+        jtfDNIGuardarAlumno.setText("");
+        jCalGuardarAlumno.setDate(Date.from(LocalDate.now().atStartOfDay().toInstant(ZoneOffset.UTC)));
     }//GEN-LAST:event_jbBorrarGuardarAlumnoActionPerformed
 
 

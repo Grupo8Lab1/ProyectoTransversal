@@ -4,8 +4,8 @@
  */
 package universidadg8.vistas;
 
+import static universidadg8.UniversidadG8.listaMaterias;
 import universidadg8.entidades.Materia;
-import static universidadg8.vistas.JfIndex.listaMaterias;
 
 /**
  *
@@ -17,7 +17,7 @@ public class JPModificarMateria extends javax.swing.JPanel {
      * Creates new form JPModificarMateria
      */
     public JPModificarMateria() {
-       initComponents();
+        initComponents();
         JCBActualizarMateria.removeAllItems();
         for (Materia materias : listaMaterias) {
             JCBActualizarMateria.addItem(materias.getNombre());

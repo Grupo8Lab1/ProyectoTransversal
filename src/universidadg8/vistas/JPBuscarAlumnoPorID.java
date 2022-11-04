@@ -5,6 +5,7 @@
 package universidadg8.vistas;
 
 import static universidadg8.UniversidadG8.adata;
+import static universidadg8.UniversidadG8.listaAlumnos;
 import universidadg8.entidades.Alumno;
 
 /**
@@ -17,6 +18,7 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
      * Creates new form JPBuscarAlumnoPorID
      */
     public JPBuscarAlumnoPorID() {
+        listaAlumnos = adata.obtenerAlumnos();
         initComponents();
     }
 

@@ -6,8 +6,8 @@ package universidadg8.vistas;
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import static universidadg8.UniversidadG8.listaAlumnos;
 import universidadg8.entidades.Alumno;
-import static universidadg8.vistas.JfIndex.listaAlumnos;
 
 /**
  *

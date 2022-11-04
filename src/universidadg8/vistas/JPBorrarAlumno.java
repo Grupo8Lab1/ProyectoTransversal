@@ -4,8 +4,9 @@
  */
 package universidadg8.vistas;
 
+import static universidadg8.UniversidadG8.adata;
+import static universidadg8.UniversidadG8.listaAlumnos;
 import universidadg8.entidades.Alumno;
-import static universidadg8.vistas.JfIndex.listaAlumnos;
 
 /**
  *
@@ -18,6 +19,7 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
      */
     public JPBorrarAlumno() {
         initComponents();
+        listaAlumnos = adata.obtenerAlumnos();
         jcbAlumnosBorrarAlumno.removeAllItems();
         for (Alumno alumnos : listaAlumnos) {
             jcbAlumnosBorrarAlumno.addItem(alumnos.getNombre() + " " + alumnos.getApellido());

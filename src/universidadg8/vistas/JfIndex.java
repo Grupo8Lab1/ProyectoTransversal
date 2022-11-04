@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.idata;
+import static universidadg8.UniversidadG8.listaAlumnos;
+import static universidadg8.UniversidadG8.listaMaterias;
 import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Alumno;
 import universidadg8.entidades.Materia;
@@ -22,8 +24,6 @@ import universidadg8.vistas.JPGuardarMateria;
 public class JfIndex extends javax.swing.JFrame {
 
     private DefaultTableModel modelo;
-    public static ArrayList<Alumno> listaAlumnos;
-    public static ArrayList<Materia> listaMaterias;
 
     public JfIndex() {
         initComponents();
@@ -65,6 +65,8 @@ public class JfIndex extends javax.swing.JFrame {
     }
 
     private void cargarDatoInscriptas() {
+        listaAlumnos = adata.obtenerAlumnos();
+        listaMaterias = mdata.obtenerMaterias();
         borrarFilasTabla();
         Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         if (seleccionado != null) {
@@ -78,6 +80,8 @@ public class JfIndex extends javax.swing.JFrame {
     }
 
     private void cargarDatoNoInscriptas() {
+        listaAlumnos = adata.obtenerAlumnos();
+        listaMaterias = mdata.obtenerMaterias();
         borrarFilasTabla();
         Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         if (seleccionado != null) {
@@ -652,6 +656,7 @@ public class JfIndex extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
   private void presentarVistasAlumno(javax.swing.JPanel p) {
+        listaAlumnos = adata.obtenerAlumnos();
         p.setSize(369, 353);
         p.setLocation(0, 0);
         contentAlumno.removeAll();
@@ -661,6 +666,7 @@ public class JfIndex extends javax.swing.JFrame {
     }
 
     private void presentarvistasMateria(javax.swing.JPanel p) {
+        listaMaterias = mdata.obtenerMaterias();
         p.setSize(369, 353);
         p.setLocation(0, 0);
         contentMateria.removeAll();

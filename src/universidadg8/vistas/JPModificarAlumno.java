@@ -6,8 +6,9 @@ package universidadg8.vistas;
 
 import java.sql.Date;
 import java.time.ZoneId;
+import static universidadg8.UniversidadG8.adata;
+import static universidadg8.UniversidadG8.listaAlumnos;
 import universidadg8.entidades.Alumno;
-import static universidadg8.vistas.JfIndex.listaAlumnos;
 
 /**
  *
@@ -15,12 +16,12 @@ import static universidadg8.vistas.JfIndex.listaAlumnos;
  */
 public class JPModificarAlumno extends javax.swing.JPanel {
 
-    // private ArrayList<Alumno> listaAlumnos = new ArrayList();
     /**
      * Creates new form JPModificarAlumno
      */
     public JPModificarAlumno() {
         initComponents();
+        listaAlumnos = adata.obtenerAlumnos();
         jcbAlumnosActualizarAlumno.removeAllItems();
         for (Alumno alumnos : listaAlumnos) {
             jcbAlumnosActualizarAlumno.addItem(alumnos.getNombre() + " " + alumnos.getApellido());

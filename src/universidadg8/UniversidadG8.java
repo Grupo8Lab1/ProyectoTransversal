@@ -1,7 +1,6 @@
 package universidadg8;
 
-
-import java.time.LocalDate;
+import java.util.ArrayList;
 import persistencia.AlumnoData;
 import persistencia.InscripcionData;
 import persistencia.MateriaData;
@@ -19,11 +18,12 @@ public class UniversidadG8 {
     public static AlumnoData adata = new AlumnoData();
     public static MateriaData mdata = new MateriaData();
     public static InscripcionData idata = new InscripcionData();
+    public static ArrayList<Alumno> listaAlumnos;
+    public static ArrayList<Materia> listaMaterias;
 
     public static void main(String[] args) {
         // TODO code application logic here    
-       
-        
+
         JfIndex jf = new JfIndex();
 
         jf.setVisible(true);
