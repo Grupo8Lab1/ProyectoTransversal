@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.listaAlumnos;
 import universidadg8.entidades.Alumno;
@@ -171,7 +172,15 @@ public class JPGuardarAlumno extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfNombreGuardarAlumnoActionPerformed
 
     private void jbGuardarGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarGuardarAlumnoActionPerformed
-        adata.guardarAlumno(new Alumno((Long.parseLong(jtfDNIGuardarAlumno.getText())), jtfApellidoGuardarAlumno.getText(), jtfNombreGuardarAlumno.getText(), jCalGuardarAlumno.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), true));
+        if (jCalGuardarAlumno.getDate().after(Date.from(LocalDate.now().minusYears(4).atStartOfDay().toInstant(ZoneOffset.UTC)))) {
+            JOptionPane.showMessageDialog(null, "Error, su alumno es un poco joven para nuestra institución...");
+        } else {
+            try {
+                adata.guardarAlumno(new Alumno((Long.parseLong(jtfDNIGuardarAlumno.getText())), jtfApellidoGuardarAlumno.getText(), jtfNombreGuardarAlumno.getText(), jCalGuardarAlumno.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), true));
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "Error, verifique haber ingresado todos los datos correctamente.");
+            }
+        }
     }//GEN-LAST:event_jbGuardarGuardarAlumnoActionPerformed
 
     private void jbBorrarGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarGuardarAlumnoActionPerformed

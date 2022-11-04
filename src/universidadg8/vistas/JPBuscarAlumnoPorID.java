@@ -4,6 +4,7 @@
  */
 package universidadg8.vistas;
 
+import javax.swing.JOptionPane;
 import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.listaAlumnos;
 import universidadg8.entidades.Alumno;
@@ -186,13 +187,16 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFechaNacBuscarAlumnoPorIDActionPerformed
 
     private void jbBuscarBuscarAlumnoPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarBuscarAlumnoPorIDActionPerformed
+        try{
         Alumno aux = adata.obtenerAlumnoPorId(Integer.valueOf(jtfIDBuscarBuscarAlumnoPorID.getText()));
         jtfNombreBuscarAlumnoPorID.setText(aux.getNombre());
         jtfApeBuscarAlumnoPorID.setText(aux.getApellido());
         jtfDNIBuscarAlumnoPorID.setText(String.valueOf(aux.getDni()));
         jtfIDBuscarAlumnoPorID.setText(String.valueOf(aux.getId_alumno()));
         jtfFechaNacBuscarAlumnoPorID.setText(aux.getFecha_nacimiento().toString());
-// TODO add your handling code here:
+        }catch(NumberFormatException ex){
+              JOptionPane.showMessageDialog(null, "Error, ingrese un numero de legajo valido.");
+        }
     }//GEN-LAST:event_jbBuscarBuscarAlumnoPorIDActionPerformed
 
 

@@ -6,6 +6,7 @@ package universidadg8.vistas;
 
 import java.sql.Date;
 import java.time.ZoneId;
+import javax.swing.JOptionPane;
 import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.listaAlumnos;
 import universidadg8.entidades.Alumno;
@@ -175,6 +176,9 @@ public class JPModificarAlumno extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfDNIActualizarAlumnoActionPerformed
 
     private void jcbAlumnosActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAlumnosActualizarAlumnoActionPerformed
+        if (jtfNombreActualizarAlumno.getText().isEmpty() || jtfApeActualizarAlumno.getText().isEmpty()) {
+
+        }
         if (jcbAlumnosActualizarAlumno.getSelectedIndex() >= 0) {
             jtfNombreActualizarAlumno.setText(listaAlumnos.get(jcbAlumnosActualizarAlumno.getSelectedIndex()).getNombre());
             jtfApeActualizarAlumno.setText(listaAlumnos.get(jcbAlumnosActualizarAlumno.getSelectedIndex()).getApellido());
@@ -186,14 +190,23 @@ public class JPModificarAlumno extends javax.swing.JPanel {
     }//GEN-LAST:event_jcbAlumnosActualizarAlumnoActionPerformed
 
     private void jbActualizarActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarActualizarAlumnoActionPerformed
-        Alumno aux;
-        aux = adata.obtenerAlumnoPorId(Integer.parseInt(jtfIDAlumActualizarAlumno.getText()));
-        aux.setNombre(jtfNombreActualizarAlumno.getText());
-        aux.setApellido(jtfApeActualizarAlumno.getText());
-        aux.setDni(Long.parseLong(jtfDNIActualizarAlumno.getText()));
-        aux.setFecha_nacimiento(jDaChActualizarAlumno.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-        adata.actualizaAlumno(aux);
-        actualizarLista();
+        if (jtfNombreActualizarAlumno.getText().isEmpty() || jtfApeActualizarAlumno.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
+        } else {
+            try {
+                Alumno aux;
+                aux = adata.obtenerAlumnoPorId(Integer.parseInt(jtfIDAlumActualizarAlumno.getText()));
+                aux.setNombre(jtfNombreActualizarAlumno.getText());
+                aux.setApellido(jtfApeActualizarAlumno.getText());
+                aux.setDni(Long.parseLong(jtfDNIActualizarAlumno.getText()));
+                aux.setFecha_nacimiento(jDaChActualizarAlumno.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+                adata.actualizaAlumno(aux);
+                actualizarLista();
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "Error, verifique haber ingresado todos los datos correctamente.");
+            }
+        }
+
     }//GEN-LAST:event_jbActualizarActualizarAlumnoActionPerformed
 
 
