@@ -48,7 +48,7 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
         setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar Legajo"));
         setPreferredSize(new java.awt.Dimension(369, 353));
 
-        jlBuscarAlumPorIDTitulo.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jlBuscarAlumPorIDTitulo.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         jlBuscarAlumPorIDTitulo.setText("Buscar Alumno");
 
         jlIdBuscarBuscarAlumnoPorID.setText("Legajo");
@@ -129,7 +129,7 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
                                 .addComponent(jlIdBuscarBuscarAlumnoPorID)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jtfIDBuscarBuscarAlumnoPorID, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                         .addComponent(jbBuscarBuscarAlumnoPorID)))
                 .addContainerGap())
         );

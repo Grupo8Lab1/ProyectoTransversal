@@ -58,7 +58,7 @@
                               <Component id="jtfIDBuscarBuscarAlumnoPorID" min="-2" pref="67" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="99" max="32767" attributes="0"/>
+                      <EmptySpace pref="141" max="32767" attributes="0"/>
                       <Component id="jbBuscarBuscarAlumnoPorID" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -115,7 +115,7 @@
     <Component class="javax.swing.JLabel" name="jlBuscarAlumPorIDTitulo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic Medium" size="24" style="0"/>
+          <Font name="Yu Gothic Medium" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Buscar Alumno"/>
       </Properties>

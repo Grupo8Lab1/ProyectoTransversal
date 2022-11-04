@@ -49,23 +49,14 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jlNombreGuardarAlumno" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="jlIconGuardarAlum" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="jlApellidoGuardarAlumno" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jlDNIGuardarAlumno" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="205" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jtfApellidoGuardarAlumno" min="-2" pref="205" max="-2" attributes="0"/>
-                                  <Component id="jtfNombreGuardarAlumno" min="-2" pref="205" max="-2" attributes="0"/>
-                                  <Component id="jtfDNIGuardarAlumno" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jtfApellidoGuardarAlumno" min="-2" pref="205" max="-2" attributes="0"/>
+                          <Component id="jtfNombreGuardarAlumno" min="-2" pref="205" max="-2" attributes="0"/>
+                          <Component id="jtfDNIGuardarAlumno" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -80,19 +71,17 @@
                           <Component id="jCalGuardarAlumno" min="-2" pref="209" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jlIconGuardarAlum" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="44" max="-2" attributes="0"/>
-              </Group>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jtfNombreGuardarAlumno" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
@@ -115,7 +104,7 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jbBorrarGuardarAlumno" pref="36" max="32767" attributes="0"/>
+                  <Component id="jbBorrarGuardarAlumno" pref="33" max="32767" attributes="0"/>
                   <Component id="jbGuardarGuardarAlumno" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -145,8 +134,6 @@
       </Properties>
     </Component>
     <Component class="com.toedter.calendar.JCalendar" name="jCalGuardarAlumno">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jlIconGuardarAlum">
     </Component>
     <Component class="javax.swing.JTextField" name="jtfApellidoGuardarAlumno">
       <Events>
