@@ -4,6 +4,11 @@
  */
 package universidadg8.vistas;
 
+import java.sql.Date;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.ArrayList;
 import persistencia.AlumnoData;
 import static universidadg8.UniversidadG8.ad;
 import universidadg8.entidades.Alumno;
@@ -14,11 +19,14 @@ import universidadg8.entidades.Alumno;
  */
 public class JPModificarAlumno extends javax.swing.JPanel {
 
+    private ArrayList<Alumno> listaAlumnos = new ArrayList();
+
     /**
      * Creates new form JPModificarAlumno
      */
     public JPModificarAlumno() {
         initComponents();
+        listaAlumnos = ad.obtenerAlumnos();
         jcbAlumnosActualizarAlumno.removeAllItems();
         for (Alumno alumnos : ad.obtenerAlumnos()) {
             jcbAlumnosActualizarAlumno.addItem(alumnos.getNombre() + " " + alumnos.getApellido());
@@ -62,6 +70,11 @@ public class JPModificarAlumno extends javax.swing.JPanel {
         jlTituloActualizarAlum.setText("Alumno");
 
         jcbAlumnosActualizarAlumno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcbAlumnosActualizarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbAlumnosActualizarAlumnoActionPerformed(evt);
+            }
+        });
 
         jlNomActualizarAlumno.setText("Nombre");
 
@@ -156,6 +169,17 @@ public class JPModificarAlumno extends javax.swing.JPanel {
     private void jtfDNIActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDNIActualizarAlumnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfDNIActualizarAlumnoActionPerformed
+
+    private void jcbAlumnosActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAlumnosActualizarAlumnoActionPerformed
+        if (jcbAlumnosActualizarAlumno.getSelectedIndex() >= 0) {
+            jtfNombreActualizarAlumno.setText(listaAlumnos.get(jcbAlumnosActualizarAlumno.getSelectedIndex()).getNombre());
+            jtfApeActualizarAlumno.setText(listaAlumnos.get(jcbAlumnosActualizarAlumno.getSelectedIndex()).getApellido());
+            jtfDNIActualizarAlumno.setText(String.valueOf(listaAlumnos.get(jcbAlumnosActualizarAlumno.getSelectedIndex()).getDni()));
+            jtfIDAlumActualizarAlumno.setText(String.valueOf(listaAlumnos.get(jcbAlumnosActualizarAlumno.getSelectedIndex()).getId_alumno()));
+            jDaChActualizarAlumno.setDate(Date.from(listaAlumnos.get(jcbAlumnosActualizarAlumno.getSelectedIndex()).getFecha_nacimiento().atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_jcbAlumnosActualizarAlumnoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
