@@ -4,6 +4,8 @@
  */
 package universidadg8.vistas;
 
+import universidadg8.entidades.Materia;
+import static universidadg8.vistas.JfIndex.listaMaterias;
 /**
  *
  * @author Santi
@@ -15,6 +17,10 @@ public class JPBorrarMateria extends javax.swing.JPanel {
      */
     public JPBorrarMateria() {
         initComponents();
+          JCBMaterias1.removeAllItems();
+        for (Materia lista : listaMaterias) {
+            JCBMaterias1.addItem(lista.getNombre());
+        }
     }
 
     /**
@@ -26,51 +32,84 @@ public class JPBorrarMateria extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        label1 = new java.awt.Label();
+        jPanel2 = new javax.swing.JPanel();
+        JCBMaterias1 = new javax.swing.JComboBox<>();
+        JLMateriaBorrar = new javax.swing.JLabel();
+        JBBotonBorrar = new javax.swing.JButton();
 
-        label1.setAlignment(java.awt.Label.CENTER);
-        label1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        label1.setText("Guardar Materia");
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar Materia"));
+        jPanel2.setPreferredSize(new java.awt.Dimension(369, 353));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(317, Short.MAX_VALUE))
+        JCBMaterias1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCBMaterias1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JCBMaterias1ActionPerformed(evt);
+            }
+        });
+
+        JLMateriaBorrar.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        JLMateriaBorrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JLMateriaBorrar.setText("Materia");
+
+        JBBotonBorrar.setText("Borrar");
+        JBBotonBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBBotonBorrarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(JLMateriaBorrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JCBMaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JBBotonBorrar)
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(239, Short.MAX_VALUE))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JCBMaterias1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JLMateriaBorrar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
+                .addComponent(JBBotonBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+
+        jPanel2.getAccessibleContext().setAccessibleName("Borrar Materia");
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JCBMaterias1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCBMaterias1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JCBMaterias1ActionPerformed
+
+    private void JBBotonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBotonBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBBotonBorrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private java.awt.Label label1;
+    private javax.swing.JButton JBBotonBorrar;
+    private javax.swing.JComboBox<String> JCBMaterias1;
+    private javax.swing.JLabel JLMateriaBorrar;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
