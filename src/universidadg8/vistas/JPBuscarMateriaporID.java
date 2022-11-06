@@ -4,6 +4,8 @@
  */
 package universidadg8.vistas;
 
+import javax.swing.JOptionPane;
+import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Materia;
 
@@ -142,12 +144,14 @@ public class JPBuscarMateriaporID extends javax.swing.JPanel {
     }//GEN-LAST:event_JTFBuscarMateriaPorIDActionPerformed
 
     private void JBBotonBuscarMateriaPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBotonBuscarMateriaPorIDActionPerformed
-        Materia aux = mdata.obtenerMateriaPorId(Integer.parseInt(JTFBuscarMateriaPorID.getText()));
-        JTFNombreBuscarMateriaPorID.setText(aux.getNombre());
-        JTFAnioBuscarMateriaPorID.setText(String.valueOf(aux.getAnio()));
+        try {
+            Materia aux = mdata.obtenerMateriaPorId(Integer.parseInt(JTFBuscarMateriaPorID.getText()));
+            JTFNombreBuscarMateriaPorID.setText(aux.getNombre());
+            JTFAnioBuscarMateriaPorID.setText(String.valueOf(aux.getAnio()));
+        } catch (NumberFormatException | NullPointerException ex) {
+            JOptionPane.showMessageDialog(null, "No hay materias que correspondan a ese ID.");
+        }
     }//GEN-LAST:event_JBBotonBuscarMateriaPorIDActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBBotonBuscarMateriaPorID;
     private javax.swing.JLabel JLAñoBuscarMateriaPorID;

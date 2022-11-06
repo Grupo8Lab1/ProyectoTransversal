@@ -134,7 +134,7 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         BModificarMateria = new java.awt.Button();
-        jLabel12 = new javax.swing.JLabel();
+        JLBuscarMateriasPorIDIcon = new javax.swing.JLabel();
         BBuscarMateriaporID = new java.awt.Button();
         jLabel13 = new javax.swing.JLabel();
         BBorrarMateria = new java.awt.Button();
@@ -303,25 +303,23 @@ public class JfIndex extends javax.swing.JFrame {
                             .addComponent(jlIConGuardarAlumno)
                             .addComponent(jbGuardarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlIconActualizarAlumno)
+                        .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jlIconActualizarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jbActualizarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(21, 21, 21)
+                        .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbListarAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlIconListarAlum))
                         .addGap(18, 18, 18)
                         .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlIconListarAlum)
-                            .addComponent(jbListarAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                            .addComponent(JBBuscarAlumnoPorID, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlIconBuscarAlumID))
+                        .addGap(20, 20, 20)
                         .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlIconBuscarAlumID)
-                            .addComponent(JBBuscarAlumnoPorID, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(JPAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlIconBorrarAlum)
-                            .addComponent(JBBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(63, 63, 63))
-                    .addGroup(JPAlumnoLayout.createSequentialGroup()
-                        .addComponent(contentAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(JBBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlIconBorrarAlum)))
+                    .addComponent(contentAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
@@ -336,7 +334,7 @@ public class JfIndex extends javax.swing.JFrame {
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
+            .addGap(0, 455, Short.MAX_VALUE)
             .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(JPAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -386,9 +384,9 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-buscar-en-la-lista-50.png"))); // NOI18N
+        JLBuscarMateriasPorIDIcon.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        JLBuscarMateriasPorIDIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JLBuscarMateriasPorIDIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-búsqueda-50.png"))); // NOI18N
 
         BBuscarMateriaporID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         BBuscarMateriaporID.setLabel("Buscar Materia por ID");
@@ -403,7 +401,7 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-borrar-para-siempre-50.png"))); // NOI18N
 
         BBorrarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        BBorrarMateria.setLabel("Borar Materia");
+        BBorrarMateria.setLabel("Borrar Materia");
         BBorrarMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BBorrarMateriaActionPerformed(evt);
@@ -419,24 +417,24 @@ public class JfIndex extends javax.swing.JFrame {
                 .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPMateriasLayout.createSequentialGroup()
                         .addComponent(contentMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JBGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                                .addComponent(JBGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                                .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
-                                .addComponent(jLabel12)
+                                .addComponent(JLBuscarMateriasPorIDIcon)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                                .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))))
+                                .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))))
                     .addGroup(JPMateriasLayout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -463,7 +461,7 @@ public class JfIndex extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addGap(18, 18, 18)
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
+                            .addComponent(JLBuscarMateriasPorIDIcon)
                             .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -645,7 +643,7 @@ public class JfIndex extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(jtpOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 646, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -709,44 +707,13 @@ public class JfIndex extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jBotonCopyActionPerformed
 
-    private void JBGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarMateriaActionPerformed
-        JPGuardarMateria a = new JPGuardarMateria();
-        presentarvistasMateria(a);
-    }//GEN-LAST:event_JBGuardarMateriaActionPerformed
-
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_button2ActionPerformed
 
-    private void jbActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarAlumnoActionPerformed
-        JPModificarAlumno jp = new JPModificarAlumno();
-        presentarVistasAlumno(jp);
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbActualizarAlumnoActionPerformed
-
-    private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
-        JPGuardarAlumno jp = new JPGuardarAlumno();
-        presentarVistasAlumno(jp);
-    }//GEN-LAST:event_jbGuardarAlumnoActionPerformed
-
     private void copyrightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyrightActionPerformed
         JOptionPane.showMessageDialog(null, "Por favor Apruebenos.");
     }//GEN-LAST:event_copyrightActionPerformed
-
-    private void jbListarAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbListarAlumnosActionPerformed
-        JPListarAlumnos jp = new JPListarAlumnos();
-        presentarVistasAlumno(jp);
-    }//GEN-LAST:event_jbListarAlumnosActionPerformed
-
-    private void JBBuscarAlumnoPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBuscarAlumnoPorIDActionPerformed
-        JPBuscarAlumnoPorID jp = new JPBuscarAlumnoPorID();
-        presentarVistasAlumno(jp);    // TODO add your handling code here:
-    }//GEN-LAST:event_JBBuscarAlumnoPorIDActionPerformed
-
-    private void JBBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBorrarAlumnoActionPerformed
-        JPBorrarAlumno jp = new JPBorrarAlumno();
-        presentarVistasAlumno(jp);// TODO add your handling code here:
-    }//GEN-LAST:event_JBBorrarAlumnoActionPerformed
 
     private void JRBMateriasInscriptasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JRBMateriasInscriptasActionPerformed
         JRBMateriasNoInscriptas.setSelected(false);
@@ -784,20 +751,52 @@ public class JfIndex extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, mdata.obtenerMateriaPorId((int) JTMaterias.getValueAt(JTMaterias.getSelectedRow(), 0)).getNombre() + " seleccionada.");
     }//GEN-LAST:event_JTMateriasMouseClicked
 
-    private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
-        JPModificarMateria a = new JPModificarMateria();
-        presentarvistasMateria(a);
-    }
-
-    private void BBuscarMateriaporIDActionPerformed(java.awt.event.ActionEvent evt) {
-        JPBuscarMateriaporID a = new JPBuscarMateriaporID();
-        presentarvistasMateria(a);
-    }
-
-    private void BBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
+    private void BBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBorrarMateriaActionPerformed
         JPBorrarMateria a = new JPBorrarMateria();
         presentarvistasMateria(a);
-    }
+    }//GEN-LAST:event_BBorrarMateriaActionPerformed
+
+    private void BBuscarMateriaporIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscarMateriaporIDActionPerformed
+        JPBuscarMateriaporID a = new JPBuscarMateriaporID();
+        presentarvistasMateria(a);
+
+    }//GEN-LAST:event_BBuscarMateriaporIDActionPerformed
+
+    private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BModificarMateriaActionPerformed
+        JPModificarMateria a = new JPModificarMateria();
+        presentarvistasMateria(a);
+    }//GEN-LAST:event_BModificarMateriaActionPerformed
+
+    private void JBGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarMateriaActionPerformed
+        JPGuardarMateria a = new JPGuardarMateria();
+        presentarvistasMateria(a);
+    }//GEN-LAST:event_JBGuardarMateriaActionPerformed
+
+    private void JBBuscarAlumnoPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBuscarAlumnoPorIDActionPerformed
+        JPBuscarAlumnoPorID jp = new JPBuscarAlumnoPorID();
+        presentarVistasAlumno(jp);    // TODO add your handling code here:
+    }//GEN-LAST:event_JBBuscarAlumnoPorIDActionPerformed
+
+    private void jbGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarAlumnoActionPerformed
+        JPGuardarAlumno jp = new JPGuardarAlumno();
+        presentarVistasAlumno(jp);
+    }//GEN-LAST:event_jbGuardarAlumnoActionPerformed
+
+    private void jbActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbActualizarAlumnoActionPerformed
+        JPModificarAlumno jp = new JPModificarAlumno();
+        presentarVistasAlumno(jp);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbActualizarAlumnoActionPerformed
+
+    private void jbListarAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbListarAlumnosActionPerformed
+        JPListarAlumnos jp = new JPListarAlumnos();
+        presentarVistasAlumno(jp);
+    }//GEN-LAST:event_jbListarAlumnosActionPerformed
+
+    private void JBBorrarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBorrarAlumnoActionPerformed
+        JPBorrarAlumno jp = new JPBorrarAlumno();
+        presentarVistasAlumno(jp);// TODO add your handling code here:
+    }//GEN-LAST:event_JBBorrarAlumnoActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -849,6 +848,7 @@ public class JfIndex extends javax.swing.JFrame {
     private java.awt.Button JBGuardarMateria;
     private java.awt.Button JBInscribirAlumno;
     private javax.swing.JComboBox<String> JCBAlumnosDB;
+    private javax.swing.JLabel JLBuscarMateriasPorIDIcon;
     private javax.swing.JPanel JPAlumno;
     private javax.swing.JPanel JPMaterias;
     private javax.swing.JRadioButton JRBMateriasInscriptas;
@@ -863,7 +863,6 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;

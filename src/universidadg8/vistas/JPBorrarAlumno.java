@@ -41,16 +41,16 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
 
         jlTituloBorrarAlumno = new javax.swing.JLabel();
         jcbAlumnosBorrarAlumno = new javax.swing.JComboBox<>();
-        jlFechaActualizarAlumno = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlFechaBorrarAlumno = new javax.swing.JLabel();
+        jlLegajoBorrarAlumno = new javax.swing.JLabel();
         jtfNombreBorrarAlumno = new javax.swing.JTextField();
         jtfApeBorrarAlumno = new javax.swing.JTextField();
         jtfDNIBorrarAlumno = new javax.swing.JTextField();
         jlTitulo2BorrarAlumno = new javax.swing.JLabel();
         jtfFechaNacBorrarAlumno = new javax.swing.JTextField();
-        jlNomActualizarAlumno = new javax.swing.JLabel();
-        jlApeActualizarAlumno = new javax.swing.JLabel();
-        jlDNIActualizarAlumno = new javax.swing.JLabel();
+        jlNomBorrarAlumno = new javax.swing.JLabel();
+        jlApeBorrarAlumno = new javax.swing.JLabel();
+        jlDNIBorrarAlumno = new javax.swing.JLabel();
         jtfIDAlumBorrarAlumno = new javax.swing.JTextField();
         jbBorrarBorrarAlumno = new javax.swing.JButton();
 
@@ -66,9 +66,9 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
             }
         });
 
-        jlFechaActualizarAlumno.setText("Fecha Nacimiento");
+        jlFechaBorrarAlumno.setText("Fecha Nacimiento");
 
-        jLabel1.setText("Legajo");
+        jlLegajoBorrarAlumno.setText("Legajo");
 
         jtfNombreBorrarAlumno.setEditable(false);
 
@@ -86,11 +86,11 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
 
         jtfFechaNacBorrarAlumno.setEditable(false);
 
-        jlNomActualizarAlumno.setText("Nombre");
+        jlNomBorrarAlumno.setText("Nombre");
 
-        jlApeActualizarAlumno.setText("Apellido");
+        jlApeBorrarAlumno.setText("Apellido");
 
-        jlDNIActualizarAlumno.setText("DNI");
+        jlDNIBorrarAlumno.setText("DNI");
 
         jtfIDAlumBorrarAlumno.setEditable(false);
 
@@ -114,12 +114,12 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
                     .addComponent(jlTitulo2BorrarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlNomActualizarAlumno)
-                            .addComponent(jlFechaActualizarAlumno)
+                            .addComponent(jlNomBorrarAlumno)
+                            .addComponent(jlFechaBorrarAlumno)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jlDNIActualizarAlumno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jlApeActualizarAlumno, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addComponent(jlLegajoBorrarAlumno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jlDNIBorrarAlumno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jlApeBorrarAlumno, javax.swing.GroupLayout.Alignment.LEADING)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jtfApeBorrarAlumno, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -144,23 +144,23 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
                 .addComponent(jlTitulo2BorrarAlumno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlNomActualizarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlNomBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfNombreBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlApeActualizarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlApeBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfApeBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlDNIActualizarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlDNIBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfDNIBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlLegajoBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfIDAlumBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlFechaActualizarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlFechaBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfFechaNacBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jbBorrarBorrarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
@@ -190,13 +190,13 @@ public class JPBorrarAlumno extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton jbBorrarBorrarAlumno;
     private javax.swing.JComboBox<String> jcbAlumnosBorrarAlumno;
-    private javax.swing.JLabel jlApeActualizarAlumno;
-    private javax.swing.JLabel jlDNIActualizarAlumno;
-    private javax.swing.JLabel jlFechaActualizarAlumno;
-    private javax.swing.JLabel jlNomActualizarAlumno;
+    private javax.swing.JLabel jlApeBorrarAlumno;
+    private javax.swing.JLabel jlDNIBorrarAlumno;
+    private javax.swing.JLabel jlFechaBorrarAlumno;
+    private javax.swing.JLabel jlLegajoBorrarAlumno;
+    private javax.swing.JLabel jlNomBorrarAlumno;
     private javax.swing.JLabel jlTitulo2BorrarAlumno;
     private javax.swing.JLabel jlTituloBorrarAlumno;
     private javax.swing.JTextField jtfApeBorrarAlumno;

@@ -33,12 +33,12 @@
                   <Component id="jlTitulo2BorrarAlumno" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jlNomActualizarAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jlFechaActualizarAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlNomBorrarAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlFechaBorrarAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jlDNIActualizarAlumno" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jlApeActualizarAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jlLegajoBorrarAlumno" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jlDNIBorrarAlumno" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jlApeBorrarAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -72,27 +72,27 @@
               <Component id="jlTitulo2BorrarAlumno" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlNomActualizarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jlNomBorrarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jtfNombreBorrarAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlApeActualizarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jlApeBorrarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jtfApeBorrarAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlDNIActualizarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jlDNIBorrarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jtfDNIBorrarAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jlLegajoBorrarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jtfIDAlumBorrarAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlFechaActualizarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jlFechaBorrarAlumno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jtfFechaNacBorrarAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -129,12 +129,12 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlFechaActualizarAlumno">
+    <Component class="javax.swing.JLabel" name="jlFechaBorrarAlumno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jlLegajoBorrarAlumno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Legajo"/>
       </Properties>
@@ -170,17 +170,17 @@
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlNomActualizarAlumno">
+    <Component class="javax.swing.JLabel" name="jlNomBorrarAlumno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nombre"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlApeActualizarAlumno">
+    <Component class="javax.swing.JLabel" name="jlApeBorrarAlumno">
       <Properties>
         <Property name="text" type="java.lang.String" value="Apellido"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlDNIActualizarAlumno">
+    <Component class="javax.swing.JLabel" name="jlDNIBorrarAlumno">
       <Properties>
         <Property name="text" type="java.lang.String" value="DNI"/>
       </Properties>

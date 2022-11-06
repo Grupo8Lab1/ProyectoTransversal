@@ -18,7 +18,6 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
     /**
      * Creates new form JPBuscarAlumnoPorID
      */
-    
     public JPBuscarAlumnoPorID() {
         listaAlumnos = adata.obtenerAlumnos();
         initComponents();
@@ -187,15 +186,17 @@ public class JPBuscarAlumnoPorID extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFechaNacBuscarAlumnoPorIDActionPerformed
 
     private void jbBuscarBuscarAlumnoPorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarBuscarAlumnoPorIDActionPerformed
-        try{
-        Alumno aux = adata.obtenerAlumnoPorId(Integer.valueOf(jtfIDBuscarBuscarAlumnoPorID.getText()));
-        jtfNombreBuscarAlumnoPorID.setText(aux.getNombre());
-        jtfApeBuscarAlumnoPorID.setText(aux.getApellido());
-        jtfDNIBuscarAlumnoPorID.setText(String.valueOf(aux.getDni()));
-        jtfIDBuscarAlumnoPorID.setText(String.valueOf(aux.getId_alumno()));
-        jtfFechaNacBuscarAlumnoPorID.setText(aux.getFecha_nacimiento().toString());
-        }catch(NumberFormatException ex){
-              JOptionPane.showMessageDialog(null, "Error, ingrese un numero de legajo valido.");
+        try {
+            Alumno aux = adata.obtenerAlumnoPorId(Integer.valueOf(jtfIDBuscarBuscarAlumnoPorID.getText()));
+            jtfNombreBuscarAlumnoPorID.setText(aux.getNombre());
+            jtfApeBuscarAlumnoPorID.setText(aux.getApellido());
+            jtfDNIBuscarAlumnoPorID.setText(String.valueOf(aux.getDni()));
+            jtfIDBuscarAlumnoPorID.setText(String.valueOf(aux.getId_alumno()));
+            jtfFechaNacBuscarAlumnoPorID.setText(aux.getFecha_nacimiento().toString());
+        } catch (NumberFormatException | NullPointerException ex) {
+            JOptionPane.showMessageDialog(null, "No hay alumnos que correspondan a ese legajo.");
+            jtfDNIBuscarAlumnoPorID.setText("");
+            jtfIDBuscarAlumnoPorID.setText("");
         }
     }//GEN-LAST:event_jbBuscarBuscarAlumnoPorIDActionPerformed
 

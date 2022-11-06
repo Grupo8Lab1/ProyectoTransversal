@@ -65,6 +65,11 @@ public class JPGuardarMateria extends javax.swing.JPanel {
         jLabel1.setText("Ingresar Datos");
 
         JBBorrarGuardarMateria.setText("Borrar");
+        JBBorrarGuardarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBBorrarGuardarMateriaActionPerformed(evt);
+            }
+        });
 
         JBGuardarGuardarMateria.setText("Guardar");
         JBGuardarGuardarMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +160,12 @@ public class JPGuardarMateria extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_JBGuardarGuardarMateriaActionPerformed
+
+    private void JBBorrarGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBorrarGuardarMateriaActionPerformed
+        JTFNombreGuardarMateria.setText("");
+        JTFAñoGuardarMateria.setText("");
+// TODO add your handling code here:
+    }//GEN-LAST:event_JBBorrarGuardarMateriaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
