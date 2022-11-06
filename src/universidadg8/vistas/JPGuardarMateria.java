@@ -4,8 +4,10 @@
  */
 package universidadg8.vistas;
 
+import javax.swing.JOptionPane;
 import static universidadg8.UniversidadG8.mdata;
 import static universidadg8.UniversidadG8.listaMaterias;
+import universidadg8.entidades.Materia;
 
 /**
  *
@@ -33,11 +35,9 @@ public class JPGuardarMateria extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jlNombreGuardarAlumno = new javax.swing.JLabel();
         JFAnio = new javax.swing.JLabel();
-        JLID = new javax.swing.JLabel();
         jlIconGuardarAlum = new javax.swing.JLabel();
         JTFAñoGuardarMateria = new javax.swing.JTextField();
         JTFNombreGuardarMateria = new javax.swing.JTextField();
-        JTFIDGuardarmateria = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         JBBorrarGuardarMateria = new javax.swing.JButton();
         JBGuardarGuardarMateria = new javax.swing.JButton();
@@ -48,8 +48,6 @@ public class JPGuardarMateria extends javax.swing.JPanel {
         jlNombreGuardarAlumno.setText("Nombre");
 
         JFAnio.setText("Año");
-
-        JLID.setText("ID");
 
         JTFAñoGuardarMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,8 +84,7 @@ public class JPGuardarMateria extends javax.swing.JPanel {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlNombreGuardarAlumno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlIconGuardarAlum, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JFAnio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JLID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JFAnio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
@@ -96,8 +93,7 @@ public class JPGuardarMateria extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(JTFAñoGuardarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JTFNombreGuardarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JTFIDGuardarmateria, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(JTFNombreGuardarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(118, 118, 118)
                         .addComponent(JBBorrarGuardarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -116,15 +112,11 @@ public class JPGuardarMateria extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JTFNombreGuardarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlNombreGuardarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFAñoGuardarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JFAnio, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFIDGuardarmateria, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLID, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(132, 132, 132)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JFAnio, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTFAñoGuardarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(156, 156, 156)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JBBorrarGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                     .addComponent(JBGuardarGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -152,7 +144,16 @@ public class JPGuardarMateria extends javax.swing.JPanel {
     }//GEN-LAST:event_JTFNombreGuardarMateriaActionPerformed
 
     private void JBGuardarGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarGuardarMateriaActionPerformed
-        // TODO add your handling code here:
+
+        if (JTFAñoGuardarMateria.getText().isEmpty() || JTFNombreGuardarMateria.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Llene todos los campos por favor");
+        } else {
+            try {
+                mdata.guardarMateria(new Materia(JTFNombreGuardarMateria.getText(), Integer.parseInt(JTFAñoGuardarMateria.getText()), true));
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "Error, verifique haber ingresado todos los datos correctamente.");
+            }
+        }
     }//GEN-LAST:event_JBGuardarGuardarMateriaActionPerformed
 
 
@@ -160,9 +161,7 @@ public class JPGuardarMateria extends javax.swing.JPanel {
     private javax.swing.JButton JBBorrarGuardarMateria;
     private javax.swing.JButton JBGuardarGuardarMateria;
     private javax.swing.JLabel JFAnio;
-    private javax.swing.JLabel JLID;
     private javax.swing.JTextField JTFAñoGuardarMateria;
-    private javax.swing.JTextField JTFIDGuardarmateria;
     private javax.swing.JTextField JTFNombreGuardarMateria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
