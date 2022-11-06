@@ -26,6 +26,7 @@ public class JfIndex extends javax.swing.JFrame {
     private final DefaultTableModel modelo;
 
     public JfIndex() {
+        initComponents();
         this.modelo = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -33,7 +34,6 @@ public class JfIndex extends javax.swing.JFrame {
                 return false;
             }
         };
-        initComponents();
         listaAlumnos = adata.obtenerAlumnos();
         listaMaterias = mdata.obtenerMaterias();
         cargarAlumno();
@@ -73,17 +73,18 @@ public class JfIndex extends javax.swing.JFrame {
         listaAlumnos = adata.obtenerAlumnos();
         listaMaterias = mdata.obtenerMaterias();
         borrarFilasTabla();
-        Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
-        if (seleccionado != null) {
-
-            for (Materia mat : idata.obtenerMateriasNoInscriptas(seleccionado)) {
-                modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
-            }
-            modelo.isCellEditable(0, 0);
-
+        Alumno seleccionado;
+        System.out.println(JCBAlumnosDB.getSelectedIndex());
+        if (JCBAlumnosDB.getSelectedIndex() >= 0) {
+            seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         } else {
-            JOptionPane.showMessageDialog(this, "se debe seleccionar un alumno");
+            seleccionado = listaAlumnos.get(0);
         }
+        for (Materia mat : idata.obtenerMateriasInscriptas(seleccionado)) {
+            modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
+        }
+        modelo.isCellEditable(0, 0);
+
     }
 
     private void cargarDatoNoInscriptas() {
@@ -92,7 +93,7 @@ public class JfIndex extends javax.swing.JFrame {
         borrarFilasTabla();
         Alumno seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         if (seleccionado != null) {
-            for (Materia mat : idata.obtenerMateriasInscriptas(seleccionado)) {
+            for (Materia mat : idata.obtenerMateriasNoInscriptas(seleccionado)) {
                 modelo.addRow(new Object[]{mat.getId_materia(), mat.getNombre(), mat.getAnio()});
             }
         } else {
@@ -766,7 +767,10 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_JRBMateriasNoInscriptasActionPerformed
 
     private void JCBAlumnosDBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCBAlumnosDBActionPerformed
-
+        JRBMateriasNoInscriptas.setSelected(false);
+        JBAnularInscripcionAlumno.setEnabled(true);
+        JBInscribirAlumno.setEnabled(false);
+        borrarFilasTabla();
     }//GEN-LAST:event_JCBAlumnosDBActionPerformed
 
     private void JBAnularInscripcionAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAnularInscripcionAlumnoActionPerformed
@@ -777,7 +781,7 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_JBAnularInscripcionAlumnoActionPerformed
 
     private void JTMateriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTMateriasMouseClicked
-        JOptionPane.showMessageDialog(this, mdata.obtenerMateriaPorId((int) JTMaterias.getValueAt(JTMaterias.getSelectedRow(), 0)));
+        JOptionPane.showMessageDialog(this, mdata.obtenerMateriaPorId((int) JTMaterias.getValueAt(JTMaterias.getSelectedRow(), 0)).getNombre() + " seleccionada.");
     }//GEN-LAST:event_JTMateriasMouseClicked
 
     private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
