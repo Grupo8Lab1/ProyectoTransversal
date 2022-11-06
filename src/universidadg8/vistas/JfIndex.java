@@ -23,14 +23,20 @@ import universidadg8.vistas.JPGuardarMateria;
  */
 public class JfIndex extends javax.swing.JFrame {
 
-    private DefaultTableModel modelo;
+    private final DefaultTableModel modelo;
 
     public JfIndex() {
+        this.modelo = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
+            }
+        };
         initComponents();
         listaAlumnos = adata.obtenerAlumnos();
         listaMaterias = mdata.obtenerMaterias();
         cargarAlumno();
-        modelo = new DefaultTableModel();
         armarCabeceraTabla();
 
     }
@@ -350,7 +356,7 @@ public class JfIndex extends javax.swing.JFrame {
         );
         contentMateriaLayout.setVerticalGroup(
             contentMateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
+            .addGap(0, 353, Short.MAX_VALUE)
         );
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-abrir-carpeta-50.png"))); // NOI18N
@@ -417,19 +423,19 @@ public class JfIndex extends javax.swing.JFrame {
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JBGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE))
+                                .addComponent(JBGuardarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE))
+                                .addComponent(BModificarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE))
+                                .addComponent(BBuscarMateriaporID, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                             .addGroup(JPMateriasLayout.createSequentialGroup()
                                 .addComponent(jLabel13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE))))
+                                .addComponent(BBorrarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))))
                     .addGroup(JPMateriasLayout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -462,7 +468,7 @@ public class JfIndex extends javax.swing.JFrame {
                         .addGroup(JPMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
                             .addComponent(BBorrarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         jtpOpciones.addTab("Materias", JPMaterias);
@@ -526,6 +532,11 @@ public class JfIndex extends javax.swing.JFrame {
         });
         JTMaterias.setName(""); // NOI18N
         JTMaterias.getTableHeader().setReorderingAllowed(false);
+        JTMaterias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JTMateriasMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(JTMaterias);
 
         JBAnularInscripcionAlumno.setLabel("Anular Inscripcion Alumno");
@@ -677,6 +688,7 @@ public class JfIndex extends javax.swing.JFrame {
         p.setLocation(0, 0);
         contentAlumno.removeAll();
         contentAlumno.add(p, BorderLayout.CENTER);
+        //   contentAlumno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         contentAlumno.revalidate();
         contentAlumno.repaint();
     }
@@ -763,6 +775,10 @@ public class JfIndex extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_JBAnularInscripcionAlumnoActionPerformed
+
+    private void JTMateriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTMateriasMouseClicked
+        JOptionPane.showMessageDialog(this, mdata.obtenerMateriaPorId((int) JTMaterias.getValueAt(JTMaterias.getSelectedRow(), 0)));
+    }//GEN-LAST:event_JTMateriasMouseClicked
 
     private void BModificarMateriaActionPerformed(java.awt.event.ActionEvent evt) {
         JPModificarMateria a = new JPModificarMateria();

@@ -430,22 +430,22 @@
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="JBGuardarMateria" pref="184" max="32767" attributes="0"/>
+                                      <Component id="JBGuardarMateria" pref="176" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="BModificarMateria" pref="184" max="32767" attributes="0"/>
+                                      <Component id="BModificarMateria" pref="176" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="BBuscarMateriaporID" pref="184" max="32767" attributes="0"/>
+                                      <Component id="BBuscarMateriaporID" pref="176" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="BBorrarMateria" pref="184" max="32767" attributes="0"/>
+                                      <Component id="BBorrarMateria" pref="176" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -492,7 +492,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace pref="24" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -517,7 +517,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="349" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="353" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -854,6 +854,9 @@
                           <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JTMateriasMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
