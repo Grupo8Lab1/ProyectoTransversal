@@ -4,7 +4,6 @@
  */
 package universidadg8.vistas;
 
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
@@ -172,7 +171,9 @@ public class JPGuardarAlumno extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfNombreGuardarAlumnoActionPerformed
 
     private void jbGuardarGuardarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarGuardarAlumnoActionPerformed
-        if (jCalGuardarAlumno.getDate().after(Date.from(LocalDate.now().minusYears(4).atStartOfDay().toInstant(ZoneOffset.UTC)))) {
+        if (jtfNombreGuardarAlumno.getText().isEmpty() || jtfApellidoGuardarAlumno.getText().isEmpty() || jtfDNIGuardarAlumno.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Llene todos los campos por favor");
+        } else if (jCalGuardarAlumno.getDate().after(Date.from(LocalDate.now().minusYears(4).atStartOfDay().toInstant(ZoneOffset.UTC)))) {
             JOptionPane.showMessageDialog(null, "Error, su alumno es un poco joven para nuestra institución...");
         } else {
             try {

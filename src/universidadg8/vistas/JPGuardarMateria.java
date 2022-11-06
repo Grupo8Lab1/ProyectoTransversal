@@ -4,6 +4,9 @@
  */
 package universidadg8.vistas;
 
+import static universidadg8.UniversidadG8.mdata;
+import static universidadg8.UniversidadG8.listaMaterias;
+
 /**
  *
  * @author Santi
@@ -15,6 +18,7 @@ public class JPGuardarMateria extends javax.swing.JPanel {
      */
     public JPGuardarMateria() {
         initComponents();
+        listaMaterias = mdata.obtenerMaterias();
     }
 
     /**

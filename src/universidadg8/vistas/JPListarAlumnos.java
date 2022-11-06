@@ -29,7 +29,7 @@ public class JPListarAlumnos extends javax.swing.JPanel {
 
     private void armarCabeceraTabla() {
         ArrayList<Object> columnas = new ArrayList<>();
-        columnas.add("ID");
+        columnas.add("N°Legajo");
         columnas.add("Nombre");
         columnas.add("Apellido");
         columnas.add("DNI");
