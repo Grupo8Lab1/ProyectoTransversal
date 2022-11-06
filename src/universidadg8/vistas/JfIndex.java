@@ -14,6 +14,7 @@ import static universidadg8.UniversidadG8.listaAlumnos;
 import static universidadg8.UniversidadG8.listaMaterias;
 import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Alumno;
+import universidadg8.entidades.Inscripcion;
 import universidadg8.entidades.Materia;
 import universidadg8.vistas.JPGuardarMateria;
 
@@ -74,7 +75,6 @@ public class JfIndex extends javax.swing.JFrame {
         listaMaterias = mdata.obtenerMaterias();
         borrarFilasTabla();
         Alumno seleccionado;
-        System.out.println(JCBAlumnosDB.getSelectedIndex());
         if (JCBAlumnosDB.getSelectedIndex() >= 0) {
             seleccionado = listaAlumnos.get(JCBAlumnosDB.getSelectedIndex());
         } else {
@@ -756,7 +756,9 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_JRBMateriasInscriptasActionPerformed
 
     private void JBInscribirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBInscribirAlumnoActionPerformed
-        // TODO add your handling code here:
+        Inscripcion i = new Inscripcion(listaAlumnos.get(JCBAlumnosDB.getSelectedIndex()), mdata.obtenerMateriaPorId((int) JTMaterias.getValueAt(JTMaterias.getSelectedRow(), 0)), 0);
+        idata.guardarInscripcion(i);
+        cargarDatoNoInscriptas();
     }//GEN-LAST:event_JBInscribirAlumnoActionPerformed
 
     private void JRBMateriasNoInscriptasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JRBMateriasNoInscriptasActionPerformed
@@ -774,10 +776,8 @@ public class JfIndex extends javax.swing.JFrame {
     }//GEN-LAST:event_JCBAlumnosDBActionPerformed
 
     private void JBAnularInscripcionAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAnularInscripcionAlumnoActionPerformed
-        //  idata.borrarInscripcion(listaAlumnos.get(JCBAlumnosDB.getSelectedIndex()).getId_alumno(),);
-        // mdata.obtenerMateriaPorId(JTMaterias.getValueAt(WIDTH, WIDTH));
-
-// TODO add your handling code here:
+        idata.borrarInscripcion(listaAlumnos.get(JCBAlumnosDB.getSelectedIndex()).getId_alumno(), mdata.obtenerMateriaPorId((int) JTMaterias.getValueAt(JTMaterias.getSelectedRow(), 0)).getId_materia());
+        cargarDatoInscriptas();
     }//GEN-LAST:event_JBAnularInscripcionAlumnoActionPerformed
 
     private void JTMateriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTMateriasMouseClicked
