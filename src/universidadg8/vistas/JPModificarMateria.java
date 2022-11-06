@@ -4,8 +4,8 @@
  */
 package universidadg8.vistas;
 
-import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.listaMaterias;
+import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Materia;
 
 /**
@@ -35,8 +35,8 @@ public class JPModificarMateria extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jlTitulo2ActualizarAlum = new javax.swing.JLabel();
-        jlTituloActualizarAlum = new javax.swing.JLabel();
+        jlTitulo2ActualizarMateria = new javax.swing.JLabel();
+        jlTituloActualizarMateria = new javax.swing.JLabel();
         JCBActualizarMateria = new javax.swing.JComboBox<>();
         JLActualizarNombreMateria = new javax.swing.JLabel();
         JLActualizarAnioMateria = new javax.swing.JLabel();
@@ -49,11 +49,11 @@ public class JPModificarMateria extends javax.swing.JPanel {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Actualizar Datos"));
         jPanel2.setPreferredSize(new java.awt.Dimension(369, 353));
 
-        jlTitulo2ActualizarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
-        jlTitulo2ActualizarAlum.setText("Datos");
+        jlTitulo2ActualizarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlTitulo2ActualizarMateria.setText("Datos");
 
-        jlTituloActualizarAlum.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
-        jlTituloActualizarAlum.setText("Materia");
+        jlTituloActualizarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
+        jlTituloActualizarMateria.setText("Materia");
 
         JCBActualizarMateria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         JCBActualizarMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +68,7 @@ public class JPModificarMateria extends javax.swing.JPanel {
 
         JLActualizarIDMateria.setText("ID");
 
+        JTFActualizarIDMateria.setEditable(false);
         JTFActualizarIDMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTFActualizarIDMateriaActionPerformed(evt);
@@ -101,8 +102,8 @@ public class JPModificarMateria extends javax.swing.JPanel {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jlTitulo2ActualizarAlum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jlTituloActualizarAlum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(jlTitulo2ActualizarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jlTituloActualizarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(JCBActualizarMateria, 0, 203, Short.MAX_VALUE)
@@ -116,10 +117,10 @@ public class JPModificarMateria extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlTituloActualizarAlum, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlTituloActualizarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JCBActualizarMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jlTitulo2ActualizarAlum)
+                .addComponent(jlTitulo2ActualizarMateria)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JLActualizarNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,7 +166,7 @@ public class JPModificarMateria extends javax.swing.JPanel {
     }//GEN-LAST:event_JTFActualizarIDMateriaActionPerformed
 
     private void JBActualizarActualizarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBActualizarActualizarMateriaActionPerformed
-       adata.actualizaAlumno(adata.obtenerAlumnoPorId(WIDTH));
+        mdata.actualizaMateria(mdata.obtenerMateriaPorId(WIDTH));
         // TODO add your handling code here:
     }//GEN-LAST:event_JBActualizarActualizarMateriaActionPerformed
 
@@ -180,7 +181,7 @@ public class JPModificarMateria extends javax.swing.JPanel {
     private javax.swing.JTextField JTFActualizarIDMateria;
     private javax.swing.JTextField JTFActualizarNombreMateria;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel jlTitulo2ActualizarAlum;
-    private javax.swing.JLabel jlTituloActualizarAlum;
+    private javax.swing.JLabel jlTitulo2ActualizarMateria;
+    private javax.swing.JLabel jlTituloActualizarMateria;
     // End of variables declaration//GEN-END:variables
 }

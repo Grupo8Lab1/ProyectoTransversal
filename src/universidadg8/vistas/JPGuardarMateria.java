@@ -65,6 +65,11 @@ public class JPGuardarMateria extends javax.swing.JPanel {
         JBBorrarGuardarMateria.setText("Borrar");
 
         JBGuardarGuardarMateria.setText("Guardar");
+        JBGuardarGuardarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBGuardarGuardarMateriaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -141,6 +146,10 @@ public class JPGuardarMateria extends javax.swing.JPanel {
     private void JTFNombreGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFNombreGuardarMateriaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JTFNombreGuardarMateriaActionPerformed
+
+    private void JBGuardarGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarGuardarMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBGuardarGuardarMateriaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
