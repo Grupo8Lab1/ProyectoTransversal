@@ -4,6 +4,7 @@
  */
 package universidadg8.vistas;
 
+import javax.swing.JOptionPane;
 import static universidadg8.UniversidadG8.listaMaterias;
 import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Materia;
@@ -17,12 +18,17 @@ public class JPModificarMateria extends javax.swing.JPanel {
     /**
      * Creates new form JPModificarMateria
      */
-    public JPModificarMateria() {
-        initComponents();
+    private void actualizarLista() {
+        listaMaterias = mdata.obtenerMaterias();
         JCBActualizarMateria.removeAllItems();
         for (Materia materias : listaMaterias) {
             JCBActualizarMateria.addItem(materias.getNombre());
         }
+    }
+
+    public JPModificarMateria() {
+        initComponents();
+        actualizarLista();
     }
 
     /**
@@ -166,7 +172,21 @@ public class JPModificarMateria extends javax.swing.JPanel {
     }//GEN-LAST:event_JTFActualizarIDMateriaActionPerformed
 
     private void JBActualizarActualizarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBActualizarActualizarMateriaActionPerformed
-        mdata.actualizaMateria(mdata.obtenerMateriaPorId(WIDTH));
+        if (JTFActualizarNombreMateria.getText().isEmpty() || JTFActualizarAnioMateria.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
+        } else {
+            try {
+                Materia aux;
+                aux = mdata.obtenerMateriaPorId(Integer.parseInt(JTFActualizarIDMateria.getText()));
+                aux.setNombre(JTFActualizarNombreMateria.getText());
+                aux.setAnio(Integer.parseInt(JTFActualizarAnioMateria.getText()));
+                aux.setEstado(true);
+                mdata.actualizaMateria(aux);
+                actualizarLista();
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "Error, verifique haber ingresado todos los datos correctamente.");
+            }
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_JBActualizarActualizarMateriaActionPerformed
 
