@@ -141,11 +141,11 @@ public class JPGuardarMateria extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JTFAñoGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFAñoGuardarMateriaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_JTFAñoGuardarMateriaActionPerformed
 
     private void JTFNombreGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFNombreGuardarMateriaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_JTFNombreGuardarMateriaActionPerformed
 
     private void JBGuardarGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBGuardarGuardarMateriaActionPerformed
@@ -164,7 +164,6 @@ public class JPGuardarMateria extends javax.swing.JPanel {
     private void JBBorrarGuardarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBorrarGuardarMateriaActionPerformed
         JTFNombreGuardarMateria.setText("");
         JTFAñoGuardarMateria.setText("");
-// TODO add your handling code here:
     }//GEN-LAST:event_JBBorrarGuardarMateriaActionPerformed
 
 

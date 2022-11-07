@@ -176,7 +176,7 @@ public class JPBorrarMateria extends javax.swing.JPanel {
     }//GEN-LAST:event_JBBotonBorrarActionPerformed
 
     private void jtfIDBorrarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfIDBorrarMateriaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jtfIDBorrarMateriaActionPerformed
 
 

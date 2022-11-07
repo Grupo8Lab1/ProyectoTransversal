@@ -66,7 +66,6 @@ public class JfIndex extends javax.swing.JFrame {
             for (int i = a; i >= 0; i--) {
                 modelo.removeRow(i);
             }
-
         }
     }
 
@@ -156,6 +155,8 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle(" VistaIndex");
+        setResizable(false);
 
         jlNombre.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jlNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -167,10 +168,12 @@ public class JfIndex extends javax.swing.JFrame {
         jlIntegrantes.setText("Integrantes:");
 
         jlLucas.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jlLucas.setText("Lucas Teruel");
+        jlLucas.setText("Lucas Teruel ");
 
         jlSantiago.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jlSantiago.setText("Santiago Lucero");
+
+        jtpOpciones.setBackground(java.awt.Color.lightGray);
 
         JPAlumno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -207,6 +210,7 @@ public class JfIndex extends javax.swing.JFrame {
 
         jlIconAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-contactos-50.png"))); // NOI18N
 
+        JBBorrarAlumno.setBackground(new java.awt.Color(179, 179, 204));
         JBBorrarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         JBBorrarAlumno.setLabel("Borrar Alumno");
         JBBorrarAlumno.addActionListener(new java.awt.event.ActionListener() {
@@ -215,6 +219,7 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
+        jbListarAlumnos.setBackground(new java.awt.Color(179, 179, 204));
         jbListarAlumnos.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jbListarAlumnos.setLabel("Listar Alumnos");
         jbListarAlumnos.addActionListener(new java.awt.event.ActionListener() {
@@ -223,6 +228,7 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
+        jbActualizarAlumno.setBackground(new java.awt.Color(179, 179, 204));
         jbActualizarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jbActualizarAlumno.setLabel("Actualizar Datos");
         jbActualizarAlumno.addActionListener(new java.awt.event.ActionListener() {
@@ -231,6 +237,7 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
+        jbGuardarAlumno.setBackground(new java.awt.Color(179, 179, 204));
         jbGuardarAlumno.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jbGuardarAlumno.setLabel("Guardar Alumno");
         jbGuardarAlumno.addActionListener(new java.awt.event.ActionListener() {
@@ -239,6 +246,7 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
+        JBBuscarAlumnoPorID.setBackground(new java.awt.Color(179, 179, 204));
         JBBuscarAlumnoPorID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         JBBuscarAlumnoPorID.setLabel("Buscar Legajo");
         JBBuscarAlumnoPorID.addActionListener(new java.awt.event.ActionListener() {
@@ -360,6 +368,7 @@ public class JfIndex extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-abrir-carpeta-50.png"))); // NOI18N
 
+        JBGuardarMateria.setBackground(new java.awt.Color(179, 179, 204));
         JBGuardarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         JBGuardarMateria.setLabel("Guardar Materia");
         JBGuardarMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -376,6 +385,7 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-choose-50.png"))); // NOI18N
 
+        BModificarMateria.setBackground(new java.awt.Color(179, 179, 204));
         BModificarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         BModificarMateria.setLabel("Modificar Materia");
         BModificarMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -388,6 +398,7 @@ public class JfIndex extends javax.swing.JFrame {
         JLBuscarMateriasPorIDIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JLBuscarMateriasPorIDIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-búsqueda-50.png"))); // NOI18N
 
+        BBuscarMateriaporID.setBackground(new java.awt.Color(179, 179, 204));
         BBuscarMateriaporID.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         BBuscarMateriaporID.setLabel("Buscar Materia por ID");
         BBuscarMateriaporID.addActionListener(new java.awt.event.ActionListener() {
@@ -400,6 +411,7 @@ public class JfIndex extends javax.swing.JFrame {
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-borrar-para-siempre-50.png"))); // NOI18N
 
+        BBorrarMateria.setBackground(new java.awt.Color(179, 179, 204));
         BBorrarMateria.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         BBorrarMateria.setLabel("Borrar Materia");
         BBorrarMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -538,6 +550,8 @@ public class JfIndex extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(JTMaterias);
 
+        JBAnularInscripcionAlumno.setBackground(new java.awt.Color(179, 179, 204));
+        JBAnularInscripcionAlumno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         JBAnularInscripcionAlumno.setLabel("Anular Inscripcion Alumno");
         JBAnularInscripcionAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -545,6 +559,8 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
+        JBInscribirAlumno.setBackground(new java.awt.Color(179, 179, 204));
+        JBInscribirAlumno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         JBInscribirAlumno.setLabel("Inscribir Alumno");
         JBInscribirAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -630,8 +646,9 @@ public class JfIndex extends javax.swing.JFrame {
 
         jtpOpciones.addTab("Inscripciones", JpInscripciones);
 
+        copyright.setBackground(new java.awt.Color(179, 179, 204));
         copyright.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        copyright.setLabel("Copyright");
+        copyright.setLabel("Copyright 2022 ©");
         copyright.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 copyrightActionPerformed(evt);
@@ -663,9 +680,9 @@ public class JfIndex extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
                 .addComponent(jlNombre)
-                .addGap(240, 240, 240)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlIntegrantes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlLucas)
@@ -676,7 +693,7 @@ public class JfIndex extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jtpOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
 
         pack();

@@ -10,6 +10,8 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value=" VistaIndex"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -58,9 +60,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Component id="jlNombre" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="jlIntegrantes" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jlLucas" min="-2" max="-2" attributes="0"/>
@@ -72,7 +74,7 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <Component id="jtpOpciones" min="-2" pref="482" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -104,7 +106,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Lucas Teruel"/>
+        <Property name="text" type="java.lang.String" value="Lucas Teruel "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlSantiago">
@@ -116,6 +118,11 @@
       </Properties>
     </Component>
     <Container class="javax.swing.JTabbedPane" name="jtpOpciones">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -330,6 +337,9 @@
                 </Component>
                 <Component class="java.awt.Button" name="JBBorrarAlumno">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic Medium" size="14" style="0"/>
                     </Property>
@@ -341,6 +351,9 @@
                 </Component>
                 <Component class="java.awt.Button" name="jbListarAlumnos">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic Medium" size="14" style="0"/>
                     </Property>
@@ -352,6 +365,9 @@
                 </Component>
                 <Component class="java.awt.Button" name="jbActualizarAlumno">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic Medium" size="14" style="0"/>
                     </Property>
@@ -363,6 +379,9 @@
                 </Component>
                 <Component class="java.awt.Button" name="jbGuardarAlumno">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic Medium" size="14" style="0"/>
                     </Property>
@@ -374,6 +393,9 @@
                 </Component>
                 <Component class="java.awt.Button" name="JBBuscarAlumnoPorID">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Yu Gothic Medium" size="14" style="0"/>
                     </Property>
@@ -528,6 +550,9 @@
             </Component>
             <Component class="java.awt.Button" name="JBGuardarMateria">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Medium" size="14" style="0"/>
                 </Property>
@@ -561,6 +586,9 @@
             </Component>
             <Component class="java.awt.Button" name="BModificarMateria">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Medium" size="14" style="0"/>
                 </Property>
@@ -583,6 +611,9 @@
             </Component>
             <Component class="java.awt.Button" name="BBuscarMateriaporID">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Medium" size="14" style="0"/>
                 </Property>
@@ -605,6 +636,9 @@
             </Component>
             <Component class="java.awt.Button" name="BBorrarMateria">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Yu Gothic Medium" size="14" style="0"/>
                 </Property>
@@ -859,6 +893,12 @@
                 </Container>
                 <Component class="java.awt.Button" name="JBAnularInscripcionAlumno">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor Por defecto"/>
+                    </Property>
                     <Property name="label" type="java.lang.String" value="Anular Inscripcion Alumno"/>
                   </Properties>
                   <Events>
@@ -867,6 +907,12 @@
                 </Component>
                 <Component class="java.awt.Button" name="JBInscribirAlumno">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="b3" red="b3" type="rgb"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursor Por defecto"/>
+                    </Property>
                     <Property name="label" type="java.lang.String" value="Inscribir Alumno"/>
                   </Properties>
                   <Events>
@@ -881,10 +927,13 @@
     </Container>
     <Component class="java.awt.Button" name="copyright">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="b3" red="b3" type="rgb"/>
+        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Yu Gothic Medium" size="14" style="0"/>
         </Property>
-        <Property name="label" type="java.lang.String" value="Copyright"/>
+        <Property name="label" type="java.lang.String" value="Copyright 2022 &#xa9;"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="copyrightActionPerformed"/>

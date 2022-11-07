@@ -22,10 +22,7 @@ public class UniversidadG8 {
     public static ArrayList<Materia> listaMaterias;
 
     public static void main(String[] args) {
-        // TODO code application logic here    
-
         JfIndex jf = new JfIndex();
-
         jf.setVisible(true);
 //        //Testing
 //
