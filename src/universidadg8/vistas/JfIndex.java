@@ -151,6 +151,7 @@ public class JfIndex extends javax.swing.JFrame {
         JBAnularInscripcionAlumno = new java.awt.Button();
         JBInscribirAlumno = new java.awt.Button();
         copyright = new java.awt.Button();
+        jLabel2 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -167,10 +168,10 @@ public class JfIndex extends javax.swing.JFrame {
         jlIntegrantes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/icons8-car-accident-50.png"))); // NOI18N
         jlIntegrantes.setText("Integrantes:");
 
-        jlLucas.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jlLucas.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlLucas.setText("Lucas Teruel ");
 
-        jlSantiago.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jlSantiago.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jlSantiago.setText("Santiago Lucero");
 
         jtpOpciones.setBackground(java.awt.Color.lightGray);
@@ -655,6 +656,9 @@ public class JfIndex extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel2.setText("Transversal");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -665,16 +669,19 @@ public class JfIndex extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jlNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(copyright, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlIntegrantes)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(112, 112, 112)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jlLucas)
-                                    .addComponent(jlSantiago))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(copyright, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jlSantiago)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel2))
+                            .addComponent(jlIntegrantes))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -682,6 +689,8 @@ public class JfIndex extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jlNombre)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlIntegrantes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -883,6 +892,7 @@ public class JfIndex extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
