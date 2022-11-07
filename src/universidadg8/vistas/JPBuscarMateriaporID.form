@@ -52,7 +52,7 @@
                               <Component id="JLNombreBuscarMateriaPorID" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="JLAñoBuscarMateriaPorID" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="101" max="32767" attributes="0"/>
+                          <EmptySpace pref="95" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="JTFAnioBuscarMateriaPorID" alignment="1" pref="203" max="32767" attributes="0"/>
                               <Component id="JTFNombreBuscarMateriaPorID" alignment="1" max="32767" attributes="0"/>
@@ -65,10 +65,10 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="JLBuscarMateriaPorID" min="-2" pref="15" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="JTFBuscarMateriaPorID" min="-2" pref="233" max="-2" attributes="0"/>
+                                  <Component id="JTFBuscarMateriaPorID" min="-2" pref="221" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace type="unrelated" max="32767" attributes="0"/>
                           <Component id="JBBotonBuscarMateriaPorID" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
