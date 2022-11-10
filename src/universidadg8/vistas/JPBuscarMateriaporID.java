@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package universidadg8.vistas;
 
 import javax.swing.JOptionPane;
-import static universidadg8.UniversidadG8.adata;
 import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Materia;
 

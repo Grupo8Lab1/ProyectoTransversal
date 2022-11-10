@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package universidadg8.entidades;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author Santi
- */
 public class Alumno {
     private int id_alumno ;
     private long dni;

@@ -9,15 +9,8 @@ import static universidadg8.UniversidadG8.listaMaterias;
 import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Materia;
 
-/**
- *
- * @author Santi
- */
 public class JPModificarMateria extends javax.swing.JPanel {
 
-    /**
-     * Creates new form JPModificarMateria
-     */
     private void actualizarLista() {
         listaMaterias = mdata.obtenerMaterias();
         JCBActualizarMateria.removeAllItems();
@@ -25,7 +18,7 @@ public class JPModificarMateria extends javax.swing.JPanel {
             JCBActualizarMateria.addItem(materias.getNombre());
         }
     }
-
+    
     public JPModificarMateria() {
         initComponents();
         actualizarLista();

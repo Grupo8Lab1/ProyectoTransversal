@@ -6,13 +6,8 @@ import persistencia.InscripcionData;
 import persistencia.MateriaData;
 import universidadg8.vistas.JfIndex;
 import universidadg8.entidades.Alumno;
-import universidadg8.entidades.Inscripcion;
 import universidadg8.entidades.Materia;
 
-/**
- *
- * @author Santi
- */
 public class UniversidadG8 {
 
     public static AlumnoData adata = new AlumnoData();

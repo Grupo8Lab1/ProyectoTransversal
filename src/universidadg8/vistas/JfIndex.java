@@ -16,7 +16,6 @@ import static universidadg8.UniversidadG8.mdata;
 import universidadg8.entidades.Alumno;
 import universidadg8.entidades.Inscripcion;
 import universidadg8.entidades.Materia;
-import universidadg8.vistas.JPGuardarMateria;
 
 /**
  *
